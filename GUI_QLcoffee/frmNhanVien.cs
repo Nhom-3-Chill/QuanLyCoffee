@@ -16,6 +16,7 @@ namespace GUI_QLcoffee
         {
             InitializeComponent();
             //testnew
+            //test
         }
 
         private void gpbNhanvien_Enter(object sender, EventArgs e)
