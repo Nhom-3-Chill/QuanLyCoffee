@@ -9,5 +9,6 @@ namespace BUS_QLcoffee
     public class Class1
     {
         //testlai
+        //test
     }
 }
