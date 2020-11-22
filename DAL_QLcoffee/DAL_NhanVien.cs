@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL_QLcoffee
 {
-    public class Class1
+    public class DAL_NhanVien : DataConnect
     {
     }
 }
