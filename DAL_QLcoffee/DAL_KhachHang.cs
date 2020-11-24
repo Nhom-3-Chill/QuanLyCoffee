@@ -25,14 +25,41 @@ namespace DAL_QLcoffee
                 table.Load(command.ExecuteReader());
                 return table;
             }
-            //catch (Exception a)
-            //{
-            //    MessageBox.Show(a.Message);
-            //}
             finally
             {
                 connection.Close();
             }
+        }
+
+        public bool LuuKhachHang(DTO_KhachHang kh)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "LuuKH";
+                command.Parameters.AddWithValue("MaKH", kh.MaKh);
+                command.Parameters.AddWithValue("TenK   hach", kh.TenKh);
+                command.Parameters.AddWithValue("SoDT", kh.SoDt);
+                command.Parameters.AddWithValue("Email", kh.Email);
+                command.Parameters.AddWithValue("DiaChi", kh.DiaChi);
+                command.Connection = connection;
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
         }
     }
 }
