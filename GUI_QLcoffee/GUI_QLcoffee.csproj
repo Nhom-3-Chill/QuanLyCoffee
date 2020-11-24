@@ -145,7 +145,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_QLcoffee\BUS_QLcoffee.csproj">
+      <Project>{b752cbf7-e745-4bd7-bbda-03e4173b56de}</Project>
+      <Name>BUS_QLcoffee</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_QLcoffee\DTO_QLcoffee.csproj">
+      <Project>{b2badf04-8678-44fa-a79b-91c1a9cc1c98}</Project>
+      <Name>DTO_QLcoffee</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_Add_27831.png" />
     <None Include="Icon\Thuc_don.png" />
