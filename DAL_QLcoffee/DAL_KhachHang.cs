@@ -61,5 +61,81 @@ namespace DAL_QLcoffee
             }
             return false;
         }
+
+        public bool XoaKhachHang(string MaKhachHang)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "XoaKH";
+                command.Parameters.AddWithValue("MaKH", MaKhachHang);
+                command.Connection = connection;
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception b)
+            {
+                MessageBox.Show(b.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
+        }
+
+        public bool SuaKhachHang(DTO_KhachHang kh)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "SuaKH";
+                command.Parameters.AddWithValue("MaKH", kh.MaKh);
+                command.Parameters.AddWithValue("TenKhach", kh.TenKh);
+                command.Parameters.AddWithValue("SoDT", kh.SoDt);
+                command.Parameters.AddWithValue("Email", kh.Email);
+                command.Parameters.AddWithValue("DiaChi", kh.DiaChi);
+                command.Connection = connection;
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception c)
+            {
+                MessageBox.Show(c.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
+        }
+
+        public DataTable TimKiemKhachHang(string TenKH)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "TimKiemKH";
+                command.Parameters.AddWithValue("TenKhach", TenKH);
+                command.Connection = connection;
+                DataTable table = new DataTable();
+                table.Load(command.ExecuteReader());
+                return table;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
