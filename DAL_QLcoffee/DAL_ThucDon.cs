@@ -86,7 +86,7 @@ namespace DAL_QLcoffee
             }
             return false;
         }
-        public bool XoaThucDon(DTO_ThucDon td)
+        public bool XoaThucDon(int MaTD)
         {
             try
             {
@@ -94,7 +94,7 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "DeleteTD";
-                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
+                scm.Parameters.AddWithValue("@MaTD", MaTD);
                 scm.Connection = connection;
                 if (scm.ExecuteNonQuery() > 0)
                     return true;
