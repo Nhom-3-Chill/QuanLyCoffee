@@ -10,6 +10,7 @@ namespace DAL_QLcoffee
 {
     public class DataConnect
     {
-        protected SqlConnection connection = new SqlConnection(@"Data Source=ADMIN;Initial Catalog=QuanLyCoffee;Integrated Security=True");
+        //protected SqlConnection connection = new SqlConnection(@"Data Source=ADMIN;Initial Catalog=QuanLyCoffee;Integrated Security=True");
+        protected SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QuanLyCoffee.mdf;Integrated Security=True");
     }
 }

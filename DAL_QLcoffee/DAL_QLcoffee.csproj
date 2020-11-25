@@ -48,5 +48,14 @@
     <Compile Include="DataConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO_QLcoffee\DTO_QLcoffee.csproj">
+      <Project>{b2badf04-8678-44fa-a79b-91c1a9cc1c98}</Project>
+      <Name>DTO_QLcoffee</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
