@@ -11,5 +11,7 @@ namespace BUS_QLcoffee
 {
     public class BUS_NhanVien
     {
+
+
     }
 }
