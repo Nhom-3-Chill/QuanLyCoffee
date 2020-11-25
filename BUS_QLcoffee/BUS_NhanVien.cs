@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QLcoffee
 {
-    public class Class1
+    public class BUS_NhanVien
     {
-        //endgame
     }
 }
