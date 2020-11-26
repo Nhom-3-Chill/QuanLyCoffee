@@ -22,5 +22,10 @@ namespace GUI_QLcoffee
         {
 
         }
+
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

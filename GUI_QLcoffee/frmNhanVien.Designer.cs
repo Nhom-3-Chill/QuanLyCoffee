@@ -332,9 +332,9 @@
             this.gpbThongTin.Controls.Add(this.lblEmail);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbThongTin.Location = new System.Drawing.Point(31, 60);
-            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gpbThongTin.Name = "gpbThongTin";
-            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.gpbThongTin.Size = new System.Drawing.Size(773, 177);
             this.gpbThongTin.TabIndex = 27;
             this.gpbThongTin.TabStop = false;
@@ -440,6 +440,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
+            this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.gpbVaiTro.ResumeLayout(false);
             this.gpbVaiTro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();

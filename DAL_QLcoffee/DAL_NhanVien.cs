@@ -16,6 +16,7 @@ namespace DAL_QLcoffee
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "DangNhap";
@@ -37,10 +38,53 @@ namespace DAL_QLcoffee
             }
             return false;
         }
+        public int VaiTroNV(DTO_NhanVien nv)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "VaiTro";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", nv.Email);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return 1;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
+        }
+        public int TinhTrang(DTO_NhanVien nv)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "TinhTrang";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", nv.Email);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return 1;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
+        }
         public bool QuenMatKhau(DTO_NhanVien nv)
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "QuenMatKhau";
@@ -65,6 +109,7 @@ namespace DAL_QLcoffee
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "TaoMatKhau";
@@ -90,6 +135,7 @@ namespace DAL_QLcoffee
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "DoiMatKhau";
