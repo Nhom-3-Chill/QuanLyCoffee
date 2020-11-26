@@ -13,9 +13,9 @@ namespace BUS_QLcoffee
     {
         DAL_KhachHang dalkhachhang = new DAL_KhachHang();
 
-        public DataTable DSKhacHang()
+        public DataTable DSKhachHang()
         {
-            return dalkhachhang.DSKhacHang();
+            return dalkhachhang.DSKhachHang();
         }
 
         public bool LuuKhachHang(DTO_KhachHang kh)

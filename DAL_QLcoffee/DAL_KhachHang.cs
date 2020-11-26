@@ -12,7 +12,7 @@ namespace DAL_QLcoffee
 {
     public class DAL_KhachHang : DataConnect
     {
-        public DataTable DSKhacHang()
+        public DataTable DSKhachHang()
         {
             try
             {
