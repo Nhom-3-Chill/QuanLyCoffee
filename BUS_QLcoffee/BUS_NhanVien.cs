@@ -20,6 +20,10 @@ namespace BUS_QLcoffee
         {
             return dAL_nhanvien.QuenMatKhau(nv);
         }
+        public bool NVTaoMatKhau(string email, string matkhau)
+        {
+            return dAL_nhanvien.TaoMatKhau(email, matkhau);
+        }
         public bool NVDoiMatKhau(DTO_NhanVien nv, string matkhaucu, string matkhaumoi)
         {
             return dAL_nhanvien.DoiMatKhau(nv,matkhaucu,matkhaumoi);

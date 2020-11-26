@@ -61,6 +61,27 @@ namespace DAL_QLcoffee
             }
             return false;
         }
+        public bool TaoMatKhau (string email, string matkhau)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "TaoMatKhau";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@matkhau", matkhau);
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
+        }
         public bool DoiMatKhau(DTO_NhanVien nv, string matkhaucu, string matkhaumoi)
         {
             try
