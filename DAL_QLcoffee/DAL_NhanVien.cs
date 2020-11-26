@@ -71,6 +71,10 @@ namespace DAL_QLcoffee
                 command.Connection = connection;
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@matkhau", matkhau);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
             }
             catch(Exception x)
             {
