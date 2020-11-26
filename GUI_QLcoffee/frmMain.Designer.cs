@@ -62,7 +62,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1030, 28);
             this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Text = "alo";
             // 
             // heThongToolStripMenuItem
             // 
@@ -81,6 +81,7 @@
             this.dangXuatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.dangXuatToolStripMenuItem.Text = "Đăng Xuất";
+            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
             // 
             // doiMatKhauToolStripMenuItem
             // 
@@ -89,6 +90,7 @@
             this.doiMatKhauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.doiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.doiMatKhauToolStripMenuItem.Text = "Đổi Mật Khẩu";
+            this.doiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.doiMatKhauToolStripMenuItem_Click);
             // 
             // thoatToolStripMenuItem
             // 
@@ -148,7 +150,7 @@
             // 
             this.lblTenDN.AutoSize = true;
             this.lblTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDN.Location = new System.Drawing.Point(13, 41);
+            this.lblTenDN.Location = new System.Drawing.Point(12, 41);
             this.lblTenDN.Name = "lblTenDN";
             this.lblTenDN.Size = new System.Drawing.Size(124, 20);
             this.lblTenDN.TabIndex = 1;
@@ -158,7 +160,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(568, 38);
+            this.lblUser.Location = new System.Drawing.Point(539, 41);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(121, 20);
             this.lblUser.TabIndex = 1;
@@ -167,7 +169,7 @@
             // lblNameLogin
             // 
             this.lblNameLogin.AutoSize = true;
-            this.lblNameLogin.Location = new System.Drawing.Point(129, 41);
+            this.lblNameLogin.Location = new System.Drawing.Point(144, 41);
             this.lblNameLogin.Name = "lblNameLogin";
             this.lblNameLogin.Size = new System.Drawing.Size(0, 17);
             this.lblNameLogin.TabIndex = 2;
@@ -175,7 +177,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(679, 38);
+            this.lblUserName.Location = new System.Drawing.Point(698, 38);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(0, 17);
             this.lblUserName.TabIndex = 3;
@@ -218,6 +220,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Phần mềm quản lý coffee";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();

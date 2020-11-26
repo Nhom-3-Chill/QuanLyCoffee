@@ -101,6 +101,7 @@
             this.lblQuenMK.Size = new System.Drawing.Size(122, 20);
             this.lblQuenMK.TabIndex = 2;
             this.lblQuenMK.Text = "Quên mật khẩu";
+            this.lblQuenMK.Click += new System.EventHandler(this.lblQuenMK_Click);
             // 
             // txtMK
             // 
@@ -123,6 +124,7 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "       Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -138,6 +140,7 @@
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // ptnLogin
             // 
@@ -167,6 +170,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptnLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

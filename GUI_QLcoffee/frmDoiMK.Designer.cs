@@ -120,6 +120,7 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "      Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDoiMK
             // 
@@ -135,6 +136,7 @@
             this.btnDoiMK.Text = "Đổi mật khẩu";
             this.btnDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoiMK.UseVisualStyleBackColor = false;
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // picDoiMK
             // 
