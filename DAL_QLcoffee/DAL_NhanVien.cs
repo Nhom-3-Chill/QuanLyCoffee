@@ -16,6 +16,7 @@ namespace DAL_QLcoffee
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "DangNhap";
@@ -37,10 +38,53 @@ namespace DAL_QLcoffee
             }
             return false;
         }
+        public int VaiTroNV(DTO_NhanVien nv)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "VaiTro";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", nv.Email);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return 1;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
+        }
+        public int TinhTrang(DTO_NhanVien nv)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "TinhTrang";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", nv.Email);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return 1;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
+        }
         public bool QuenMatKhau(DTO_NhanVien nv)
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "QuenMatKhau";
@@ -61,10 +105,37 @@ namespace DAL_QLcoffee
             }
             return false;
         }
+        public bool TaoMatKhau (string email, string matkhau)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "TaoMatKhau";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@matkhau", matkhau);
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
+        }
         public bool DoiMatKhau(DTO_NhanVien nv, string matkhaucu, string matkhaumoi)
         {
             try
             {
+                connection.Open();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "DoiMatKhau";

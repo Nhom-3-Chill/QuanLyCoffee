@@ -16,9 +16,21 @@ namespace BUS_QLcoffee
         {
             return dAL_nhanvien.DangNhap(nv);
         }
+        public int NVVaiTro(DTO_NhanVien nv)
+        {
+            return dAL_nhanvien.VaiTroNV(nv);
+        }
+        public int NVTinhTrang(DTO_NhanVien nv)
+        {
+            return dAL_nhanvien.TinhTrang(nv);
+        }
         public bool NVQuenMatKhau(DTO_NhanVien nv)
         {
             return dAL_nhanvien.QuenMatKhau(nv);
+        }
+        public bool NVTaoMatKhau(string email, string matkhau)
+        {
+            return dAL_nhanvien.TaoMatKhau(email, matkhau);
         }
         public bool NVDoiMatKhau(DTO_NhanVien nv, string matkhaucu, string matkhaumoi)
         {
