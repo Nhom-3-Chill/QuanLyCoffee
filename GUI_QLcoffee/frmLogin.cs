@@ -37,33 +37,52 @@ namespace GUI_QLcoffee
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtEmail.Focus();
+            txtEmail.Text = Properties.Settings.Default.email;
+            txtMK.Text = Properties.Settings.Default.pass;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            DTO_NhanVien nv = new DTO_NhanVien();
-            nv.Email = txtEmail.Text;
-            nv.MatKhau = txtMK.Text;
-            if (bus_NhanVien.NVDangNhap(nv))
+            try
             {
-                tinhtrang = bus_NhanVien.NVTinhTrang(nv);
-                if (tinhtrang == 1)
+                DTO_NhanVien nv = new DTO_NhanVien();
+                nv.Email = txtEmail.Text;
+                nv.MatKhau = txtMK.Text;
+                if (bus_NhanVien.NVDangNhap(nv))
                 {
-                    frmMain.mail = txtEmail.Text;
-                    frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
-                    MessageBox.Show("Đăng nhập thành công!");
+                    tinhtrang = bus_NhanVien.NVTinhTrang(nv);
+                    if (tinhtrang == 1)
+                    {
+                        frmMain.mail = txtEmail.Text;
+                        frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
+                        MessageBox.Show("Đăng nhập thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản đã dừng hoạt động vui lòng liên hệ quản lý!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản đã dừng hoạt động vui lòng liên hệ quản lý!");
+                    MessageBox.Show("Đăng nhập thất bại, vui lòng kiểm tra email hoặc mật khẩu!");
+                    txtEmail.Text = null;
+                    txtMK.Text = null;
+                    txtEmail.Focus();
                 }
+            }
+            catch { MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo"); }
+            
+            if (chkLogin.Checked)
+            {
+                Properties.Settings.Default.email = txtEmail.Text;
+                Properties.Settings.Default.pass = txtMK.Text;
+                Properties.Settings.Default.Save();
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại, vui lòng kiểm tra email hoặc mật khẩu!");
-                txtEmail.Text = null;
-                txtMK.Text = null;
-                txtEmail.Focus();
+                Properties.Settings.Default.email = "";
+                Properties.Settings.Default.pass = "";
+                Properties.Settings.Default.Save();
             }
         }
 
