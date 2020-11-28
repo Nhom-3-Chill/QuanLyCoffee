@@ -87,9 +87,10 @@ namespace GUI_QLcoffee
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 frmLogin login = new frmLogin();
                 login.Show();
+                
             }
         }
 

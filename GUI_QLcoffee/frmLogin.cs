@@ -25,6 +25,9 @@ namespace GUI_QLcoffee
         {
             if(MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+
+                frmMain frm = new frmMain();
+                frm.Close();
                 this.Close();
             }
             else
