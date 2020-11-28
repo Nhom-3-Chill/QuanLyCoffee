@@ -16,7 +16,7 @@ namespace DAL_QLcoffee
         {
             try
             {
-                connection.Open();
+                connection.Open();                  
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "DanhSachKH";

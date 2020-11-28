@@ -21,7 +21,7 @@ namespace GUI_QLcoffee
             InitializeComponent();
         }
 
-        public void Load_khachhang()
+        private void Load_khachhang()
         {
             dgvKhachHang.DataSource = bus_khachhang.DSKhachHang();
             dgvKhachHang.Columns[0].HeaderText = "MaKH";

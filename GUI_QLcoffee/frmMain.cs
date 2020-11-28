@@ -92,7 +92,7 @@ namespace GUI_QLcoffee
             }
             else
             {
-                ActiveChildForm("frmDoiMK")
+                ActiveChildForm("frmDoiMK");
             }
         }
         void frmDoiMK_FormClosed(object sender, EventArgs e)
