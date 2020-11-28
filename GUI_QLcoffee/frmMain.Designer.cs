@@ -99,6 +99,7 @@
             this.thoatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.thoatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.thoatToolStripMenuItem.Text = "Thoát";
+            this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
             // danhMucToolStripMenuItem
             // 
@@ -117,6 +118,7 @@
             this.hoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
             this.hoaDonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hoaDonToolStripMenuItem.Text = "Hóa Đơn";
+            this.hoaDonToolStripMenuItem.Click += new System.EventHandler(this.hoaDonToolStripMenuItem_Click);
             // 
             // khachHangToolStripMenuItem
             // 
@@ -125,6 +127,7 @@
             this.khachHangToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
             this.khachHangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.khachHangToolStripMenuItem.Text = "Khách Hàng";
+            this.khachHangToolStripMenuItem.Click += new System.EventHandler(this.khachHangToolStripMenuItem_Click);
             // 
             // nhanVienToolStripMenuItem
             // 
@@ -133,12 +136,14 @@
             this.nhanVienToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.nhanVienToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nhanVienToolStripMenuItem.Text = "Nhân Viên";
+            this.nhanVienToolStripMenuItem.Click += new System.EventHandler(this.nhanVienToolStripMenuItem_Click);
             // 
             // thongKeToolStripMenuItem
             // 
             this.thongKeToolStripMenuItem.Name = "thongKeToolStripMenuItem";
             this.thongKeToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.thongKeToolStripMenuItem.Text = "Thống kê";
+            this.thongKeToolStripMenuItem.Click += new System.EventHandler(this.thongKeToolStripMenuItem_Click);
             // 
             // huongDanSửDụngToolStripMenuItem
             // 
@@ -169,17 +174,19 @@
             // lblNameLogin
             // 
             this.lblNameLogin.AutoSize = true;
-            this.lblNameLogin.Location = new System.Drawing.Point(144, 41);
+            this.lblNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameLogin.Location = new System.Drawing.Point(149, 42);
             this.lblNameLogin.Name = "lblNameLogin";
-            this.lblNameLogin.Size = new System.Drawing.Size(0, 17);
+            this.lblNameLogin.Size = new System.Drawing.Size(0, 20);
             this.lblNameLogin.TabIndex = 2;
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(698, 38);
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(679, 42);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(0, 17);
+            this.lblUserName.Size = new System.Drawing.Size(0, 20);
             this.lblUserName.TabIndex = 3;
             // 
             // lblTextMain
@@ -219,6 +226,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý coffee";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
