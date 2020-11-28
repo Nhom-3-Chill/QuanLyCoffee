@@ -40,7 +40,7 @@ namespace DAL_QLcoffee
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "LuuKH";
                 command.Parameters.AddWithValue("MaKH", kh.MaKh);
-                command.Parameters.AddWithValue("TenK   hach", kh.TenKh);
+                command.Parameters.AddWithValue("TenKhach", kh.TenKh);
                 command.Parameters.AddWithValue("SoDT", kh.SoDt);
                 command.Parameters.AddWithValue("Email", kh.Email);
                 command.Parameters.AddWithValue("DiaChi", kh.DiaChi);

@@ -15,7 +15,7 @@ namespace GUI_QLcoffee
 {
     public partial class frmKhachHang : Form
     {
-        BUS_KhachHang bus_khachhang = new BUS_KhachHang();
+        BUS_KhachHang buskhachhang = new BUS_KhachHang();
         public frmKhachHang()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace GUI_QLcoffee
 
         private void Load_khachhang()
         {
-            dgvKhachHang.DataSource = bus_khachhang.DSKhachHang();
+            dgvKhachHang.DataSource = buskhachhang.DSKhachHang();
             dgvKhachHang.Columns[0].HeaderText = "MaKH";
             dgvKhachHang.Columns[1].HeaderText = "TenKhach";
             dgvKhachHang.Columns[2].HeaderText = "SoDT";
@@ -74,17 +74,84 @@ namespace GUI_QLcoffee
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
+            if (txtMaKH.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtTenKH.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập số điện thoại của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập Email của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập địa chỉ của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtMaKH.Text != "" && txtTenKH.Text != "" && txtDienThoai.Text != "" && txtEmail.Text != "" && txtDiaChi.Text != "")
+            {
+                DTO_KhachHang dtokhachhang = new DTO_KhachHang(txtMaKH.Text, txtTenKH.Text,txtDienThoai.Text,txtEmail.Text,txtDiaChi.Text);
+                if (buskhachhang.LuuKhachHang(dtokhachhang))
+                {
+                    MessageBox.Show("Thêm khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Load_khachhang();
+                    ResetValues();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm khách hàng thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Bạn có muốn xóa khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string MaKH = txtMaKH.Text;
+                if (buskhachhang.XoaKhachHang(MaKH))
+                {
+                    MessageBox.Show("Xóa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Load_khachhang();
+                    ResetValues();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa khách hàng thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ResetValues();
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            DTO_KhachHang dtokhachhang = new DTO_KhachHang(txtMaKH.Text, txtTenKH.Text, txtDienThoai.Text, txtEmail.Text, txtDiaChi.Text);
+            if (MessageBox.Show("Bạn có muốn sửa khách hàng này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (buskhachhang.SuaKhachHang(dtokhachhang))
+                {
+                    MessageBox.Show("Sửa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Load_khachhang();
+                    ResetValues();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa khách hàng thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ResetValues();
+            }
         }
 
         private void btnBoqua_Click(object sender, EventArgs e)
