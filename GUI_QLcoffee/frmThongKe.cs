@@ -16,5 +16,10 @@ namespace GUI_QLcoffee
         {
             InitializeComponent();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

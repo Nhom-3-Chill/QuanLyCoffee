@@ -130,5 +130,26 @@ namespace DAL_QLcoffee
             }
         }
 
+        // Xem thống kê
+        public DataTable XemThongKe(string ngayBD, string ngayKT)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "XemThongKe";
+                command.Parameters.AddWithValue("ngaybt", ngayBD);
+                command.Parameters.AddWithValue("ngaykt", ngayKT);
+                command.Connection = connection;
+                DataTable table = new DataTable();
+                table.Load(command.ExecuteReader());
+                return table;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

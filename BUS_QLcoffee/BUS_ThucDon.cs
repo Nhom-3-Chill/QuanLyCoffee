@@ -36,5 +36,10 @@ namespace BUS_QLcoffee
         {
             return dal_ThucDon.TimKiemThucDon(tenTD);
         }
+
+        public DataTable XemThongKe(string ngayBT, string ngayKT)
+        {
+            return dal_ThucDon.XemThongKe(ngayBT, ngayKT);
+        }
     }
 }
