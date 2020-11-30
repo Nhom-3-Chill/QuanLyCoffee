@@ -107,7 +107,7 @@ namespace DTO_QLcoffee
                 matKhau = value;
             }
         }
-        public DTO_NhanVien(string maNv, string email, string tenNv, string diaChi, int vaiTro, int tinhTrang, string soDt, string matKhau)
+        public DTO_NhanVien(string maNv, string email, string tenNv, string diaChi, int vaiTro, int tinhTrang, string soDt)
         {
             this.maNv = maNv;
             this.email = email;
@@ -116,7 +116,6 @@ namespace DTO_QLcoffee
             this.vaiTro = vaiTro;
             this.tinhTrang = tinhTrang;
             this.soDt = soDt;
-            this.matKhau = matKhau;
         }
         public DTO_NhanVien() { }
     }

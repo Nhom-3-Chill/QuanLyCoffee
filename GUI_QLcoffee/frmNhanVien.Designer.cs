@@ -268,6 +268,7 @@
             // 
             // dgvNhanVien
             // 
+            this.dgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Location = new System.Drawing.Point(31, 378);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -276,6 +277,7 @@
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(773, 235);
             this.dgvNhanVien.TabIndex = 13;
+            this.dgvNhanVien.Click += new System.EventHandler(this.dgvNhanvien);
             // 
             // gpbNhanvien
             // 
@@ -312,6 +314,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // gpbThongTin
             // 
@@ -353,6 +356,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnBoqua
             // 
@@ -367,6 +371,7 @@
             this.btnBoqua.Text = "Bỏ Qua";
             this.btnBoqua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // btnSua
             // 
@@ -380,6 +385,7 @@
             this.btnSua.TabIndex = 31;
             this.btnSua.Text = "        Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -394,6 +400,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtSearch
             // 
@@ -418,6 +425,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSearch
             // 
@@ -430,6 +438,7 @@
             this.btnSearch.TabIndex = 28;
             this.btnSearch.Text = "        Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmNhanVien
             // 

@@ -210,7 +210,7 @@ namespace DAL_QLcoffee
             return false;
         }
 
-        public bool XoaNhanVien(string MaNhanVien)
+        public bool XoaNhanVien(string email)
         {
             try
             {
@@ -218,7 +218,7 @@ namespace DAL_QLcoffee
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "XoaNV";
-                command.Parameters.AddWithValue("@manv", MaNhanVien);
+                command.Parameters.AddWithValue("@email", email);
                 command.Connection = connection;
                 if (command.ExecuteNonQuery() > 0)
                 {
