@@ -12,6 +12,41 @@ namespace DAL_QLcoffee
 {
     public class DAL_ThucDon : DataConnect
     {
+        public DataTable DanhSachTenMon()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand scm = new SqlCommand();
+                scm.CommandType = CommandType.StoredProcedure;
+                scm.CommandText = "DanhSanhMon";
+                scm.Connection = connection;
+                DataTable tb = new DataTable();
+                tb.Load(scm.ExecuteReader());
+                return tb;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public string DonGiaMon(string tenmon)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand scm = new SqlCommand();
+                scm.CommandType = CommandType.StoredProcedure;
+                scm.CommandText = "DonGiaMon";
+                scm.Parameters.AddWithValue("@tenmon", tenmon);
+                scm.Connection = connection;
+                return scm.ExecuteScalar().ToString();
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         // Get Danh sach thuc don
         public DataTable DSThucDon()
         {

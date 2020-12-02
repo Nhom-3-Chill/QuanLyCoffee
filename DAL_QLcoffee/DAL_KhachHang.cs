@@ -12,6 +12,24 @@ namespace DAL_QLcoffee
 {
     public class DAL_KhachHang : DataConnect
     {
+        public DataTable DanhSachTenKhach()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand scm = new SqlCommand();
+                scm.CommandType = CommandType.StoredProcedure;
+                scm.CommandText = "DanhSanhKH";
+                scm.Connection = connection;
+                DataTable tb = new DataTable();
+                tb.Load(scm.ExecuteReader());
+                return tb;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         public DataTable DSKhachHang()
         {
             try

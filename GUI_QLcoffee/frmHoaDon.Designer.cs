@@ -40,7 +40,7 @@
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
             this.cboTenKH = new System.Windows.Forms.ComboBox();
             this.cboTenMon = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.NumSoLuong = new System.Windows.Forms.NumericUpDown();
             this.linkKH = new System.Windows.Forms.LinkLabel();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.btnThemmon = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -119,6 +119,7 @@
             this.btnThanhtoan.Text = "Thanh Toán";
             this.btnThanhtoan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThanhtoan.UseVisualStyleBackColor = true;
+            this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
             // 
             // txtGiamgia
             // 
@@ -131,6 +132,7 @@
             // 
             // dgvHoaDon
             // 
+            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Location = new System.Drawing.Point(60, 197);
             this.dgvHoaDon.Name = "dgvHoaDon";
@@ -143,7 +145,7 @@
             // 
             this.gpbThongTin.Controls.Add(this.cboTenKH);
             this.gpbThongTin.Controls.Add(this.cboTenMon);
-            this.gpbThongTin.Controls.Add(this.numericUpDown1);
+            this.gpbThongTin.Controls.Add(this.NumSoLuong);
             this.gpbThongTin.Controls.Add(this.linkKH);
             this.gpbThongTin.Controls.Add(this.lblSoLuong);
             this.gpbThongTin.Controls.Add(this.btnThemmon);
@@ -175,12 +177,12 @@
             this.cboTenMon.Size = new System.Drawing.Size(253, 33);
             this.cboTenMon.TabIndex = 27;
             // 
-            // numericUpDown1
+            // NumSoLuong
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(640, 29);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(50, 26);
-            this.numericUpDown1.TabIndex = 25;
+            this.NumSoLuong.Location = new System.Drawing.Point(640, 29);
+            this.NumSoLuong.Name = "NumSoLuong";
+            this.NumSoLuong.Size = new System.Drawing.Size(50, 26);
+            this.NumSoLuong.TabIndex = 25;
             // 
             // linkKH
             // 
@@ -215,6 +217,7 @@
             this.btnThemmon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemmon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemmon.UseVisualStyleBackColor = true;
+            this.btnThemmon.Click += new System.EventHandler(this.btnThemmon_Click);
             // 
             // lblTenKH
             // 
@@ -246,12 +249,13 @@
             this.Name = "frmHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hóa đơn";
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.gpbThongTin.ResumeLayout(false);
             this.gpbThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,7 +275,7 @@
         private System.Windows.Forms.Button btnThemmon;
         private System.Windows.Forms.LinkLabel linkKH;
         private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown NumSoLuong;
         private System.Windows.Forms.Label lblHoaDon;
         private System.Windows.Forms.ComboBox cboTenKH;
         private System.Windows.Forms.ComboBox cboTenMon;

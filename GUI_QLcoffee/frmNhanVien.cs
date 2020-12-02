@@ -54,6 +54,8 @@ namespace GUI_QLcoffee
             txtDienThoai.Enabled = false;
             txtDiaChi.Text = null;
             txtDiaChi.Enabled = false;
+            txtSearch.Text = "Nhập tên nhân viên";
+            txtSearch.BackColor = Color.DarkGray;
             rdbtnAdmin.Checked = false;
             rdbtnHD.Checked = false;
             rdbtnNgungHD.Checked = false;
@@ -289,6 +291,7 @@ namespace GUI_QLcoffee
         private void btnBoqua_Click(object sender, EventArgs e)
         {
             resetvalue();
+            loaddata();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -298,7 +301,20 @@ namespace GUI_QLcoffee
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dgvNhanVien.DataSource = busNhanvien.TimKiemNhanVien(txtSearch.Text);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Vui long kiem tra lai thong tin tim kiem!"+ x.Message);
+            }
+        }
 
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = null;
+            txtSearch.BackColor = Color.White;
         }
     }
 }

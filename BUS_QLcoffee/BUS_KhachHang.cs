@@ -37,5 +37,9 @@ namespace BUS_QLcoffee
         {
             return dalkhachhang.TimKiemKhachHang(TenKH);
         }
+        public DataTable DanhSachTenKhach()
+        {
+            return dalkhachhang.DanhSachTenKhach();
+        }
     }
 }

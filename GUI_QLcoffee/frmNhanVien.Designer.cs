@@ -149,11 +149,11 @@
             // txtDienThoai
             // 
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtDienThoai.Location = new System.Drawing.Point(549, 106);
+            this.txtDienThoai.Location = new System.Drawing.Point(539, 106);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDienThoai.Multiline = true;
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(207, 31);
+            this.txtDienThoai.Size = new System.Drawing.Size(217, 31);
             this.txtDienThoai.TabIndex = 11;
             // 
             // lblDienThoai
@@ -169,21 +169,21 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtEmail.Location = new System.Drawing.Point(549, 15);
+            this.txtEmail.Location = new System.Drawing.Point(539, 15);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(207, 31);
+            this.txtEmail.Size = new System.Drawing.Size(217, 31);
             this.txtEmail.TabIndex = 9;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtDiaChi.Location = new System.Drawing.Point(549, 60);
+            this.txtDiaChi.Location = new System.Drawing.Point(539, 60);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(207, 31);
+            this.txtDiaChi.Size = new System.Drawing.Size(217, 31);
             this.txtDiaChi.TabIndex = 8;
             // 
             // lblDiaChi
@@ -405,12 +405,13 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtSearch.Location = new System.Drawing.Point(256, 318);
+            this.txtSearch.Location = new System.Drawing.Point(200, 318);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(232, 43);
+            this.txtSearch.Size = new System.Drawing.Size(288, 43);
             this.txtSearch.TabIndex = 27;
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
             // 
             // btnThem
             // 
