@@ -56,6 +56,7 @@ namespace GUI_QLcoffee
                     tinhtrang = bus_NhanVien.NVTinhTrang(nv);
                     if (tinhtrang == 1)
                     {
+                        // dcm voly
                         frmMain.mail = txtEmail.Text;
                         frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
                         MessageBox.Show("Đăng nhập thành công!");
