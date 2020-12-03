@@ -16,5 +16,10 @@ namespace GUI_QLcoffee
         {
             InitializeComponent();
         }
+
+        private void gpbThucDon_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

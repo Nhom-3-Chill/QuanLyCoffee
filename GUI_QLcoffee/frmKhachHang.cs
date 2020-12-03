@@ -200,5 +200,10 @@ namespace GUI_QLcoffee
                 MessageBox.Show("Không có thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void gpbNhanvien_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
