@@ -16,5 +16,10 @@ namespace GUI_QLcoffee
         {
             InitializeComponent();
         }
+
+        private void frmThucDon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
