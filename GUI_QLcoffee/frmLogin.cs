@@ -58,7 +58,7 @@ namespace GUI_QLcoffee
                     {
                         frmMain.mail = txtEmail.Text;
                         frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
-                        MessageBox.Show("Đăng nhập thành công!");
+                        MessageBox.Show("Đăng nhập thành công!","Confirm",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         this.Hide();
                         frmMain frm = new frmMain();
                         frm.Show();
@@ -74,6 +74,7 @@ namespace GUI_QLcoffee
                     txtEmail.Text = null;
                     txtMK.Text = null;
                     txtEmail.Focus();
+                    chkLogin.Checked = false;
                 }
             }
             catch { MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo"); }
@@ -97,6 +98,7 @@ namespace GUI_QLcoffee
             DTO_NhanVien nv = new DTO_NhanVien();
             if (txtEmail.Text != "")
             {
+                nv.Email = txtEmail.Text;
                 if (bus_NhanVien.NVQuenMatKhau(nv))
                 {
                     StringBuilder builder = new StringBuilder();
@@ -106,6 +108,7 @@ namespace GUI_QLcoffee
                     string matKhauMoi = bus_NhanVien.encryption(builder.ToString());
                     bus_NhanVien.NVTaoMatKhau(txtEmail.Text, matKhauMoi);
                     bus_NhanVien.SendEmail(txtEmail.Text, builder.ToString());
+                    MessageBox.Show(matKhauMoi);
                 }
                 else
                 {
@@ -117,6 +120,11 @@ namespace GUI_QLcoffee
                 MessageBox.Show("Bạn cần nhập email, để nhận thông tin phục hồi mật khẩu!");
                 txtEmail.Focus();
             }
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

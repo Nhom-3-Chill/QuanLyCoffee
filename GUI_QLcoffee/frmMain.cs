@@ -101,7 +101,7 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmDoiMK"))
             {
                 this.IsMdiContainer = true;
-                frmDoiMK profilenv = new frmDoiMK(frmMain.mail);
+                frmDoiMK profilenv = new frmDoiMK();
                 profilenv.MdiParent = this;
                 profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
@@ -130,7 +130,6 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmHoaDon"))
             {
-                this.IsMdiContainer = true;
                 frmHoaDon hoaDon = new frmHoaDon();
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
@@ -149,7 +148,6 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmKhachHang"))
             {
-                this.IsMdiContainer = true;
                 frmKhachHang khachHang = new frmKhachHang();
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
