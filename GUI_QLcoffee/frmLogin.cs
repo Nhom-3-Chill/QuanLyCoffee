@@ -50,7 +50,7 @@ namespace GUI_QLcoffee
             {
                 DTO_NhanVien nv = new DTO_NhanVien();
                 nv.Email = txtEmail.Text;
-                nv.MatKhau = txtMK.Text;
+                nv.MatKhau = bus_NhanVien.encryption(txtMK.Text);
                 if (bus_NhanVien.NVDangNhap(nv))
                 {
                     tinhtrang = bus_NhanVien.NVTinhTrang(nv);

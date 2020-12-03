@@ -47,10 +47,9 @@
             this.lblThongKe.AutoSize = true;
             this.lblThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblThongKe.ForeColor = System.Drawing.Color.Red;
-            this.lblThongKe.Location = new System.Drawing.Point(165, 15);
-            this.lblThongKe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblThongKe.Location = new System.Drawing.Point(220, 18);
             this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(127, 29);
+            this.lblThongKe.Size = new System.Drawing.Size(153, 36);
             this.lblThongKe.TabIndex = 1;
             this.lblThongKe.Text = "Thống Kê";
             // 
@@ -60,31 +59,32 @@
             this.gpbNhanvien.Controls.Add(this.btnThongKe);
             this.gpbNhanvien.Controls.Add(this.gpbThongTin);
             this.gpbNhanvien.Controls.Add(this.lblThongKe);
-            this.gpbNhanvien.Location = new System.Drawing.Point(11, 11);
-            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbNhanvien.Location = new System.Drawing.Point(15, 14);
+            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbNhanvien.Name = "gpbNhanvien";
-            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbNhanvien.Size = new System.Drawing.Size(551, 458);
+            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbNhanvien.Size = new System.Drawing.Size(735, 564);
             this.gpbNhanvien.TabIndex = 3;
             this.gpbNhanvien.TabStop = false;
             // 
             // dgvThongKe
             // 
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongKe.Location = new System.Drawing.Point(32, 212);
+            this.dgvThongKe.Location = new System.Drawing.Point(43, 261);
+            this.dgvThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
-            this.dgvThongKe.Size = new System.Drawing.Size(498, 223);
+            this.dgvThongKe.Size = new System.Drawing.Size(664, 274);
             this.dgvThongKe.TabIndex = 21;
             // 
             // btnThongKe
             // 
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(160, 172);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThongKe.Location = new System.Drawing.Point(213, 212);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(171, 35);
+            this.btnThongKe.Size = new System.Drawing.Size(228, 43);
             this.btnThongKe.TabIndex = 20;
             this.btnThongKe.Text = "Xem thống kê doanh thu";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -97,11 +97,11 @@
             this.gpbThongTin.Controls.Add(this.lblKetThuc);
             this.gpbThongTin.Controls.Add(this.lblBatDau);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.gpbThongTin.Location = new System.Drawing.Point(32, 57);
-            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThongTin.Location = new System.Drawing.Point(43, 70);
+            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbThongTin.Name = "gpbThongTin";
-            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbThongTin.Size = new System.Drawing.Size(419, 99);
+            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbThongTin.Size = new System.Drawing.Size(559, 122);
             this.gpbThongTin.TabIndex = 3;
             this.gpbThongTin.TabStop = false;
             this.gpbThongTin.Text = "Thông Tin";
@@ -109,27 +109,28 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(169, 59);
+            this.dateTimePicker2.Location = new System.Drawing.Point(225, 73);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(217, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(288, 26);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(225, 31);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(217, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(288, 26);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // lblKetThuc
             // 
             this.lblKetThuc.AutoSize = true;
             this.lblKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblKetThuc.Location = new System.Drawing.Point(14, 64);
-            this.lblKetThuc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKetThuc.Location = new System.Drawing.Point(19, 79);
             this.lblKetThuc.Name = "lblKetThuc";
-            this.lblKetThuc.Size = new System.Drawing.Size(134, 17);
+            this.lblKetThuc.Size = new System.Drawing.Size(157, 20);
             this.lblKetThuc.TabIndex = 1;
             this.lblKetThuc.Text = "Chọn ngày kết thúc:";
             // 
@@ -137,23 +138,23 @@
             // 
             this.lblBatDau.AutoSize = true;
             this.lblBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblBatDau.Location = new System.Drawing.Point(14, 30);
-            this.lblBatDau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBatDau.Location = new System.Drawing.Point(19, 37);
             this.lblBatDau.Name = "lblBatDau";
-            this.lblBatDau.Size = new System.Drawing.Size(132, 17);
+            this.lblBatDau.Size = new System.Drawing.Size(153, 20);
             this.lblBatDau.TabIndex = 1;
             this.lblBatDau.Text = "Chọn ngày bắt đầu:";
             // 
             // frmThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 480);
+            this.ClientSize = new System.Drawing.Size(775, 591);
             this.Controls.Add(this.gpbNhanvien);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongKe";
+            this.Load += new System.EventHandler(this.frmThongKe_Load);
             this.gpbNhanvien.ResumeLayout(false);
             this.gpbNhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
