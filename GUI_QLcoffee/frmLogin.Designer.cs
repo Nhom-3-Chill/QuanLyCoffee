@@ -108,6 +108,7 @@
             this.txtMK.Location = new System.Drawing.Point(559, 136);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(281, 32);
             this.txtMK.TabIndex = 3;
             // 

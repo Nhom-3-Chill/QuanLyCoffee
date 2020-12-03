@@ -48,16 +48,12 @@ namespace DAL_QLcoffee
                 command.CommandText = "VaiTro";
                 command.Connection = connection;
                 command.Parameters.AddWithValue("@email", nv.Email);
-                if (command.ExecuteNonQuery() > 0)
-                {
-                    return 1;
-                }
+                return Convert.ToInt32(command.ExecuteScalar());
             }
             finally
             {
                 connection.Close();
             }
-            return 0;
         }
         public int TinhTrang(DTO_NhanVien nv)
         {
@@ -69,16 +65,12 @@ namespace DAL_QLcoffee
                 command.CommandText = "TinhTrang";
                 command.Connection = connection;
                 command.Parameters.AddWithValue("@email", nv.Email);
-                if (command.ExecuteNonQuery() > 0)
-                {
-                    return 1;
-                }
+                return Convert.ToInt32(command.ExecuteScalar());
             }
             finally
             {
                 connection.Close();
             }
-            return 0;
         }
         public bool QuenMatKhau(DTO_NhanVien nv)
         {
@@ -287,5 +279,6 @@ namespace DAL_QLcoffee
                 connection.Close();
             }
         }
+
     }
 }
