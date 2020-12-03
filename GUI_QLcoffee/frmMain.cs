@@ -195,5 +195,10 @@ namespace GUI_QLcoffee
             this.Refresh();
             frmMain_Load(sender, e);
         }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.lblNhanVien = new System.Windows.Forms.Label();
             this.rdbtnNgungHD = new System.Windows.Forms.RadioButton();
             this.gpbVaiTro = new System.Windows.Forms.GroupBox();
@@ -447,10 +448,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 639);
             this.Controls.Add(this.gpbNhanvien);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNhanVien";
+            this.Text = "Quản Lý Nhân Viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.gpbVaiTro.ResumeLayout(false);
             this.gpbVaiTro.PerformLayout();

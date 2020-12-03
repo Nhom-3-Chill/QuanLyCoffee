@@ -166,7 +166,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đổi mật khẩu";
+            this.Text = "Đổi Mật Khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
