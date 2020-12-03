@@ -72,6 +72,12 @@ namespace BUS_QLcoffee
         {
             return dAL_nhanvien.SuaNhanVien(nv);
         }
+
+        public string getTenNV(string email)
+        {
+            return dAL_nhanvien.getTenNV(email);
+        }
+
         public DataTable TimKiemNhanVien(string nv)
         {
             return dAL_nhanvien.TimKiemNhanVien(nv);

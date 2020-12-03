@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_QLcoffee;
 
 namespace GUI_QLcoffee
 {
@@ -14,6 +15,7 @@ namespace GUI_QLcoffee
     {
         public static string mail;
         public static int vaitro = 0;
+        BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
         public frmMain()
         {
             InitializeComponent();
@@ -37,8 +39,8 @@ namespace GUI_QLcoffee
 
         public void ResetValues()
         {
-            lblNameLogin.Text = "Chào" + frmMain.mail;
-            lblUserName.Text = "Chào";
+            lblNameLogin.Text = "Chào " + frmMain.mail;
+            lblUserName.Text = bus_NhanVien.getTenNV(frmMain.mail);
             dangXuatToolStripMenuItem.Visible = true;
             doiMatKhauToolStripMenuItem.Visible = true;
             thoatToolStripMenuItem.Visible = true;
