@@ -31,5 +31,10 @@ namespace GUI_QLcoffee
         {
             thongkesanpham();
         }
+
+        private void frmThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

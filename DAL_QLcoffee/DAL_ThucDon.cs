@@ -12,6 +12,7 @@ namespace DAL_QLcoffee
 {
     public class DAL_ThucDon : DataConnect
     {
+        // Bo sung 3 ham:
         public DataTable DanhSachTenMon()
         {
             try
@@ -46,6 +47,30 @@ namespace DAL_QLcoffee
             {
                 connection.Close();
             }
+        }
+        public bool ThanhToanTien(string tenkh, string tennv, DateTime ngaylap, float tongtien)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand scm = new SqlCommand();
+                scm.CommandType = CommandType.StoredProcedure;
+                scm.CommandText = "ThanhToan";
+                scm.Parameters.AddWithValue("@TenKH", tenkh);
+                scm.Parameters.AddWithValue("@TenNV", tennv);
+                scm.Parameters.AddWithValue("@Ngaylap", ngaylap);
+                scm.Parameters.AddWithValue("@TongTien", tongtien);
+                scm.Connection = connection;
+                if (scm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
         }
         // Get Danh sach thuc don
         public DataTable DSThucDon()
