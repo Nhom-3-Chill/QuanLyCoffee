@@ -68,6 +68,7 @@
             this.txtMkCu.Location = new System.Drawing.Point(239, 163);
             this.txtMkCu.Multiline = true;
             this.txtMkCu.Name = "txtMkCu";
+            this.txtMkCu.PasswordChar = '*';
             this.txtMkCu.Size = new System.Drawing.Size(391, 33);
             this.txtMkCu.TabIndex = 2;
             // 
@@ -96,6 +97,7 @@
             this.txtMkMoi.Location = new System.Drawing.Point(239, 211);
             this.txtMkMoi.Multiline = true;
             this.txtMkMoi.Name = "txtMkMoi";
+            this.txtMkMoi.PasswordChar = '*';
             this.txtMkMoi.Size = new System.Drawing.Size(391, 33);
             this.txtMkMoi.TabIndex = 2;
             // 
@@ -104,6 +106,7 @@
             this.txtNhapLaiMkMoi.Location = new System.Drawing.Point(239, 261);
             this.txtNhapLaiMkMoi.Multiline = true;
             this.txtNhapLaiMkMoi.Name = "txtNhapLaiMkMoi";
+            this.txtNhapLaiMkMoi.PasswordChar = '*';
             this.txtNhapLaiMkMoi.Size = new System.Drawing.Size(391, 33);
             this.txtNhapLaiMkMoi.TabIndex = 2;
             // 
@@ -166,7 +169,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đổi mật khẩu";
+            this.Text = "Đổi Mật Khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

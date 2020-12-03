@@ -15,17 +15,18 @@ namespace GUI_QLcoffee
     public partial class frmDoiMK : Form
     {
         BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
-        public frmDoiMK(string email)
+        public frmDoiMK()
         {
             InitializeComponent();
-            email = frmMain.mail;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                frmMain frm = new frmMain();
+                frm.Refresh();
             }
             else
             {
@@ -66,13 +67,18 @@ namespace GUI_QLcoffee
                 if(MessageBox.Show("Bạn có chắc chắn muốn đổi mật khẩu không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     DTO_NhanVien nv = new DTO_NhanVien();
+                    nv.Email = frmMain.mail;
                     string matKhauCu = bus_NhanVien.encryption(txtMkCu.Text);
                     string matKhauMoi = bus_NhanVien.encryption(txtMkMoi.Text);
                     if(bus_NhanVien.NVDoiMatKhau(nv, matKhauCu, matKhauMoi))
                     {
                         bus_NhanVien.SendEmail(frmMain.mail, txtNhapLaiMkMoi.Text);
                         MessageBox.Show("Đổi mật khẩu thành công, bạn cần phải đăng nhập lại!");
-                        this.Close();
+                        this.Hide();
+                        frmMain main = new frmMain();
+                        main.Visible=false;
+                        frmLogin login = new frmLogin();
+                        login.Show();
                     }
                     else
                     {

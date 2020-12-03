@@ -47,7 +47,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.Red;
-            this.lblLogin.Location = new System.Drawing.Point(614, 21);
+            this.lblLogin.Location = new System.Drawing.Point(602, 23);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(170, 37);
             this.lblLogin.TabIndex = 1;
@@ -108,6 +108,7 @@
             this.txtMK.Location = new System.Drawing.Point(559, 136);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(281, 32);
             this.txtMK.TabIndex = 3;
             // 
@@ -170,7 +171,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng nhập";
+            this.Text = "Đăng Nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptnLogin)).EndInit();
             this.ResumeLayout(false);

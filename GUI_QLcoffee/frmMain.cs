@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_QLcoffee;
 
 namespace GUI_QLcoffee
 {
@@ -14,6 +15,7 @@ namespace GUI_QLcoffee
     {
         public static string mail;
         public static int vaitro = 0;
+        BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
         public frmMain()
         {
             InitializeComponent();
@@ -37,8 +39,8 @@ namespace GUI_QLcoffee
 
         public void ResetValues()
         {
-            lblNameLogin.Text = "Chào" + frmMain.mail;
-            lblUserName.Text = "Chào";
+            lblNameLogin.Text = "Chào " + frmMain.mail;
+            lblUserName.Text = bus_NhanVien.getTenNV(frmMain.mail);
             dangXuatToolStripMenuItem.Visible = true;
             doiMatKhauToolStripMenuItem.Visible = true;
             thoatToolStripMenuItem.Visible = true;
@@ -99,9 +101,9 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmDoiMK"))
             {
                 this.IsMdiContainer = true;
-                frmDoiMK profilenv = new frmDoiMK(frmMain.mail);
+                frmDoiMK profilenv = new frmDoiMK();
                 profilenv.MdiParent = this;
-                profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
+                //profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
                 Hidencontrol();
             }
@@ -110,11 +112,11 @@ namespace GUI_QLcoffee
                 ActiveChildForm("frmDoiMK");
             }
         }
-        void frmDoiMK_FormClosed(object sender, EventArgs e)
-        {
-            this.Refresh();
-            frmMain_Load(sender, e);
-        }
+        //void frmDoiMK_FormClosed(object sender, EventArgs e)
+        //{
+        //    this.Refresh();
+        //    frmMain_Load(sender, e);
+        //}
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -128,7 +130,6 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmHoaDon"))
             {
-                this.IsMdiContainer = true;
                 frmHoaDon hoaDon = new frmHoaDon();
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
@@ -147,7 +148,6 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmKhachHang"))
             {
-                this.IsMdiContainer = true;
                 frmKhachHang khachHang = new frmKhachHang();
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
@@ -183,6 +183,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmThongKe"))
             {
+                this.IsMdiContainer = true;
                 frmThongKe thongKe = new frmThongKe();
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThongKe_FormClosed);
@@ -194,6 +195,11 @@ namespace GUI_QLcoffee
         {
             this.Refresh();
             frmMain_Load(sender, e);
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
