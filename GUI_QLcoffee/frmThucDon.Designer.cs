@@ -68,9 +68,9 @@
             this.gpbThucDon.Controls.Add(this.gpbThongTin);
             this.gpbThucDon.Controls.Add(this.lblThucDon);
             this.gpbThucDon.Location = new System.Drawing.Point(2, 2);
-            this.gpbThucDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThucDon.Margin = new System.Windows.Forms.Padding(2);
             this.gpbThucDon.Name = "gpbThucDon";
-            this.gpbThucDon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThucDon.Padding = new System.Windows.Forms.Padding(2);
             this.gpbThucDon.Size = new System.Drawing.Size(659, 519);
             this.gpbThucDon.TabIndex = 2;
             this.gpbThucDon.TabStop = false;
@@ -81,13 +81,14 @@
             this.btnXoa.Image = global::GUI_QLcoffee.Properties.Resources.Xoa;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(238, 204);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 39);
             this.btnXoa.TabIndex = 34;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
@@ -95,7 +96,7 @@
             this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Thoat;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(507, 204);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(84, 39);
             this.btnThoat.TabIndex = 33;
@@ -110,7 +111,7 @@
             this.btnBoqua.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Remove_27874;
             this.btnBoqua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBoqua.Location = new System.Drawing.Point(418, 204);
-            this.btnBoqua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBoqua.Margin = new System.Windows.Forms.Padding(2);
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(85, 39);
             this.btnBoqua.TabIndex = 32;
@@ -124,12 +125,13 @@
             this.btnSua.Image = global::GUI_QLcoffee.Properties.Resources.Sua;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(322, 204);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 39);
             this.btnSua.TabIndex = 31;
             this.btnSua.Text = "        Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -137,7 +139,7 @@
             this.btnLuu.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Save_27876;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(156, 204);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(78, 39);
             this.btnLuu.TabIndex = 30;
@@ -152,7 +154,7 @@
             this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them1;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(71, 204);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(81, 39);
             this.btnThem.TabIndex = 29;
@@ -166,7 +168,7 @@
             this.btnSearch.Image = global::GUI_QLcoffee.Properties.Resources.icons8_search_32;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Location = new System.Drawing.Point(398, 257);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(86, 35);
             this.btnSearch.TabIndex = 28;
@@ -177,7 +179,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtSearch.Location = new System.Drawing.Point(213, 257);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(175, 36);
@@ -185,14 +187,17 @@
             // 
             // dgvThucDon
             // 
+            this.dgvThucDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThucDon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThucDon.Location = new System.Drawing.Point(45, 308);
-            this.dgvThucDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvThucDon.Margin = new System.Windows.Forms.Padding(2);
             this.dgvThucDon.Name = "dgvThucDon";
             this.dgvThucDon.RowHeadersWidth = 51;
             this.dgvThucDon.RowTemplate.Height = 24;
             this.dgvThucDon.Size = new System.Drawing.Size(580, 191);
             this.dgvThucDon.TabIndex = 13;
+            this.dgvThucDon.Click += new System.EventHandler(this.dgvThucDon_Click);
             // 
             // gpbThongTin
             // 
@@ -206,9 +211,9 @@
             this.gpbThongTin.Controls.Add(this.lblMaTD);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.gpbThongTin.Location = new System.Drawing.Point(45, 46);
-            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.gpbThongTin.Name = "gpbThongTin";
-            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(2);
             this.gpbThongTin.Size = new System.Drawing.Size(580, 145);
             this.gpbThongTin.TabIndex = 2;
             this.gpbThongTin.TabStop = false;
@@ -218,7 +223,7 @@
             // 
             this.picThucDon.Image = global::GUI_QLcoffee.Properties.Resources.avtkhung;
             this.picThucDon.Location = new System.Drawing.Point(418, 10);
-            this.picThucDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picThucDon.Margin = new System.Windows.Forms.Padding(2);
             this.picThucDon.Name = "picThucDon";
             this.picThucDon.Size = new System.Drawing.Size(127, 130);
             this.picThucDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,18 +234,19 @@
             // 
             this.btnHinhAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnHinhAnh.Location = new System.Drawing.Point(327, 62);
-            this.btnHinhAnh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHinhAnh.Margin = new System.Windows.Forms.Padding(2);
             this.btnHinhAnh.Name = "btnHinhAnh";
             this.btnHinhAnh.Size = new System.Drawing.Size(80, 38);
             this.btnHinhAnh.TabIndex = 13;
             this.btnHinhAnh.Text = "Hình Ảnh";
             this.btnHinhAnh.UseVisualStyleBackColor = true;
+            this.btnHinhAnh.Click += new System.EventHandler(this.btnHinhAnh_Click);
             // 
             // txtGia
             // 
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtGia.Location = new System.Drawing.Point(139, 103);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtGia.Multiline = true;
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(156, 26);
@@ -250,7 +256,7 @@
             // 
             this.txtTenTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtTenTD.Location = new System.Drawing.Point(139, 66);
-            this.txtTenTD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTD.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTD.Multiline = true;
             this.txtTenTD.Name = "txtTenTD";
             this.txtTenTD.Size = new System.Drawing.Size(156, 26);
@@ -260,7 +266,7 @@
             // 
             this.txtMaTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtMaTD.Location = new System.Drawing.Point(139, 28);
-            this.txtMaTD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaTD.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaTD.Multiline = true;
             this.txtMaTD.Name = "txtMaTD";
             this.txtMaTD.Size = new System.Drawing.Size(156, 26);
@@ -317,7 +323,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 542);
             this.Controls.Add(this.gpbThucDon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThucDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThucDon";

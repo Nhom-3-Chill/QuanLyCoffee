@@ -55,7 +55,7 @@ namespace DAL_QLcoffee
                 connection.Open();
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
-                scm.CommandText = "ListTD";
+                scm.CommandText = "DanhSachTD";
                 scm.Connection = connection;
                 DataTable tb = new DataTable();
                 tb.Load(scm.ExecuteReader());
