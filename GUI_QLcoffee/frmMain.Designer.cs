@@ -157,7 +157,7 @@
             this.picMain.Location = new System.Drawing.Point(0, 139);
             this.picMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picMain.Name = "picMain";
-            this.picMain.Size = new System.Drawing.Size(1029, 528);
+            this.picMain.Size = new System.Drawing.Size(1029, 616);
             this.picMain.TabIndex = 5;
             this.picMain.TabStop = false;
             // 
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 663);
+            this.ClientSize = new System.Drawing.Size(1029, 753);
             this.Controls.Add(this.picMain);
             this.Controls.Add(this.lblTextMain);
             this.Controls.Add(this.lblUserName);

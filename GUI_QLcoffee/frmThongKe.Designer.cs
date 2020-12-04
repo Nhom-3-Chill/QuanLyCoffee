@@ -64,25 +64,25 @@
             this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbNhanvien.Name = "gpbNhanvien";
             this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbNhanvien.Size = new System.Drawing.Size(901, 564);
+            this.gpbNhanvien.Size = new System.Drawing.Size(901, 625);
             this.gpbNhanvien.TabIndex = 3;
             this.gpbNhanvien.TabStop = false;
             // 
             // dgvThongKe
             // 
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongKe.Location = new System.Drawing.Point(32, 212);
+            this.dgvThongKe.Location = new System.Drawing.Point(33, 271);
             this.dgvThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
-            this.dgvThongKe.Size = new System.Drawing.Size(833, 274);
+            this.dgvThongKe.Size = new System.Drawing.Size(833, 336);
             this.dgvThongKe.TabIndex = 21;
             // 
             // btnThongKe
             // 
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(213, 212);
+            this.btnThongKe.Location = new System.Drawing.Point(342, 212);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(228, 43);
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 591);
+            this.ClientSize = new System.Drawing.Size(928, 650);
             this.Controls.Add(this.gpbNhanvien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
