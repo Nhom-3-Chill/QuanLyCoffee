@@ -83,5 +83,12 @@ namespace GUI_QLcoffee
                 loaddata();
             }
         }
+
+        private void frmHoaDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

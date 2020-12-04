@@ -201,5 +201,12 @@ namespace GUI_QLcoffee
                 ResetValues();
             }
         }
+
+        private void frmThucDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

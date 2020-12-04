@@ -190,7 +190,7 @@
             // 
             // hoaDonToolStripMenuItem
             // 
-            this.hoaDonToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Hoa_Don2;
+            this.hoaDonToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Hoa_Don;
             this.hoaDonToolStripMenuItem.Name = "hoaDonToolStripMenuItem";
             this.hoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
             this.hoaDonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
@@ -222,6 +222,7 @@
             this.thucDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
             this.thucDonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thucDonToolStripMenuItem.Text = "Thực Đơn";
+            this.thucDonToolStripMenuItem.Click += new System.EventHandler(this.thucDonToolStripMenuItem_Click);
             // 
             // frmMain
             // 

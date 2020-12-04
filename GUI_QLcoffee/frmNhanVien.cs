@@ -311,5 +311,12 @@ namespace GUI_QLcoffee
             txtSearch.Text = null;
             txtSearch.BackColor = Color.White;
         }
+
+        private void frmNhanVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

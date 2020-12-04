@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Hoa_Don1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\Hoa_Don1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ly_coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\ly_coffee.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,6 +162,9 @@
   </data>
   <data name="iconfinder_Remove_27874" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Remove_27874.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoa_Don2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dang_nhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\dang_nhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,7 @@
   <data name="Them" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hoa_Don2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Hoa_Don3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

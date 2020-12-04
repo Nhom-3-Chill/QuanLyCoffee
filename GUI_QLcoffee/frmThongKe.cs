@@ -36,5 +36,12 @@ namespace GUI_QLcoffee
         {
             thongkesanpham();
         }
+
+        private void frmThongKe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

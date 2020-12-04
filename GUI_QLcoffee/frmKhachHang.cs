@@ -227,5 +227,12 @@ namespace GUI_QLcoffee
             txtSearch.Text = null;
             txtSearch.BackColor = Color.LightGray;
         }
+
+        private void frmKhachHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }

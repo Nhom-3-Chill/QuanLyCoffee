@@ -179,6 +179,25 @@ namespace GUI_QLcoffee
             frmMain_Load(sender, e);
         }
 
+        private void thucDonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("frmThucDon"))
+            {
+                this.IsMdiContainer = true;
+                frmThucDon thongKe = new frmThucDon();
+                thongKe.MdiParent = this;
+                thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);
+                thongKe.Show();
+                Hidencontrol();
+            }
+        }
+
+        void frmThucDon_FormClosed(object sender, EventArgs e)
+        {
+            this.Refresh();
+            frmMain_Load(sender, e);
+        }
+
         private void thongKeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!CheckExistForm("frmThongKe"))
