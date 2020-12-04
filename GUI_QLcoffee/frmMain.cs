@@ -131,7 +131,7 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmHoaDon"))
             {
                 frmHoaDon hoaDon = new frmHoaDon();
-                hoaDon.MdiParent = this;
+                this.IsMdiContainer = true;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
                 Hidencontrol();
@@ -166,6 +166,7 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmNhanVien"))
             {
                 frmNhanVien nhanVien = new frmNhanVien();
+                this.IsMdiContainer = true;
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
                 nhanVien.Show();

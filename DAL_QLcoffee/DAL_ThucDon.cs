@@ -12,6 +12,26 @@ namespace DAL_QLcoffee
 {
     public class DAL_ThucDon : DataConnect
     {
+
+        //static void Main(string[] args)
+        //{
+        //    var exampleClass = new ExampleClass();
+        //    var returnedClass = exampleClass.ExampleMethod();
+        //    returnedClass.AnotherExampleMethod();
+        //}
+        //class ExampleClass
+        //{
+        //    public ReturnedClass ExampleMethod()
+        //    {
+        //        return null;
+        //    }
+        //}
+        //class ReturnedClass
+        //{
+        //    public void AnotherExampleMethod()
+        //    {
+        //    }
+        //}
         // Bo sung 3 ham:
         public DataTable DanhSachTenMon()
         {
@@ -41,7 +61,7 @@ namespace DAL_QLcoffee
                 scm.CommandText = "DonGiaMon";
                 scm.Parameters.AddWithValue("@tenmon", tenmon);
                 scm.Connection = connection;
-                return scm.ExecuteScalar().ToString();
+                return Convert.ToString(scm.ExecuteScalar());
             }
             finally
             {
