@@ -193,6 +193,36 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hoa_Don {
+            get {
+                object obj = ResourceManager.GetObject("Hoa_Don", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoa_Don1 {
+            get {
+                object obj = ResourceManager.GetObject("Hoa_Don1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoa_Don2 {
+            get {
+                object obj = ResourceManager.GetObject("Hoa_Don2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Add_27831 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Add_27831", resourceCulture);
@@ -326,6 +356,16 @@ namespace GUI_QLcoffee.Properties {
         internal static System.Drawing.Bitmap Thuc_don {
             get {
                 object obj = ResourceManager.GetObject("Thuc_don", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thuc_don1 {
+            get {
+                object obj = ResourceManager.GetObject("Thuc_don1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
