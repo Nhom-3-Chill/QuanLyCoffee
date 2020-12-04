@@ -200,5 +200,32 @@ namespace GUI_QLcoffee
                 MessageBox.Show("Không có thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string TenKH = txtSearch.Text;
+            DataTable table = buskhachhang.TimKiemKhachHang(TenKH);
+            if (table.Rows.Count > 0)
+            {
+                dgvKhachHang.DataSource = table;
+                dgvKhachHang.Columns[0].HeaderText = "MaKH";
+                dgvKhachHang.Columns[1].HeaderText = "TenKH";
+                dgvKhachHang.Columns[2].HeaderText = "DienThoai";
+                dgvKhachHang.Columns[3].HeaderText = "Email";
+                dgvKhachHang.Columns[4].HeaderText = "DiaChi";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ResetValues();
+            txtSearch.BackColor = Color.White;
+        }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = null;
+            txtSearch.BackColor = Color.LightGray;
+        }
     }
 }

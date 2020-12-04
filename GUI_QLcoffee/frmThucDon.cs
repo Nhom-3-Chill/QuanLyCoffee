@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace GUI_QLcoffee
     public partial class frmThucDon : Form
     {
         BUS_ThucDon busthucdon = new BUS_ThucDon();
+        string checkUrlImage;
+        string fileName;
+        string fileSavePath;
+        string fileAddress;
 
         public frmThucDon()
         {
@@ -58,7 +63,7 @@ namespace GUI_QLcoffee
             txtMaTD.Text = null;
             txtTenTD.Text = null;
             txtGia.Text = null;
-            txtMaTD.Enabled = true;
+            txtMaTD.Enabled = false;
             txtTenTD.Enabled = true;
             txtGia.Enabled = true;
             btnHinhAnh.Enabled = true;
@@ -80,10 +85,6 @@ namespace GUI_QLcoffee
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaTD.Text == "")
-            {
-                MessageBox.Show("Bạn phải nhập mã thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             if (txtTenTD.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập tên thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -96,7 +97,7 @@ namespace GUI_QLcoffee
             {
                 MessageBox.Show("Bạn phải nhập hình ảnh của thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtMaTD.Text != "" && txtTenTD.Text != "" && txtGia.Text != "")
+            if (txtTenTD.Text != "" && txtGia.Text != "")
             {
                 DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
                 if (busthucdon.LuuThucDon(dtothucdon))
@@ -109,6 +110,89 @@ namespace GUI_QLcoffee
                 {
                     MessageBox.Show("Thêm thực đơn thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnHinhAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            dialog.FilterIndex = 2;
+            dialog.Title = "Chọn ảnh cho thực đơn";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                fileAddress = dialog.FileName;
+                picThucDon.BackgroundImage = Image.FromFile(fileAddress);
+                picThucDon.BackgroundImageLayout = ImageLayout.Stretch;
+                fileName = Path.GetFileName(dialog.FileName);
+                string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                fileSavePath = saveDirectory + "\\Images\\" + fileName;
+            }
+        }
+
+        private void dgvThucDon_Click(object sender, EventArgs e)
+        {
+            if (dgvThucDon.Rows.Count > 1)
+            {
+                txtTenTD.Enabled = true;
+                txtGia.Enabled = true;
+                btnHinhAnh.Enabled = true;
+                btnThem.Enabled = true;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                btnBoqua.Enabled = true;
+                btnThoat.Enabled = true;
+                txtTenTD.Text = dgvThucDon.CurrentRow.Cells[0].Value.ToString();
+                txtGia.Text = dgvThucDon.CurrentRow.Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bảng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string MaTD = txtMaTD.Text;
+                if (busthucdon.XoaThucDon(int.Parse(MaTD)))
+                {
+                    MessageBox.Show("Xóa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResetValues();
+                    load_thucdon();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thực đơn thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ResetValues();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+            if (MessageBox.Show("Bạn có muốn sửa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (busthucdon.SuaThucDon(dtothucdon))
+                {
+                    MessageBox.Show("Sửa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResetValues();
+                    load_thucdon();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thực đơn thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ResetValues();
             }
         }
     }
