@@ -62,9 +62,9 @@
             this.gpbNhanvien.Controls.Add(this.gpbThongTin);
             this.gpbNhanvien.Controls.Add(this.lblThongKe);
             this.gpbNhanvien.Location = new System.Drawing.Point(11, 11);
-            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.gpbNhanvien.Name = "gpbNhanvien";
-            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(2);
             this.gpbNhanvien.Size = new System.Drawing.Size(551, 458);
             this.gpbNhanvien.TabIndex = 3;
             this.gpbNhanvien.TabStop = false;
@@ -73,7 +73,7 @@
             // 
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongKe.Location = new System.Drawing.Point(24, 172);
-            this.dgvThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
             this.dgvThongKe.Size = new System.Drawing.Size(498, 223);
@@ -84,7 +84,7 @@
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.Location = new System.Drawing.Point(160, 172);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(171, 35);
             this.btnThongKe.TabIndex = 20;
@@ -100,9 +100,9 @@
             this.gpbThongTin.Controls.Add(this.lblBatDau);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.gpbThongTin.Location = new System.Drawing.Point(32, 57);
-            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.gpbThongTin.Name = "gpbThongTin";
-            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbThongTin.Padding = new System.Windows.Forms.Padding(2);
             this.gpbThongTin.Size = new System.Drawing.Size(419, 99);
             this.gpbThongTin.TabIndex = 3;
             this.gpbThongTin.TabStop = false;
@@ -111,12 +111,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-<<<<<<< Updated upstream
-            this.dateTimePicker2.Location = new System.Drawing.Point(215, 78);
-=======
-            this.dateTimePicker2.Location = new System.Drawing.Point(152, 58);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
+            this.dateTimePicker2.Location = new System.Drawing.Point(153, 59);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(217, 23);
             this.dateTimePicker2.TabIndex = 3;
@@ -124,12 +119,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-<<<<<<< Updated upstream
-            this.dateTimePicker1.Location = new System.Drawing.Point(215, 36);
-=======
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 24);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
+            this.dateTimePicker1.Location = new System.Drawing.Point(153, 25);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(217, 23);
             this.dateTimePicker1.TabIndex = 2;
