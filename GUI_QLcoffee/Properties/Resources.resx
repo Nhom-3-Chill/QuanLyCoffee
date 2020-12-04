@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Hoa_Don1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ly_coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\ly_coffee.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="avtkhung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avtkhung.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_Add_27831" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_Add_27831.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dong_y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dong_y.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +162,9 @@
   </data>
   <data name="iconfinder_Remove_27874" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Remove_27874.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoa_Don2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dang_nhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\dang_nhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +178,9 @@
   <data name="Nhan_vien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\Nhan_vien.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Thuc_don1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\Thuc_don.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DoiMK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\DoiMK.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +190,8 @@
   <data name="dang_nhap2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\dang_nhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Them1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Them1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dong_y1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dong_y1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Xoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xoa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +199,14 @@
   <data name="Khach_hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\Khach_hang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Them1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Them1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Thuc_don" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\Thuc_don.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dong_y1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dong_y1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hoa_Don" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Thoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +214,7 @@
   <data name="Them" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_Add_27831" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Add_27831.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hoa_Don3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\Hoa_Don.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

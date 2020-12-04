@@ -12,6 +12,26 @@ namespace DAL_QLcoffee
 {
     public class DAL_ThucDon : DataConnect
     {
+
+        //static void Main(string[] args)
+        //{
+        //    var exampleClass = new ExampleClass();
+        //    var returnedClass = exampleClass.ExampleMethod();
+        //    returnedClass.AnotherExampleMethod();
+        //}
+        //class ExampleClass
+        //{
+        //    public ReturnedClass ExampleMethod()
+        //    {
+        //        return null;
+        //    }
+        //}
+        //class ReturnedClass
+        //{
+        //    public void AnotherExampleMethod()
+        //    {
+        //    }
+        //}
         // Bo sung 3 ham:
         public DataTable DanhSachTenMon()
         {
@@ -41,7 +61,7 @@ namespace DAL_QLcoffee
                 scm.CommandText = "DonGiaMon";
                 scm.Parameters.AddWithValue("@tenmon", tenmon);
                 scm.Connection = connection;
-                return scm.ExecuteScalar().ToString();
+                return Convert.ToString(scm.ExecuteScalar());
             }
             finally
             {
@@ -80,7 +100,7 @@ namespace DAL_QLcoffee
                 connection.Open();
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
-                scm.CommandText = "ListTD";
+                scm.CommandText = "DanhSachTD";
                 scm.Connection = connection;
                 DataTable tb = new DataTable();
                 tb.Load(scm.ExecuteReader());
@@ -101,6 +121,7 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "InsertTD";
+                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia",  td.Gia);
                 scm.Parameters.AddWithValue("@HinhAnh", td.HinhAnh);
@@ -128,6 +149,7 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "UpdateTD";
+                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia", td.Gia);
                 scm.Parameters.AddWithValue("@HinhAnh", td.HinhAnh);

@@ -17,10 +17,9 @@ namespace GUI_QLcoffee
         BUS_ThucDon bus_Thucdon = new BUS_ThucDon();
         DataTable dt = new DataTable();
         float dem = 0;
-        public frmHoaDon(string tennv)
+        public frmHoaDon()
         {
             InitializeComponent();
-            lblTenNV.Text = tennv;
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
@@ -30,27 +29,17 @@ namespace GUI_QLcoffee
         }
         public void loaddata()
         {
-            DataTable dsmon = bus_Thucdon.DanhSachTenMon();
-            cboTenMon.DataSource = dsmon;
-            cboTenMon.DisplayMember = "TenTD";
-            cboTenMon.ValueMember = "TenTD";
-            DataTable dskh = bus_Khachhang.DanhSachTenKhach();
-            cboTenKH.DataSource = dskh;
-            cboTenKH.DisplayMember = "TenKhach";
-            cboTenKH.ValueMember = "TenKhach";
-            NumSoLuong.Value = 0;
-            dt.Clear();
-            try
-            {
-                dt.Columns.Add("TenNV");
-                dt.Columns.Add("TenKH");
-                dt.Columns.Add("TenMon");
-                dt.Columns.Add("SoLuong");
-                dt.Columns.Add("DonGia");
-                dt.Columns.Add("ThanhTien");
-            }
-            catch (Exception)
-            { }
+            //DataTable dsmon = bus_Thucdon.DanhSachTenMon();
+            //cboTenMon.DataSource = dsmon;
+            //DataTable dskh = bus_Khachhang.DanhSachTenKhach();
+            //cboTenKH.DataSource = dskh;
+            //dt.Clear();
+            dt.Columns.Add("TenNV");
+            dt.Columns.Add("TenKH");
+            dt.Columns.Add("TenMon");
+            dt.Columns.Add("SoLuong");
+            dt.Columns.Add("DonGia");
+            dt.Columns.Add("ThanhTien");
             dgvHoaDon.DataSource = dt;
         }
         public void loadtongtien()
@@ -71,7 +60,7 @@ namespace GUI_QLcoffee
                 adddt["DonGia"] = int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text));
                 adddt["ThanhTien"] = (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
                 dt.Rows.Add(adddt);
-                dem += (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
+                dem += int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text));
             }
             catch(Exception x)
             {
@@ -79,9 +68,7 @@ namespace GUI_QLcoffee
             }
             finally
             {
-                txtTongtien.Text = dem.ToString();
-                //txtTongtien.Text = (dem * (float.Parse(txtGiamgia.Text) / 100)).ToString();
-                //MessageBox.Show((dem * (float.Parse(txtGiamgia.Text) / 100)).ToString());
+                txtTongtien.Text = (dem * (float.Parse(txtGiamgia.Text) / 100)).ToString();
                 dgvHoaDon.DataSource = dt;
             }
         }
@@ -97,12 +84,11 @@ namespace GUI_QLcoffee
             }
         }
 
-        private void frmHoaDon_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmHoaDon_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Muốn Thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
         }
     }
 }

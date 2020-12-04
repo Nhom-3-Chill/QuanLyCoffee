@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_QLcoffee;
+using DTO_QLcoffee;
 
 namespace GUI_QLcoffee
 {
     public partial class frmThongKe : Form
     {
+        BUS_ThucDon busthucdon = new BUS_ThucDon();
+
         public frmThongKe()
         {
             InitializeComponent();
@@ -20,6 +24,7 @@ namespace GUI_QLcoffee
         private void thongkesanpham()
         {
             //dgvThongKe.DataSource = busthucdon.XemThongKe();
+            ////dgvThongKe.DataSource = busthucdon.XemThongKe();
             //dgvThongKe.Columns[0].HeaderText = "ngayBD";
             //dgvThongKe.Columns[1].HeaderText = "ngayKT";
             //dgvThongKe.Columns[2].HeaderText = "TenTD";
@@ -32,9 +37,11 @@ namespace GUI_QLcoffee
             thongkesanpham();
         }
 
-        private void frmThongKe_Load(object sender, EventArgs e)
+        private void frmThongKe_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            this.Refresh();
+            frmMain frm = new frmMain();
+            frm.Show();
         }
     }
 }

@@ -31,13 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.heThongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doiMatKhauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMucToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hoaDonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.khachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thongKeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.huongDanSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTenDN = new System.Windows.Forms.Label();
@@ -46,6 +40,13 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblTextMain = new System.Windows.Forms.Label();
             this.picMain = new System.Windows.Forms.PictureBox();
+            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doiMatKhauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hoaDonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.khachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thucDonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
             this.SuspendLayout();
@@ -75,69 +76,16 @@
             this.heThongToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.heThongToolStripMenuItem.Text = "Hệ thống";
             // 
-            // dangXuatToolStripMenuItem
-            // 
-            this.dangXuatToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Dang_xuat;
-            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
-            this.dangXuatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.dangXuatToolStripMenuItem.Text = "Đăng Xuất";
-            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
-            // 
-            // doiMatKhauToolStripMenuItem
-            // 
-            this.doiMatKhauToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.DoiMK1;
-            this.doiMatKhauToolStripMenuItem.Name = "doiMatKhauToolStripMenuItem";
-            this.doiMatKhauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.doiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.doiMatKhauToolStripMenuItem.Text = "Đổi Mật Khẩu";
-            this.doiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.doiMatKhauToolStripMenuItem_Click);
-            // 
-            // thoatToolStripMenuItem
-            // 
-            this.thoatToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Exit2;
-            this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.thoatToolStripMenuItem.Text = "Thoát";
-            this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
-            // 
             // danhMucToolStripMenuItem
             // 
             this.danhMucToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hoaDonToolStripMenuItem,
             this.khachHangToolStripMenuItem,
-            this.nhanVienToolStripMenuItem});
+            this.nhanVienToolStripMenuItem,
+            this.thucDonToolStripMenuItem});
             this.danhMucToolStripMenuItem.Name = "danhMucToolStripMenuItem";
             this.danhMucToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.danhMucToolStripMenuItem.Text = "Danh mục";
-            // 
-            // hoaDonToolStripMenuItem
-            // 
-            this.hoaDonToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Thuc_don;
-            this.hoaDonToolStripMenuItem.Name = "hoaDonToolStripMenuItem";
-            this.hoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
-            this.hoaDonToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
-            this.hoaDonToolStripMenuItem.Text = "Hóa Đơn";
-            this.hoaDonToolStripMenuItem.Click += new System.EventHandler(this.hoaDonToolStripMenuItem_Click);
-            // 
-            // khachHangToolStripMenuItem
-            // 
-            this.khachHangToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Khach_hang;
-            this.khachHangToolStripMenuItem.Name = "khachHangToolStripMenuItem";
-            this.khachHangToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.khachHangToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
-            this.khachHangToolStripMenuItem.Text = "Khách Hàng";
-            this.khachHangToolStripMenuItem.Click += new System.EventHandler(this.khachHangToolStripMenuItem_Click);
-            // 
-            // nhanVienToolStripMenuItem
-            // 
-            this.nhanVienToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Nhan_vien1;
-            this.nhanVienToolStripMenuItem.Name = "nhanVienToolStripMenuItem";
-            this.nhanVienToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-            this.nhanVienToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
-            this.nhanVienToolStripMenuItem.Text = "Nhân Viên";
-            this.nhanVienToolStripMenuItem.Click += new System.EventHandler(this.nhanVienToolStripMenuItem_Click);
             // 
             // thongKeToolStripMenuItem
             // 
@@ -195,7 +143,7 @@
             this.lblTextMain.AutoSize = true;
             this.lblTextMain.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextMain.ForeColor = System.Drawing.Color.Red;
-            this.lblTextMain.Location = new System.Drawing.Point(307, 98);
+            this.lblTextMain.Location = new System.Drawing.Point(307, 81);
             this.lblTextMain.Name = "lblTextMain";
             this.lblTextMain.Size = new System.Drawing.Size(369, 37);
             this.lblTextMain.TabIndex = 4;
@@ -206,18 +154,81 @@
             // 
             this.picMain.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.ly_coffee;
             this.picMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMain.Location = new System.Drawing.Point(0, 156);
+            this.picMain.Location = new System.Drawing.Point(0, 139);
             this.picMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picMain.Name = "picMain";
-            this.picMain.Size = new System.Drawing.Size(1029, 608);
+            this.picMain.Size = new System.Drawing.Size(1029, 528);
             this.picMain.TabIndex = 5;
             this.picMain.TabStop = false;
+            // 
+            // dangXuatToolStripMenuItem
+            // 
+            this.dangXuatToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Dang_xuat;
+            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
+            this.dangXuatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.dangXuatToolStripMenuItem.Text = "Đăng Xuất";
+            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
+            // 
+            // doiMatKhauToolStripMenuItem
+            // 
+            this.doiMatKhauToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.DoiMK1;
+            this.doiMatKhauToolStripMenuItem.Name = "doiMatKhauToolStripMenuItem";
+            this.doiMatKhauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.doiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.doiMatKhauToolStripMenuItem.Text = "Đổi Mật Khẩu";
+            this.doiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.doiMatKhauToolStripMenuItem_Click);
+            // 
+            // thoatToolStripMenuItem
+            // 
+            this.thoatToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Exit2;
+            this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
+            this.thoatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.thoatToolStripMenuItem.Text = "Thoát";
+            this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
+            // 
+            // hoaDonToolStripMenuItem
+            // 
+            this.hoaDonToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Hoa_Don;
+            this.hoaDonToolStripMenuItem.Name = "hoaDonToolStripMenuItem";
+            this.hoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
+            this.hoaDonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hoaDonToolStripMenuItem.Text = "Hóa Đơn";
+            this.hoaDonToolStripMenuItem.Click += new System.EventHandler(this.hoaDonToolStripMenuItem_Click);
+            // 
+            // khachHangToolStripMenuItem
+            // 
+            this.khachHangToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Khach_hang;
+            this.khachHangToolStripMenuItem.Name = "khachHangToolStripMenuItem";
+            this.khachHangToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
+            this.khachHangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.khachHangToolStripMenuItem.Text = "Khách Hàng";
+            this.khachHangToolStripMenuItem.Click += new System.EventHandler(this.khachHangToolStripMenuItem_Click);
+            // 
+            // nhanVienToolStripMenuItem
+            // 
+            this.nhanVienToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Nhan_vien1;
+            this.nhanVienToolStripMenuItem.Name = "nhanVienToolStripMenuItem";
+            this.nhanVienToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
+            this.nhanVienToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nhanVienToolStripMenuItem.Text = "Nhân Viên";
+            this.nhanVienToolStripMenuItem.Click += new System.EventHandler(this.nhanVienToolStripMenuItem_Click);
+            // 
+            // thucDonToolStripMenuItem
+            // 
+            this.thucDonToolStripMenuItem.Image = global::GUI_QLcoffee.Properties.Resources.Thuc_don1;
+            this.thucDonToolStripMenuItem.Name = "thucDonToolStripMenuItem";
+            this.thucDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
+            this.thucDonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thucDonToolStripMenuItem.Text = "Thực Đơn";
+            this.thucDonToolStripMenuItem.Click += new System.EventHandler(this.thucDonToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 760);
+            this.ClientSize = new System.Drawing.Size(1029, 663);
             this.Controls.Add(this.picMain);
             this.Controls.Add(this.lblTextMain);
             this.Controls.Add(this.lblUserName);
@@ -260,5 +271,6 @@
         private System.Windows.Forms.ToolStripMenuItem khachHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhanVienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thucDonToolStripMenuItem;
     }
 }

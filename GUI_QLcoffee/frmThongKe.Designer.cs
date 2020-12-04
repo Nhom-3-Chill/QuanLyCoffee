@@ -48,7 +48,7 @@
             this.lblThongKe.AutoSize = true;
             this.lblThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblThongKe.ForeColor = System.Drawing.Color.Red;
-            this.lblThongKe.Location = new System.Drawing.Point(220, 18);
+            this.lblThongKe.Location = new System.Drawing.Point(389, 21);
             this.lblThongKe.Name = "lblThongKe";
             this.lblThongKe.Size = new System.Drawing.Size(153, 36);
             this.lblThongKe.TabIndex = 1;
@@ -64,7 +64,7 @@
             this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbNhanvien.Name = "gpbNhanvien";
             this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbNhanvien.Size = new System.Drawing.Size(735, 564);
+            this.gpbNhanvien.Size = new System.Drawing.Size(901, 564);
             this.gpbNhanvien.TabIndex = 3;
             this.gpbNhanvien.TabStop = false;
             // 
@@ -72,9 +72,10 @@
             // 
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongKe.Location = new System.Drawing.Point(32, 212);
+            this.dgvThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
-            this.dgvThongKe.Size = new System.Drawing.Size(664, 274);
+            this.dgvThongKe.Size = new System.Drawing.Size(833, 274);
             this.dgvThongKe.TabIndex = 21;
             // 
             // btnThongKe
@@ -97,7 +98,7 @@
             this.gpbThongTin.Controls.Add(this.lblKetThuc);
             this.gpbThongTin.Controls.Add(this.lblBatDau);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.gpbThongTin.Location = new System.Drawing.Point(43, 70);
+            this.gpbThongTin.Location = new System.Drawing.Point(180, 69);
             this.gpbThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbThongTin.Name = "gpbThongTin";
             this.gpbThongTin.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -109,7 +110,8 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(169, 59);
+            this.dateTimePicker2.Location = new System.Drawing.Point(204, 73);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(288, 26);
             this.dateTimePicker2.TabIndex = 3;
@@ -117,7 +119,8 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(204, 31);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(288, 26);
             this.dateTimePicker1.TabIndex = 2;
@@ -146,12 +149,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 591);
+            this.ClientSize = new System.Drawing.Size(928, 591);
             this.Controls.Add(this.gpbNhanvien);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThongKe";
+            this.Text = "Quản Lý Thống Kê";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmThongKe_FormClosed);
             this.gpbNhanvien.ResumeLayout(false);
             this.gpbNhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
