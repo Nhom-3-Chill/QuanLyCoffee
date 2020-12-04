@@ -260,6 +260,22 @@ namespace DAL_QLcoffee
             return false;
         }
 
+        public string getTenNV(string email)
+        {
+            try
+            {
+                connection.Open();
+                string query = "select TenNV from NHANVIEN where Email=@email";
+                SqlCommand scm = new SqlCommand(query, connection);
+                scm.Parameters.AddWithValue("@email", email);
+                return Convert.ToString(scm.ExecuteScalar());
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public DataTable TimKiemNhanVien(string TenNV)
         {
             try
