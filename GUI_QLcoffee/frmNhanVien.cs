@@ -21,6 +21,11 @@ namespace GUI_QLcoffee
             //testcommit
         }
 
+        private void gpbNhanvien_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             resetvalue();
@@ -98,10 +103,10 @@ namespace GUI_QLcoffee
                     else { rdbtnAdmin.Checked = true; rdbtnNV.Checked = false; }
                     if (int.Parse(dgvNhanVien.CurrentRow.Cells[5].Value.ToString()) == 0)
                     {
-                        rdbtnHD.Checked = false;
-                        rdbtnNgungHD.Checked = true;
+                        rdbtnHD.Checked = true;
+                        rdbtnNgungHD.Checked = false;
                     }
-                    else { rdbtnNgungHD.Checked = false; rdbtnHD.Checked = true; }
+                    else { rdbtnNgungHD.Checked = true; rdbtnHD.Checked = false; }
                 }
                 catch (Exception x)
                 {
@@ -310,13 +315,6 @@ namespace GUI_QLcoffee
         {
             txtSearch.Text = null;
             txtSearch.BackColor = Color.White;
-        }
-
-        private void frmNhanVien_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Refresh();
-            frmMain frm = new frmMain();
-            frm.Show();
         }
     }
 }
