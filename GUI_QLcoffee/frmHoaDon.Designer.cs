@@ -46,6 +46,7 @@
             this.btnThemmon = new System.Windows.Forms.Button();
             this.lblTenKH = new System.Windows.Forms.Label();
             this.lblTenMon = new System.Windows.Forms.Label();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTenNV);
             this.groupBox1.Controls.Add(this.lblHoaDon);
             this.groupBox1.Controls.Add(this.lblTongTien);
             this.groupBox1.Controls.Add(this.txtTongtien);
@@ -239,6 +241,15 @@
             this.lblTenMon.TabIndex = 0;
             this.lblTenMon.Text = "Tên Món:";
             // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Location = new System.Drawing.Point(774, 18);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(0, 17);
+            this.lblTenNV.TabIndex = 23;
+            this.lblTenNV.Visible = false;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,5 +290,6 @@
         private System.Windows.Forms.Label lblHoaDon;
         private System.Windows.Forms.ComboBox cboTenKH;
         private System.Windows.Forms.ComboBox cboTenMon;
+        private System.Windows.Forms.Label lblTenNV;
     }
 }

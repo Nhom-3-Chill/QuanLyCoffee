@@ -183,6 +183,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmThongKe"))
             {
+                this.IsMdiContainer = true;
                 frmThongKe thongKe = new frmThongKe();
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThongKe_FormClosed);

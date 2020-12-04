@@ -49,5 +49,9 @@ namespace BUS_QLcoffee
         {
             return dal_ThucDon.DonGiaMon(tenmon);
         }
+        public bool ThanhToanTien(string tenkh, string tennv, DateTime ngaylap, float tongtien)
+        {
+            return dal_ThucDon.ThanhToanTien(tenkh, tennv, ngaylap, tongtien);
+        }
     }
 }
