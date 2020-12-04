@@ -16,7 +16,6 @@ namespace GUI_QLcoffee
     public partial class frmThucDon : Form
     {
         BUS_ThucDon busthucdon = new BUS_ThucDon();
-        string checkUrlImage;
         string fileName;
         string fileSavePath;
         string fileAddress;
@@ -63,7 +62,7 @@ namespace GUI_QLcoffee
             txtMaTD.Text = null;
             txtTenTD.Text = null;
             txtGia.Text = null;
-            txtMaTD.Enabled = false;
+            txtMaTD.Enabled = true;
             txtTenTD.Enabled = true;
             txtGia.Enabled = true;
             btnHinhAnh.Enabled = true;
@@ -85,6 +84,10 @@ namespace GUI_QLcoffee
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtMaTD.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập mã thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if (txtTenTD.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập tên thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -132,6 +135,7 @@ namespace GUI_QLcoffee
 
         private void dgvThucDon_Click(object sender, EventArgs e)
         {
+            string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
             if (dgvThucDon.Rows.Count > 1)
             {
                 txtTenTD.Enabled = true;
@@ -143,8 +147,10 @@ namespace GUI_QLcoffee
                 btnXoa.Enabled = true;
                 btnBoqua.Enabled = true;
                 btnThoat.Enabled = true;
-                txtTenTD.Text = dgvThucDon.CurrentRow.Cells[0].Value.ToString();
-                txtGia.Text = dgvThucDon.CurrentRow.Cells[1].Value.ToString();
+                txtMaTD.Text = dgvThucDon.CurrentRow.Cells[0].Value.ToString();
+                txtTenTD.Text = dgvThucDon.CurrentRow.Cells[1].Value.ToString();
+                txtGia.Text = dgvThucDon.CurrentRow.Cells[2].Value.ToString();
+                picThucDon.BackgroundImage = Image.FromFile(saveDirectory + dgvThucDon.CurrentRow.Cells["HinhAnh"].Value.ToString());
             }
             else
             {
