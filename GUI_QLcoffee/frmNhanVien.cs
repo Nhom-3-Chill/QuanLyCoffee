@@ -98,10 +98,10 @@ namespace GUI_QLcoffee
                     else { rdbtnAdmin.Checked = true; rdbtnNV.Checked = false; }
                     if (int.Parse(dgvNhanVien.CurrentRow.Cells[5].Value.ToString()) == 0)
                     {
-                        rdbtnHD.Checked = true;
-                        rdbtnNgungHD.Checked = false;
+                        rdbtnHD.Checked = false;
+                        rdbtnNgungHD.Checked = true;
                     }
-                    else { rdbtnNgungHD.Checked = true; rdbtnHD.Checked = false; }
+                    else { rdbtnNgungHD.Checked = false; rdbtnHD.Checked = true; }
                 }
                 catch (Exception x)
                 {
