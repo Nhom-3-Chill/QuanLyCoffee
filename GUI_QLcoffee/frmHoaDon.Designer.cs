@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.lblHoaDon = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.txtTongtien = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.btnThemmon = new System.Windows.Forms.Button();
             this.lblTenKH = new System.Windows.Forms.Label();
             this.lblTenMon = new System.Windows.Forms.Label();
-            this.lblTenNV = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
@@ -69,6 +69,15 @@
             this.groupBox1.Size = new System.Drawing.Size(886, 567);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Location = new System.Drawing.Point(774, 18);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(0, 17);
+            this.lblTenNV.TabIndex = 23;
+            this.lblTenNV.Visible = false;
             // 
             // lblHoaDon
             // 
@@ -241,15 +250,6 @@
             this.lblTenMon.TabIndex = 0;
             this.lblTenMon.Text = "Tên Món:";
             // 
-            // lblTenNV
-            // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Location = new System.Drawing.Point(774, 18);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(0, 17);
-            this.lblTenNV.TabIndex = 23;
-            this.lblTenNV.Visible = false;
-            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,6 +260,7 @@
             this.Name = "frmHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hóa Đơn";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDon_FormClosing);
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
