@@ -103,7 +103,7 @@ namespace GUI_QLcoffee
                 this.IsMdiContainer = true;
                 frmDoiMK profilenv = new frmDoiMK();
                 profilenv.MdiParent = this;
-                //profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
+                profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
                 Hidencontrol();
             }
@@ -112,11 +112,11 @@ namespace GUI_QLcoffee
                 ActiveChildForm("frmDoiMK");
             }
         }
-        //void frmDoiMK_FormClosed(object sender, EventArgs e)
-        //{
-        //    this.Refresh();
-        //    frmMain_Load(sender, e);
-        //}
+        void frmDoiMK_FormClosed(object sender, EventArgs e)
+        {
+            this.Refresh();
+            frmMain_Load(sender, e);
+        }
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
