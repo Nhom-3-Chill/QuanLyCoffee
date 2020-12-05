@@ -29,11 +29,11 @@ namespace GUI_QLcoffee
         }
         public void loaddata()
         {
-            //DataTable dsmon = bus_Thucdon.DanhSachTenMon();
-            //cboTenMon.DataSource = dsmon;
-            //DataTable dskh = bus_Khachhang.DanhSachTenKhach();
-            //cboTenKH.DataSource = dskh;
-            //dt.Clear();
+            DataTable dsmon = bus_Thucdon.DanhSachTenMon();
+            cboTenMon.DataSource = dsmon;
+            DataTable dskh = bus_Khachhang.DanhSachTenKhach();
+            cboTenKH.DataSource = dskh;
+            dt.Clear();
             dt.Columns.Add("TenNV");
             dt.Columns.Add("TenKH");
             dt.Columns.Add("TenMon");

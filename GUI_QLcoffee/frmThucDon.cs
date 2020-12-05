@@ -108,6 +108,7 @@ namespace GUI_QLcoffee
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
                     load_thucdon();
+                    File.Copy(fileAddress, fileSavePath, true);
                 }
                 else
                 {
@@ -190,6 +191,7 @@ namespace GUI_QLcoffee
                     MessageBox.Show("Sửa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
                     load_thucdon();
+                    File.Copy(fileAddress, fileSavePath, true);
                 }
                 else
                 {
@@ -207,6 +209,32 @@ namespace GUI_QLcoffee
             this.Refresh();
             frmMain frm = new frmMain();
             frm.Show();
+        }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = null;
+            txtSearch.BackColor = Color.LightGray;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string TenTD = txtTenTD.Text;
+            DataTable table = busthucdon.TimKiemThucDon(TenTD);
+            if (table.Rows.Count > 0)
+            {
+                dgvThucDon.DataSource = table;
+                dgvThucDon.Columns[0].HeaderText = "MaTD";
+                dgvThucDon.Columns[1].HeaderText = "TenTD";
+                dgvThucDon.Columns[2].HeaderText = "Gia";
+                dgvThucDon.Columns[3].HeaderText = "HinhAnh";
+            }
+            else
+            {
+                MessageBox.Show("Bảng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            txtSearch.BackColor = Color.White;
+            ResetValues();
         }
     }
 }
