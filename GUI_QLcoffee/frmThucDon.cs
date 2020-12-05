@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace GUI_QLcoffee
     public partial class frmThucDon : Form
     {
         BUS_ThucDon busthucdon = new BUS_ThucDon();
+        string fileName;
+        string fileSavePath;
+        string fileAddress;
 
         public frmThucDon()
         {
@@ -96,15 +100,14 @@ namespace GUI_QLcoffee
             {
                 MessageBox.Show("Bạn phải nhập hình ảnh của thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtMaTD.Text != "" && txtTenTD.Text != "" && txtGia.Text != "")
+            if (txtTenTD.Text != "" && txtGia.Text != "")
             {
-                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+                DTO_ThucDon dtothucdon = new DTO_ThucDon(txtMaTD.Text, txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
                 if (busthucdon.LuuThucDon(dtothucdon))
                 {
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
                     load_thucdon();
-                    File.Copy(fileAddress, fileSavePath, true);
                 }
                 else
                 {
@@ -112,7 +115,6 @@ namespace GUI_QLcoffee
                 }
             }
         }
-<<<<<<< HEAD
 
         private void btnHinhAnh_Click(object sender, EventArgs e)
         {
@@ -188,7 +190,6 @@ namespace GUI_QLcoffee
                     MessageBox.Show("Sửa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
                     load_thucdon();
-                    File.Copy(fileAddress, fileSavePath, true);
                 }
                 else
                 {
@@ -200,40 +201,5 @@ namespace GUI_QLcoffee
                 ResetValues();
             }
         }
-
-        private void frmThucDon_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Refresh();
-            frmMain frm = new frmMain();
-            frm.Show();
-        }
-
-        private void txtSearch_Click(object sender, EventArgs e)
-        {
-            txtSearch.Text = null;
-            txtSearch.BackColor = Color.LightGray;
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string TenTD = txtTenTD.Text;
-            DataTable table = busthucdon.TimKiemThucDon(TenTD);
-            if (table.Rows.Count > 0)
-            {
-                dgvThucDon.DataSource = table;
-                dgvThucDon.Columns[0].HeaderText = "MaTD";
-                dgvThucDon.Columns[1].HeaderText = "TenTD";
-                dgvThucDon.Columns[2].HeaderText = "Gia";
-                dgvThucDon.Columns[3].HeaderText = "HinhAnh";
-            }
-            else
-            {
-                MessageBox.Show("Bảng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            txtSearch.BackColor = Color.White;
-            ResetValues();
-        }
-=======
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
     }
 }

@@ -300,7 +300,6 @@
             this.gpbNhanvien.Size = new System.Drawing.Size(833, 618);
             this.gpbNhanvien.TabIndex = 1;
             this.gpbNhanvien.TabStop = false;
-            this.gpbNhanvien.Enter += new System.EventHandler(this.gpbNhanvien_Enter);
             // 
             // btnXoa
             // 

@@ -21,11 +21,6 @@ namespace GUI_QLcoffee
             //testcommit
         }
 
-        private void gpbNhanvien_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             resetvalue();

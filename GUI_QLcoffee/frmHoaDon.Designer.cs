@@ -66,12 +66,7 @@
             this.groupBox1.Controls.Add(this.gpbThongTin);
             this.groupBox1.Location = new System.Drawing.Point(6, 2);
             this.groupBox1.Name = "groupBox1";
-<<<<<<< HEAD
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(910, 567);
-=======
             this.groupBox1.Size = new System.Drawing.Size(886, 567);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -89,12 +84,7 @@
             this.lblHoaDon.AutoSize = true;
             this.lblHoaDon.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoaDon.ForeColor = System.Drawing.Color.Red;
-<<<<<<< HEAD
-            this.lblHoaDon.Location = new System.Drawing.Point(383, 18);
-            this.lblHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.lblHoaDon.Location = new System.Drawing.Point(380, 18);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.lblHoaDon.Name = "lblHoaDon";
             this.lblHoaDon.Size = new System.Drawing.Size(149, 38);
             this.lblHoaDon.TabIndex = 22;
@@ -104,12 +94,7 @@
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-<<<<<<< HEAD
-            this.lblTongTien.Location = new System.Drawing.Point(560, 514);
-            this.lblTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.lblTongTien.Location = new System.Drawing.Point(554, 514);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(98, 20);
             this.lblTongTien.TabIndex = 20;
@@ -118,12 +103,7 @@
             // txtTongtien
             // 
             this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-<<<<<<< HEAD
-            this.txtTongtien.Location = new System.Drawing.Point(681, 497);
-            this.txtTongtien.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtTongtien.Location = new System.Drawing.Point(675, 497);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.txtTongtien.Multiline = true;
             this.txtTongtien.Name = "txtTongtien";
             this.txtTongtien.Size = new System.Drawing.Size(133, 45);
@@ -133,12 +113,7 @@
             // 
             this.lblGiamGia.AutoSize = true;
             this.lblGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-<<<<<<< HEAD
-            this.lblGiamGia.Location = new System.Drawing.Point(82, 515);
-            this.lblGiamGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.lblGiamGia.Location = new System.Drawing.Point(76, 515);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.lblGiamGia.Name = "lblGiamGia";
             this.lblGiamGia.Size = new System.Drawing.Size(85, 20);
             this.lblGiamGia.TabIndex = 18;
@@ -148,12 +123,7 @@
             // 
             this.btnThanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-            this.btnThanhtoan.Location = new System.Drawing.Point(376, 491);
-            this.btnThanhtoan.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.btnThanhtoan.Location = new System.Drawing.Point(370, 491);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.btnThanhtoan.Name = "btnThanhtoan";
             this.btnThanhtoan.Size = new System.Drawing.Size(144, 53);
             this.btnThanhtoan.TabIndex = 19;
@@ -165,12 +135,7 @@
             // txtGiamgia
             // 
             this.txtGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-<<<<<<< HEAD
-            this.txtGiamgia.Location = new System.Drawing.Point(195, 497);
-            this.txtGiamgia.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtGiamgia.Location = new System.Drawing.Point(189, 497);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.txtGiamgia.Multiline = true;
             this.txtGiamgia.Name = "txtGiamgia";
             this.txtGiamgia.Size = new System.Drawing.Size(133, 45);
@@ -180,12 +145,7 @@
             // 
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-            this.dgvHoaDon.Location = new System.Drawing.Point(66, 197);
-            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.dgvHoaDon.Location = new System.Drawing.Point(60, 197);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
@@ -203,12 +163,7 @@
             this.gpbThongTin.Controls.Add(this.lblTenKH);
             this.gpbThongTin.Controls.Add(this.lblTenMon);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-<<<<<<< HEAD
-            this.gpbThongTin.Location = new System.Drawing.Point(66, 57);
-            this.gpbThongTin.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.gpbThongTin.Location = new System.Drawing.Point(60, 57);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.gpbThongTin.Name = "gpbThongTin";
             this.gpbThongTin.Size = new System.Drawing.Size(773, 134);
             this.gpbThongTin.TabIndex = 2;
@@ -265,12 +220,7 @@
             this.btnThemmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThemmon.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Add_27831;
             this.btnThemmon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-            this.btnThemmon.Location = new System.Drawing.Point(405, 51);
-            this.btnThemmon.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.btnThemmon.Location = new System.Drawing.Point(553, 67);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.btnThemmon.Name = "btnThemmon";
             this.btnThemmon.Size = new System.Drawing.Size(147, 49);
             this.btnThemmon.TabIndex = 22;
@@ -304,17 +254,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(928, 577);
-=======
             this.ClientSize = new System.Drawing.Size(898, 577);
->>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hóa Đơn";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDon_FormClosing);
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
