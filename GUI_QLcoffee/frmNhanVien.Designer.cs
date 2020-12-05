@@ -70,7 +70,7 @@
             this.lblNhanVien.AutoSize = true;
             this.lblNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblNhanVien.ForeColor = System.Drawing.Color.Red;
-            this.lblNhanVien.Location = new System.Drawing.Point(320, 21);
+            this.lblNhanVien.Location = new System.Drawing.Point(359, 20);
             this.lblNhanVien.Name = "lblNhanVien";
             this.lblNhanVien.Size = new System.Drawing.Size(165, 36);
             this.lblNhanVien.TabIndex = 0;
@@ -150,18 +150,18 @@
             // txtDienThoai
             // 
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtDienThoai.Location = new System.Drawing.Point(539, 106);
+            this.txtDienThoai.Location = new System.Drawing.Point(581, 106);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDienThoai.Multiline = true;
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(217, 31);
+            this.txtDienThoai.Size = new System.Drawing.Size(244, 31);
             this.txtDienThoai.TabIndex = 11;
             // 
             // lblDienThoai
             // 
             this.lblDienThoai.AutoSize = true;
             this.lblDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblDienThoai.Location = new System.Drawing.Point(427, 117);
+            this.lblDienThoai.Location = new System.Drawing.Point(469, 117);
             this.lblDienThoai.Name = "lblDienThoai";
             this.lblDienThoai.Size = new System.Drawing.Size(94, 20);
             this.lblDienThoai.TabIndex = 10;
@@ -170,28 +170,28 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtEmail.Location = new System.Drawing.Point(539, 15);
+            this.txtEmail.Location = new System.Drawing.Point(581, 15);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(217, 31);
+            this.txtEmail.Size = new System.Drawing.Size(244, 31);
             this.txtEmail.TabIndex = 9;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtDiaChi.Location = new System.Drawing.Point(539, 60);
+            this.txtDiaChi.Location = new System.Drawing.Point(581, 60);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(217, 31);
+            this.txtDiaChi.Size = new System.Drawing.Size(244, 31);
             this.txtDiaChi.TabIndex = 8;
             // 
             // lblDiaChi
             // 
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblDiaChi.Location = new System.Drawing.Point(427, 70);
+            this.lblDiaChi.Location = new System.Drawing.Point(469, 70);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(69, 20);
             this.lblDiaChi.TabIndex = 7;
@@ -201,7 +201,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblEmail.Location = new System.Drawing.Point(427, 25);
+            this.lblEmail.Location = new System.Drawing.Point(469, 25);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 20);
             this.lblEmail.TabIndex = 6;
@@ -214,7 +214,7 @@
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenNV.Multiline = true;
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(207, 31);
+            this.txtTenNV.Size = new System.Drawing.Size(244, 31);
             this.txtTenNV.TabIndex = 5;
             // 
             // txtMaNV
@@ -224,7 +224,7 @@
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaNV.Multiline = true;
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(207, 31);
+            this.txtMaNV.Size = new System.Drawing.Size(244, 31);
             this.txtMaNV.TabIndex = 4;
             // 
             // lblTinhTrang
@@ -297,7 +297,7 @@
             this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbNhanvien.Name = "gpbNhanvien";
             this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbNhanvien.Size = new System.Drawing.Size(833, 618);
+            this.gpbNhanvien.Size = new System.Drawing.Size(904, 618);
             this.gpbNhanvien.TabIndex = 1;
             this.gpbNhanvien.TabStop = false;
             // 
@@ -338,7 +338,7 @@
             this.gpbThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gpbThongTin.Name = "gpbThongTin";
             this.gpbThongTin.Padding = new System.Windows.Forms.Padding(4);
-            this.gpbThongTin.Size = new System.Drawing.Size(773, 177);
+            this.gpbThongTin.Size = new System.Drawing.Size(845, 177);
             this.gpbThongTin.TabIndex = 27;
             this.gpbThongTin.TabStop = false;
             this.gpbThongTin.Text = "Thông tin";
@@ -445,7 +445,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 639);
+            this.ClientSize = new System.Drawing.Size(928, 639);
             this.Controls.Add(this.gpbNhanvien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

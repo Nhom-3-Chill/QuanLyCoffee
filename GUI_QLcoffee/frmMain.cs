@@ -131,14 +131,16 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmHoaDon"))
             {
                 frmHoaDon hoaDon = new frmHoaDon();
-                this.IsMdiContainer = true;
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
                 Hidencontrol();
             }
+            else
+            {
+                ActiveChildForm("frmHoaDon");
+            }
         }
-
         void frmHoaDon_FormClosed(object sender, EventArgs e)
         {
             this.Refresh();
@@ -150,11 +152,14 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmKhachHang"))
             {
                 frmKhachHang khachHang = new frmKhachHang();
-                this.IsMdiContainer = true;
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
                 khachHang.Show();
                 Hidencontrol();
+            }
+            else
+            {
+                ActiveChildForm("frmKhachHang");
             }
         }
         void frmKhachHang_FormClosed(object sender, EventArgs e)
@@ -168,11 +173,14 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmNhanVien"))
             {
                 frmNhanVien nhanVien = new frmNhanVien();
-                this.IsMdiContainer = true;
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
                 nhanVien.Show();
                 Hidencontrol();
+            }
+            else
+            {
+                ActiveChildForm("frmNhanVien");
             }
         }
 
@@ -186,12 +194,15 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmThucDon"))
             {
-                this.IsMdiContainer = true;
                 frmThucDon thongKe = new frmThucDon();
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);
                 thongKe.Show();
                 Hidencontrol();
+            }
+            else
+            {
+                ActiveChildForm("frmThucDon");
             }
         }
 
@@ -205,12 +216,15 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmThongKe"))
             {
-                this.IsMdiContainer = true;
                 frmThongKe thongKe = new frmThongKe();
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThongKe_FormClosed);
                 thongKe.Show();
                 Hidencontrol();
+            }
+            else
+            {
+                ActiveChildForm("frmThongKe");
             }
         }
         void frmThongKe_FormClosed(object sender, EventArgs e)
