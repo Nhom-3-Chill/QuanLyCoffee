@@ -81,7 +81,7 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them1;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(89, 305);
+            this.btnThem.Location = new System.Drawing.Point(89, 300);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 48);
@@ -95,7 +95,7 @@
             // 
             this.btnSearch.Image = global::GUI_QLcoffee.Properties.Resources.icons8_search_32;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(563, 370);
+            this.btnSearch.Location = new System.Drawing.Point(563, 364);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(115, 43);
@@ -108,7 +108,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnLuu.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Save_27876;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(205, 305);
+            this.btnLuu.Location = new System.Drawing.Point(205, 300);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(104, 48);
@@ -121,7 +121,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtSearch.Location = new System.Drawing.Point(245, 381);
+            this.txtSearch.Location = new System.Drawing.Point(245, 375);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -133,7 +133,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnXoa.Image = global::GUI_QLcoffee.Properties.Resources.Xoa;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(317, 305);
+            this.btnXoa.Location = new System.Drawing.Point(317, 300);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(107, 48);
@@ -148,7 +148,7 @@
             this.dgvThucDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThucDon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucDon.Location = new System.Drawing.Point(60, 435);
+            this.dgvThucDon.Location = new System.Drawing.Point(60, 428);
             this.dgvThucDon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvThucDon.Name = "dgvThucDon";
             this.dgvThucDon.RowHeadersWidth = 51;
@@ -168,7 +168,7 @@
             this.gpbThongTin.Controls.Add(this.lblTenTD);
             this.gpbThongTin.Controls.Add(this.lblMaTD);
             this.gpbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.gpbThongTin.Location = new System.Drawing.Point(60, 87);
+            this.gpbThongTin.Location = new System.Drawing.Point(60, 80);
             this.gpbThongTin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gpbThongTin.Name = "gpbThongTin";
             this.gpbThongTin.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -267,7 +267,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnSua.Image = global::GUI_QLcoffee.Properties.Resources.Sua;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(432, 305);
+            this.btnSua.Location = new System.Drawing.Point(432, 300);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(123, 48);
@@ -281,7 +281,7 @@
             this.btnBoqua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnBoqua.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Remove_27874;
             this.btnBoqua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoqua.Location = new System.Drawing.Point(563, 305);
+            this.btnBoqua.Location = new System.Drawing.Point(563, 300);
             this.btnBoqua.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(113, 48);
@@ -295,7 +295,7 @@
             this.lblThucDon.AutoSize = true;
             this.lblThucDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblThucDon.ForeColor = System.Drawing.Color.Red;
-            this.lblThucDon.Location = new System.Drawing.Point(369, 25);
+            this.lblThucDon.Location = new System.Drawing.Point(369, 21);
             this.lblThucDon.Name = "lblThucDon";
             this.lblThucDon.Size = new System.Drawing.Size(173, 39);
             this.lblThucDon.TabIndex = 0;
@@ -306,7 +306,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Thoat;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(684, 305);
+            this.btnThoat.Location = new System.Drawing.Point(684, 300);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 48);
@@ -320,7 +320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 655);
+            this.ClientSize = new System.Drawing.Size(928, 643);
             this.Controls.Add(this.gpbThucDon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

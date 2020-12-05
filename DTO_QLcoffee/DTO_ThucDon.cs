@@ -65,12 +65,12 @@ namespace DTO_QLcoffee
             this.gia = gia;
             this.hinhAnh = hinhAnh;
         }
-        public DTO_ThucDon(string tenTD, double gia, string hinhAnh)
-        {
-            this.tenTD = tenTD;
-            this.gia = gia;
-            this.hinhAnh = hinhAnh;
-        }
+        //public DTO_ThucDon(string tenTD, double gia, string hinhAnh)
+        //{
+        //    this.tenTD = tenTD;
+        //    this.gia = gia;
+        //    this.hinhAnh = hinhAnh;
+        //}
         public DTO_ThucDon() { }
     }
 }

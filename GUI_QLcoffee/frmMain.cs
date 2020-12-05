@@ -130,6 +130,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmHoaDon"))
             {
+                this.IsMdiContainer = true;
                 frmHoaDon hoaDon = new frmHoaDon();
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
@@ -151,6 +152,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmKhachHang"))
             {
+                this.IsMdiContainer = true;
                 frmKhachHang khachHang = new frmKhachHang();
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
@@ -172,6 +174,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmNhanVien"))
             {
+                this.IsMdiContainer = true;
                 frmNhanVien nhanVien = new frmNhanVien();
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
@@ -194,6 +197,7 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmThucDon"))
             {
+                this.IsMdiContainer = true;
                 frmThucDon thongKe = new frmThucDon();
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);

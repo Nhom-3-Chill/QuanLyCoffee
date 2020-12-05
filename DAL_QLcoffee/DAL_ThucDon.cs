@@ -147,7 +147,7 @@ namespace DAL_QLcoffee
             }
             return false;
         }
-        public bool XoaThucDon(int MaTD)
+        public bool XoaThucDon(string MaTD)
         {
             try
             {
