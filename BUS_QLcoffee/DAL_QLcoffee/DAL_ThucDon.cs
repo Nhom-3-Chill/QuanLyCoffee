@@ -80,7 +80,7 @@ namespace DAL_QLcoffee
                 connection.Open();
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
-                scm.CommandText = "DanhSachTD";
+                scm.CommandText = "ListTD";
                 scm.Connection = connection;
                 DataTable tb = new DataTable();
                 tb.Load(scm.ExecuteReader());
@@ -101,7 +101,6 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "InsertTD";
-                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia",  td.Gia);
                 scm.Parameters.AddWithValue("@HinhAnh", td.HinhAnh);
@@ -129,7 +128,6 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "UpdateTD";
-                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia", td.Gia);
                 scm.Parameters.AddWithValue("@HinhAnh", td.HinhAnh);

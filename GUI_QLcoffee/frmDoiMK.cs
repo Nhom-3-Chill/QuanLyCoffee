@@ -96,10 +96,5 @@ namespace GUI_QLcoffee
                 }
             }
         }
-
-        private void frmDoiMK_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
