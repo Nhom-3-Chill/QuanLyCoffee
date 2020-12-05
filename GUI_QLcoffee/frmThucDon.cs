@@ -23,6 +23,7 @@ namespace GUI_QLcoffee
         public frmThucDon()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void load_thucdon()

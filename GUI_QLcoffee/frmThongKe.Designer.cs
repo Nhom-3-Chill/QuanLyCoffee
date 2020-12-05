@@ -156,6 +156,7 @@
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thống Kê";
+            this.Load += new System.EventHandler(this.frmThongKe_Load);
             this.gpbNhanvien.ResumeLayout(false);
             this.gpbNhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();

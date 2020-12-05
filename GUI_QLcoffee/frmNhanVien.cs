@@ -18,7 +18,7 @@ namespace GUI_QLcoffee
         public frmNhanVien()
         {
             InitializeComponent();
-            //testcommit
+            //testcommitt
         }
 
         private void frmNhanVien_Load(object sender, EventArgs e)

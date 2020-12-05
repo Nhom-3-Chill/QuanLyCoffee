@@ -19,6 +19,7 @@ namespace GUI_QLcoffee
         public frmThongKe()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void thongkesanpham()
@@ -35,6 +36,11 @@ namespace GUI_QLcoffee
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             thongkesanpham();
+        }
+
+        private void frmThongKe_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

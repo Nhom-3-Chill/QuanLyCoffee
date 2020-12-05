@@ -19,6 +19,7 @@ namespace GUI_QLcoffee
         public frmKhachHang()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void Load_khachhang()

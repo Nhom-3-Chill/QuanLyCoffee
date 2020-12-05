@@ -20,6 +20,7 @@ namespace GUI_QLcoffee
         public frmHoaDon()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)

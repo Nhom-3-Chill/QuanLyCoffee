@@ -18,6 +18,7 @@ namespace GUI_QLcoffee
         public frmDoiMK()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -95,6 +96,11 @@ namespace GUI_QLcoffee
                     txtNhapLaiMkMoi.Text = null;
                 }
             }
+        }
+
+        private void frmDoiMK_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

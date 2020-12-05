@@ -19,6 +19,7 @@ namespace GUI_QLcoffee
         public frmLogin()
         {
             InitializeComponent();
+            //testcommitt
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
