@@ -103,7 +103,7 @@ namespace GUI_QLcoffee
             }
             if (txtTenTD.Text != "" && txtGia.Text != "")
             {
-                DTO_ThucDon dtothucdon = new DTO_ThucDon(txtMaTD.Text,txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text),txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
                 if (busthucdon.LuuThucDon(dtothucdon))
                 {
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -164,7 +164,7 @@ namespace GUI_QLcoffee
             if (MessageBox.Show("Bạn có muốn xóa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string MaTD = txtMaTD.Text;
-                if (busthucdon.XoaThucDon(MaTD))
+                if (busthucdon.XoaThucDon(int.Parse(MaTD)))
                 {
                     MessageBox.Show("Xóa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
@@ -183,7 +183,7 @@ namespace GUI_QLcoffee
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DTO_ThucDon dtothucdon = new DTO_ThucDon(txtMaTD.Text, txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+            DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
             if (MessageBox.Show("Bạn có muốn sửa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (busthucdon.SuaThucDon(dtothucdon))

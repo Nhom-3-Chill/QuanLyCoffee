@@ -8,12 +8,12 @@ namespace DTO_QLcoffee
 {
     public class DTO_ThucDon
     {
-        private string maTD;
+        private int maTD;
         private string tenTD;
         private double gia;
         private string hinhAnh;
 
-        public string MaTD
+        public int MaTD
         {
             get
             {
@@ -58,7 +58,7 @@ namespace DTO_QLcoffee
                 hinhAnh = value;
             }
         }
-        public DTO_ThucDon(string maTD, string tenTD, double gia, string hinhAnh)
+        public DTO_ThucDon(int maTD, string tenTD, double gia, string hinhAnh)
         {
             this.maTD = maTD;
             this.tenTD = tenTD;

@@ -27,7 +27,7 @@ namespace BUS_QLcoffee
             return dal_ThucDon.SuaThucDon(td);
         }
 
-        public bool XoaThucDon(string MaTD)
+        public bool XoaThucDon(int MaTD)
         {
             return dal_ThucDon.XoaThucDon(MaTD);
         }

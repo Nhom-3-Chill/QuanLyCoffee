@@ -14,6 +14,7 @@ namespace GUI_QLcoffee
         [STAThread]
         static void Main()
         {
+            //commit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
