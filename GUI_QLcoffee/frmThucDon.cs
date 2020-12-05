@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +15,6 @@ namespace GUI_QLcoffee
     public partial class frmThucDon : Form
     {
         BUS_ThucDon busthucdon = new BUS_ThucDon();
-        string fileName;
-        string fileSavePath;
-        string fileAddress;
 
         public frmThucDon()
         {
@@ -100,9 +96,9 @@ namespace GUI_QLcoffee
             {
                 MessageBox.Show("Bạn phải nhập hình ảnh của thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtTenTD.Text != "" && txtGia.Text != "")
+            if (txtMaTD.Text != "" && txtTenTD.Text != "" && txtGia.Text != "")
             {
-                DTO_ThucDon dtothucdon = new DTO_ThucDon(txtMaTD.Text, txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
                 if (busthucdon.LuuThucDon(dtothucdon))
                 {
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,6 +112,7 @@ namespace GUI_QLcoffee
                 }
             }
         }
+<<<<<<< HEAD
 
         private void btnHinhAnh_Click(object sender, EventArgs e)
         {
@@ -236,5 +233,7 @@ namespace GUI_QLcoffee
             txtSearch.BackColor = Color.White;
             ResetValues();
         }
+=======
+>>>>>>> 87089548215274ea65873fd2096c71cf47eed8b7
     }
 }

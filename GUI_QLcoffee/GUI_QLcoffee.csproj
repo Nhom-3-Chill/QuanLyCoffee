@@ -156,7 +156,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icon\Hoa_Don.jpg" />
     <None Include="Resources\iconfinder_Add_27831.png" />
     <None Include="Icon\Thuc_don.png" />
     <None Include="Icon\Khach_hang.jpg" />

@@ -103,7 +103,7 @@ namespace GUI_QLcoffee
                 this.IsMdiContainer = true;
                 frmDoiMK profilenv = new frmDoiMK();
                 profilenv.MdiParent = this;
-                profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
+                //profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
                 Hidencontrol();
             }
@@ -112,11 +112,11 @@ namespace GUI_QLcoffee
                 ActiveChildForm("frmDoiMK");
             }
         }
-        void frmDoiMK_FormClosed(object sender, EventArgs e)
-        {
-            this.Refresh();
-            frmMain_Load(sender, e);
-        }
+        //void frmDoiMK_FormClosed(object sender, EventArgs e)
+        //{
+        //    this.Refresh();
+        //    frmMain_Load(sender, e);
+        //}
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -130,8 +130,8 @@ namespace GUI_QLcoffee
         {
             if (!CheckExistForm("frmHoaDon"))
             {
-                frmHoaDon hoaDon = new frmHoaDon();
-                this.IsMdiContainer = true;
+                frmHoaDon hoaDon = new frmHoaDon(lblUserName.Text);
+                hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
                 Hidencontrol();
@@ -166,7 +166,6 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmNhanVien"))
             {
                 frmNhanVien nhanVien = new frmNhanVien();
-                this.IsMdiContainer = true;
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
                 nhanVien.Show();
@@ -175,25 +174,6 @@ namespace GUI_QLcoffee
         }
 
         void frmNhanVien_FormClosed(object sender, EventArgs e)
-        {
-            this.Refresh();
-            frmMain_Load(sender, e);
-        }
-
-        private void thucDonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!CheckExistForm("frmThucDon"))
-            {
-                this.IsMdiContainer = true;
-                frmThucDon thongKe = new frmThucDon();
-                thongKe.MdiParent = this;
-                thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);
-                thongKe.Show();
-                Hidencontrol();
-            }
-        }
-
-        void frmThucDon_FormClosed(object sender, EventArgs e)
         {
             this.Refresh();
             frmMain_Load(sender, e);
