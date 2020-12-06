@@ -29,10 +29,10 @@ namespace GUI_QLcoffee
         private void load_thucdon()
         {
             dgvThucDon.DataSource = busthucdon.DSThucDon();
-            dgvThucDon.Columns[0].HeaderText = "MaTD";
-            dgvThucDon.Columns[1].HeaderText = "TenTD";
-            dgvThucDon.Columns[2].HeaderText = "Gia";
-            dgvThucDon.Columns[3].HeaderText = "HinhAnh";
+            dgvThucDon.Columns[0].HeaderText = "Mã Thực Đơn";
+            dgvThucDon.Columns[1].HeaderText = "Tên Thực Đơn";
+            dgvThucDon.Columns[2].HeaderText = "Giá";
+            dgvThucDon.Columns[3].HeaderText = "Hình Ảnh";
         }
 
         public void ResetValues()
@@ -85,21 +85,21 @@ namespace GUI_QLcoffee
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTenTD.Text == "")
+            if (txtTenTD.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtGia.Text == "")
+            else if (txtGia.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập giá của thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (btnHinhAnh.Text == "")
+            else if (txtHinh.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập hình ảnh của thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn phải upoad hình!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtTenTD.Text != "" && txtGia.Text != "")
+            else 
             {
-                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text),txtTenTD.Text, double.Parse(txtGia.Text), stremail);
+                DTO_ThucDon dtothucdon = new DTO_ThucDon(txtTenTD.Text, double.Parse(txtGia.Text), txtHinh.Text);
                 if (busthucdon.LuuThucDon(dtothucdon))
                 {
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,7 +116,7 @@ namespace GUI_QLcoffee
         private void btnHinhAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            dialog.Filter = "Images files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
             dialog.FilterIndex = 2;
             dialog.Title = "Chọn ảnh cho thực đơn";
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -127,6 +127,7 @@ namespace GUI_QLcoffee
                 fileName = Path.GetFileName(dialog.FileName);
                 string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                 fileSavePath = saveDirectory + "\\Images\\" + fileName;
+                txtHinh.Text = "\\Images\\" + fileName;
             }
         }
 
@@ -147,6 +148,7 @@ namespace GUI_QLcoffee
                 txtMaTD.Text = dgvThucDon.CurrentRow.Cells[0].Value.ToString();
                 txtTenTD.Text = dgvThucDon.CurrentRow.Cells[1].Value.ToString();
                 txtGia.Text = dgvThucDon.CurrentRow.Cells[2].Value.ToString();
+                txtHinh.Text = dgvThucDon.CurrentRow.Cells[3].Value.ToString();
                 picThucDon.BackgroundImage = Image.FromFile(saveDirectory + dgvThucDon.CurrentRow.Cells["HinhAnh"].Value.ToString());
             }
             else
@@ -162,7 +164,7 @@ namespace GUI_QLcoffee
                 string MaTD = txtMaTD.Text;
                 if (busthucdon.XoaThucDon(MaTD))
                 {
-                    MessageBox.Show("Xóa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thực đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
                     load_thucdon();
                 }
@@ -179,7 +181,7 @@ namespace GUI_QLcoffee
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+            DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text), txtTenTD.Text, double.Parse(txtGia.Text), txtHinh.Text);
             if (MessageBox.Show("Bạn có muốn sửa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (busthucdon.SuaThucDon(dtothucdon))
@@ -212,10 +214,10 @@ namespace GUI_QLcoffee
             if (table.Rows.Count > 0)
             {
                 dgvThucDon.DataSource = table;
-                dgvThucDon.Columns[0].HeaderText = "MaTD";
-                dgvThucDon.Columns[1].HeaderText = "TenTD";
-                dgvThucDon.Columns[2].HeaderText = "Gia";
-                dgvThucDon.Columns[3].HeaderText = "HinhAnh";
+                dgvThucDon.Columns[0].HeaderText = "Mã Thực Đơn";
+                dgvThucDon.Columns[1].HeaderText = "Tên Thực Đơn";
+                dgvThucDon.Columns[2].HeaderText = "Giá";
+                dgvThucDon.Columns[3].HeaderText = "Hình Ảnh";
             }
             else
             {
@@ -223,6 +225,12 @@ namespace GUI_QLcoffee
             }
             ResetValues();
             txtSearch.BackColor = Color.White;
+        }
+
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

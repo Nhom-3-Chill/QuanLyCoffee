@@ -50,7 +50,7 @@
             this.lblDoiMK.Location = new System.Drawing.Point(303, 53);
             this.lblDoiMK.Name = "lblDoiMK";
             this.lblDoiMK.Size = new System.Drawing.Size(206, 37);
-            this.lblDoiMK.TabIndex = 1;
+            this.lblDoiMK.TabIndex = 0;
             this.lblDoiMK.Text = "Đổi mật khẩu";
             // 
             // lblMkCu
@@ -60,7 +60,7 @@
             this.lblMkCu.Location = new System.Drawing.Point(40, 165);
             this.lblMkCu.Name = "lblMkCu";
             this.lblMkCu.Size = new System.Drawing.Size(105, 20);
-            this.lblMkCu.TabIndex = 1;
+            this.lblMkCu.TabIndex = 4;
             this.lblMkCu.Text = "Mật khẩu cũ:";
             // 
             // txtMkCu
@@ -70,7 +70,7 @@
             this.txtMkCu.Name = "txtMkCu";
             this.txtMkCu.PasswordChar = '*';
             this.txtMkCu.Size = new System.Drawing.Size(391, 33);
-            this.txtMkCu.TabIndex = 2;
+            this.txtMkCu.TabIndex = 1;
             // 
             // lblMkMoi
             // 
@@ -79,7 +79,7 @@
             this.lblMkMoi.Location = new System.Drawing.Point(39, 217);
             this.lblMkMoi.Name = "lblMkMoi";
             this.lblMkMoi.Size = new System.Drawing.Size(114, 20);
-            this.lblMkMoi.TabIndex = 1;
+            this.lblMkMoi.TabIndex = 5;
             this.lblMkMoi.Text = "Mật khẩu mới:";
             // 
             // lblNhaplaiMkMoi
@@ -89,7 +89,7 @@
             this.lblNhaplaiMkMoi.Location = new System.Drawing.Point(39, 268);
             this.lblNhaplaiMkMoi.Name = "lblNhaplaiMkMoi";
             this.lblNhaplaiMkMoi.Size = new System.Drawing.Size(180, 20);
-            this.lblNhaplaiMkMoi.TabIndex = 1;
+            this.lblNhaplaiMkMoi.TabIndex = 6;
             this.lblNhaplaiMkMoi.Text = "Nhập lại mật khẩu mới:";
             // 
             // txtMkMoi
@@ -108,7 +108,7 @@
             this.txtNhapLaiMkMoi.Name = "txtNhapLaiMkMoi";
             this.txtNhapLaiMkMoi.PasswordChar = '*';
             this.txtNhapLaiMkMoi.Size = new System.Drawing.Size(391, 33);
-            this.txtNhapLaiMkMoi.TabIndex = 2;
+            this.txtNhapLaiMkMoi.TabIndex = 3;
             // 
             // btnThoat
             // 
@@ -120,7 +120,7 @@
             this.btnThoat.Location = new System.Drawing.Point(436, 320);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(194, 74);
-            this.btnThoat.TabIndex = 3;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "      Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -135,7 +135,7 @@
             this.btnDoiMK.Location = new System.Drawing.Point(239, 320);
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.Size = new System.Drawing.Size(191, 74);
-            this.btnDoiMK.TabIndex = 3;
+            this.btnDoiMK.TabIndex = 7;
             this.btnDoiMK.Text = "Đổi mật khẩu";
             this.btnDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoiMK.UseVisualStyleBackColor = false;
@@ -170,7 +170,6 @@
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
-            this.Load += new System.EventHandler(this.frmDoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

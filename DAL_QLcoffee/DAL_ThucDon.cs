@@ -101,7 +101,6 @@ namespace DAL_QLcoffee
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
                 scm.CommandText = "InsertTD";
-                scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia",  td.Gia);
                 scm.Parameters.AddWithValue("@HinhAnh", td.HinhAnh);
