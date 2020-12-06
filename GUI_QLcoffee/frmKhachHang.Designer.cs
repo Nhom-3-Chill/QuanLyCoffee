@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
-            this.gpbKhachhang = new System.Windows.Forms.GroupBox();
+            this.gpbNhanvien = new System.Windows.Forms.GroupBox();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblMaKH = new System.Windows.Forms.Label();
@@ -51,31 +51,31 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.lblKhachHang = new System.Windows.Forms.Label();
-            this.gpbKhachhang.SuspendLayout();
+            this.gpbNhanvien.SuspendLayout();
             this.gpbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
-            // gpbKhachhang
+            // gpbNhanvien
             // 
-            this.gpbKhachhang.Controls.Add(this.gpbThongTin);
-            this.gpbKhachhang.Controls.Add(this.btnXoa);
-            this.gpbKhachhang.Controls.Add(this.btnThoat);
-            this.gpbKhachhang.Controls.Add(this.btnBoqua);
-            this.gpbKhachhang.Controls.Add(this.btnSua);
-            this.gpbKhachhang.Controls.Add(this.btnLuu);
-            this.gpbKhachhang.Controls.Add(this.btnThem);
-            this.gpbKhachhang.Controls.Add(this.btnSearch);
-            this.gpbKhachhang.Controls.Add(this.txtSearch);
-            this.gpbKhachhang.Controls.Add(this.dgvKhachHang);
-            this.gpbKhachhang.Controls.Add(this.lblKhachHang);
-            this.gpbKhachhang.Location = new System.Drawing.Point(8, 9);
-            this.gpbKhachhang.Margin = new System.Windows.Forms.Padding(2);
-            this.gpbKhachhang.Name = "gpbKhachhang";
-            this.gpbKhachhang.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbKhachhang.Size = new System.Drawing.Size(667, 490);
-            this.gpbKhachhang.TabIndex = 2;
-            this.gpbKhachhang.TabStop = false;
+            this.gpbNhanvien.Controls.Add(this.gpbThongTin);
+            this.gpbNhanvien.Controls.Add(this.btnXoa);
+            this.gpbNhanvien.Controls.Add(this.btnThoat);
+            this.gpbNhanvien.Controls.Add(this.btnBoqua);
+            this.gpbNhanvien.Controls.Add(this.btnSua);
+            this.gpbNhanvien.Controls.Add(this.btnLuu);
+            this.gpbNhanvien.Controls.Add(this.btnThem);
+            this.gpbNhanvien.Controls.Add(this.btnSearch);
+            this.gpbNhanvien.Controls.Add(this.txtSearch);
+            this.gpbNhanvien.Controls.Add(this.dgvKhachHang);
+            this.gpbNhanvien.Controls.Add(this.lblKhachHang);
+            this.gpbNhanvien.Location = new System.Drawing.Point(8, 9);
+            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(2);
+            this.gpbNhanvien.Name = "gpbNhanvien";
+            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(2);
+            this.gpbNhanvien.Size = new System.Drawing.Size(667, 490);
+            this.gpbNhanvien.TabIndex = 2;
+            this.gpbNhanvien.TabStop = false;
             // 
             // gpbThongTin
             // 
@@ -346,14 +346,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 517);
-            this.Controls.Add(this.gpbKhachhang);
+            this.Controls.Add(this.gpbNhanvien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Khách Hàng";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
-            this.gpbKhachhang.ResumeLayout(false);
-            this.gpbKhachhang.PerformLayout();
+            this.gpbNhanvien.ResumeLayout(false);
+            this.gpbNhanvien.PerformLayout();
             this.gpbThongTin.ResumeLayout(false);
             this.gpbThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
@@ -363,7 +363,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gpbKhachhang;
+        private System.Windows.Forms.GroupBox gpbNhanvien;
         private System.Windows.Forms.GroupBox gpbThongTin;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblMaKH;
