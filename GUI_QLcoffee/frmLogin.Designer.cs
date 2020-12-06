@@ -50,7 +50,7 @@
             this.lblLogin.Location = new System.Drawing.Point(602, 23);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(170, 37);
-            this.lblLogin.TabIndex = 1;
+            this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Đăng nhập";
             // 
             // lblEmail
@@ -60,7 +60,7 @@
             this.lblEmail.Location = new System.Drawing.Point(466, 92);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 20);
-            this.lblEmail.TabIndex = 2;
+            this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
             // 
             // lblMK
@@ -70,7 +70,7 @@
             this.lblMK.Location = new System.Drawing.Point(466, 143);
             this.lblMK.Name = "lblMK";
             this.lblMK.Size = new System.Drawing.Size(82, 20);
-            this.lblMK.TabIndex = 2;
+            this.lblMK.TabIndex = 4;
             this.lblMK.Text = "Mật khẩu:";
             // 
             // txtEmail
@@ -79,7 +79,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(281, 32);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 0;
             // 
             // chkLogin
             // 
@@ -88,7 +88,7 @@
             this.chkLogin.Location = new System.Drawing.Point(554, 191);
             this.chkLogin.Name = "chkLogin";
             this.chkLogin.Size = new System.Drawing.Size(89, 24);
-            this.chkLogin.TabIndex = 4;
+            this.chkLogin.TabIndex = 6;
             this.chkLogin.Text = "Ghi nhớ";
             this.chkLogin.UseVisualStyleBackColor = true;
             // 
@@ -99,7 +99,7 @@
             this.lblQuenMK.Location = new System.Drawing.Point(721, 191);
             this.lblQuenMK.Name = "lblQuenMK";
             this.lblQuenMK.Size = new System.Drawing.Size(122, 20);
-            this.lblQuenMK.TabIndex = 2;
+            this.lblQuenMK.TabIndex = 5;
             this.lblQuenMK.Text = "Quên mật khẩu";
             this.lblQuenMK.Click += new System.EventHandler(this.lblQuenMK_Click);
             // 
@@ -110,7 +110,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(281, 32);
-            this.txtMK.TabIndex = 3;
+            this.txtMK.TabIndex = 1;
             // 
             // btnThoat
             // 
@@ -122,7 +122,7 @@
             this.btnThoat.Location = new System.Drawing.Point(697, 239);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(162, 53);
-            this.btnThoat.TabIndex = 5;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "       Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -137,7 +137,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(496, 239);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(172, 53);
-            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDangNhap.UseVisualStyleBackColor = false;
@@ -171,7 +171,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng Nhập";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptnLogin)).EndInit();

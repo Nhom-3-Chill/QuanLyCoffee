@@ -75,8 +75,11 @@ namespace GUI_QLcoffee
                     {
                         bus_NhanVien.SendEmail(frmMain.mail, txtNhapLaiMkMoi.Text);
                         MessageBox.Show("Đổi mật khẩu thành công, bạn cần phải đăng nhập lại!");
-                        frmMain.demEventClosed = 1;
-                        this.Close();
+                        this.Hide();
+                        frmMain main = new frmMain();
+                        main.Close();
+                        frmLogin login = new frmLogin();
+                        login.Show();
                     }
                     else
                     {
@@ -93,16 +96,6 @@ namespace GUI_QLcoffee
                     txtNhapLaiMkMoi.Text = null;
                 }
             }
-        }
-
-        private void frmDoiMK_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmDoiMK_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
     }
 }

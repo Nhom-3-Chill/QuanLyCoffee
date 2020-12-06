@@ -40,7 +40,6 @@ namespace GUI_QLcoffee
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtEmail.Focus();
             txtEmail.Text = Properties.Settings.Default.email;
             txtMK.Text = Properties.Settings.Default.pass;
         }
