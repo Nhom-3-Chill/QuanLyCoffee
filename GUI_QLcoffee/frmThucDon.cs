@@ -23,7 +23,6 @@ namespace GUI_QLcoffee
         public frmThucDon()
         {
             InitializeComponent();
-            //testcommitt
         }
 
         private void load_thucdon()
@@ -164,7 +163,7 @@ namespace GUI_QLcoffee
             if (MessageBox.Show("Bạn có muốn xóa thực đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string MaTD = txtMaTD.Text;
-                if (busthucdon.XoaThucDon(int.Parse(MaTD)))
+                if (busthucdon.XoaThucDon(MaTD))
                 {
                     MessageBox.Show("Xóa thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetValues();
@@ -201,6 +200,32 @@ namespace GUI_QLcoffee
             {
                 ResetValues();
             }
+        }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = null;
+            txtSearch.BackColor = Color.LightGray;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string TenTD = txtSearch.Text;
+            DataTable table = busthucdon.TimKiemThucDon(TenTD);
+            if (table.Rows.Count > 0)
+            {
+                dgvThucDon.DataSource = table;
+                dgvThucDon.Columns[0].HeaderText = "MaTD";
+                dgvThucDon.Columns[1].HeaderText = "TenTD";
+                dgvThucDon.Columns[2].HeaderText = "Gia";
+                dgvThucDon.Columns[3].HeaderText = "HinhAnh";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy tên thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ResetValues();
+            txtSearch.BackColor = Color.White;
         }
     }
 }
