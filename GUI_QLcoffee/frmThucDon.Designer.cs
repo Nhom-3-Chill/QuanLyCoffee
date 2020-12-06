@@ -181,7 +181,8 @@
             // 
             // picThucDon
             // 
-            this.picThucDon.Image = global::GUI_QLcoffee.Properties.Resources.avtkhung;
+            this.picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.avtkhung;
+            this.picThucDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picThucDon.Location = new System.Drawing.Point(456, 20);
             this.picThucDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picThucDon.Name = "picThucDon";

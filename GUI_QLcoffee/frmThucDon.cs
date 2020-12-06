@@ -16,6 +16,7 @@ namespace GUI_QLcoffee
     public partial class frmThucDon : Form
     {
         BUS_ThucDon busthucdon = new BUS_ThucDon();
+        string stremail = frmMain.mail;
         string fileName;
         string fileSavePath;
         string fileAddress;
@@ -62,7 +63,7 @@ namespace GUI_QLcoffee
             txtMaTD.Text = null;
             txtTenTD.Text = null;
             txtGia.Text = null;
-            txtMaTD.Enabled = true;
+            txtMaTD.Enabled = false;
             txtTenTD.Enabled = true;
             txtGia.Enabled = true;
             btnHinhAnh.Enabled = true;
@@ -84,10 +85,6 @@ namespace GUI_QLcoffee
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaTD.Text == "")
-            {
-                MessageBox.Show("Bạn phải nhập mã thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             if (txtTenTD.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập tên thực đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -102,7 +99,7 @@ namespace GUI_QLcoffee
             }
             if (txtTenTD.Text != "" && txtGia.Text != "")
             {
-                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text),txtTenTD.Text, double.Parse(txtGia.Text), btnHinhAnh.Text);
+                DTO_ThucDon dtothucdon = new DTO_ThucDon(int.Parse(txtMaTD.Text),txtTenTD.Text, double.Parse(txtGia.Text), stremail);
                 if (busthucdon.LuuThucDon(dtothucdon))
                 {
                     MessageBox.Show("Thêm thực đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
