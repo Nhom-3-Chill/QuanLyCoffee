@@ -293,7 +293,7 @@
             this.gpbNhanvien.Controls.Add(this.txtSearch);
             this.gpbNhanvien.Controls.Add(this.btnThem);
             this.gpbNhanvien.Controls.Add(this.btnSearch);
-            this.gpbNhanvien.Location = new System.Drawing.Point(12, 7);
+            this.gpbNhanvien.Location = new System.Drawing.Point(12, 10);
             this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbNhanvien.Name = "gpbNhanvien";
             this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);

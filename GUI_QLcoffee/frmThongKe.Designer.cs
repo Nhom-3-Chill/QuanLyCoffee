@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongKe));
             this.lblThongKe = new System.Windows.Forms.Label();
-            this.gpbNhanvien = new System.Windows.Forms.GroupBox();
+            this.gpbThongKe = new System.Windows.Forms.GroupBox();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
@@ -38,7 +38,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblKetThuc = new System.Windows.Forms.Label();
             this.lblBatDau = new System.Windows.Forms.Label();
-            this.gpbNhanvien.SuspendLayout();
+            this.gpbThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.gpbThongTin.SuspendLayout();
             this.SuspendLayout();
@@ -54,19 +54,19 @@
             this.lblThongKe.TabIndex = 1;
             this.lblThongKe.Text = "Thống Kê";
             // 
-            // gpbNhanvien
+            // gpbThongKe
             // 
-            this.gpbNhanvien.Controls.Add(this.dgvThongKe);
-            this.gpbNhanvien.Controls.Add(this.btnThongKe);
-            this.gpbNhanvien.Controls.Add(this.gpbThongTin);
-            this.gpbNhanvien.Controls.Add(this.lblThongKe);
-            this.gpbNhanvien.Location = new System.Drawing.Point(15, 14);
-            this.gpbNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbNhanvien.Name = "gpbNhanvien";
-            this.gpbNhanvien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbNhanvien.Size = new System.Drawing.Size(901, 608);
-            this.gpbNhanvien.TabIndex = 3;
-            this.gpbNhanvien.TabStop = false;
+            this.gpbThongKe.Controls.Add(this.dgvThongKe);
+            this.gpbThongKe.Controls.Add(this.btnThongKe);
+            this.gpbThongKe.Controls.Add(this.gpbThongTin);
+            this.gpbThongKe.Controls.Add(this.lblThongKe);
+            this.gpbThongKe.Location = new System.Drawing.Point(15, 14);
+            this.gpbThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbThongKe.Name = "gpbThongKe";
+            this.gpbThongKe.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbThongKe.Size = new System.Drawing.Size(901, 608);
+            this.gpbThongKe.TabIndex = 3;
+            this.gpbThongKe.TabStop = false;
             // 
             // dgvThongKe
             // 
@@ -150,14 +150,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 639);
-            this.Controls.Add(this.gpbNhanvien);
+            this.Controls.Add(this.gpbThongKe);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thống Kê";
-            this.gpbNhanvien.ResumeLayout(false);
-            this.gpbNhanvien.PerformLayout();
+            this.gpbThongKe.ResumeLayout(false);
+            this.gpbThongKe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
             this.gpbThongTin.ResumeLayout(false);
             this.gpbThongTin.PerformLayout();
@@ -168,7 +168,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblThongKe;
-        private System.Windows.Forms.GroupBox gpbNhanvien;
+        private System.Windows.Forms.GroupBox gpbThongKe;
         private System.Windows.Forms.GroupBox gpbThongTin;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
