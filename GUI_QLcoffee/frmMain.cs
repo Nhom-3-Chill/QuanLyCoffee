@@ -15,7 +15,6 @@ namespace GUI_QLcoffee
     {
         public static string mail;
         public static int vaitro = 0;
-        public static int demEventClosed = 0;
         BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
         public frmMain()
         {
@@ -28,13 +27,6 @@ namespace GUI_QLcoffee
         {
             this.Refresh();
             ResetValues();
-            if (demEventClosed != 0)
-            {
-                demEventClosed = 0;
-                this.Close();
-                frmLogin login = new frmLogin();
-                login.Show();
-            }
         }
 
         public void Hidencontrol()
@@ -131,7 +123,11 @@ namespace GUI_QLcoffee
         }
         void frmDoiMK_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Refresh();
             frmMain_Load(sender, e);
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
