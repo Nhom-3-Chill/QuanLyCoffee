@@ -132,7 +132,7 @@ namespace GUI_QLcoffee
             if (!CheckExistForm("frmHoaDon"))
             {
                 this.IsMdiContainer = true;
-                frmHoaDon hoaDon = new frmHoaDon();
+                frmHoaDon hoaDon = new frmHoaDon(lblUserName.Text);
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
