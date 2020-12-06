@@ -170,6 +170,7 @@
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDoiMK_FormClosed);
             this.Load += new System.EventHandler(this.frmDoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMK)).EndInit();
             this.ResumeLayout(false);

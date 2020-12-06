@@ -15,17 +15,26 @@ namespace GUI_QLcoffee
     {
         public static string mail;
         public static int vaitro = 0;
+        public static int demEventClosed = 0;
         BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
         public frmMain()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
             //testcommitt
         }
 
-
         private void frmMain_Load(object sender, EventArgs e)
         {
+            this.Refresh();
             ResetValues();
+            if (demEventClosed != 0)
+            {
+                demEventClosed = 0;
+                this.Close();
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
         }
 
         public void Hidencontrol()
@@ -49,6 +58,14 @@ namespace GUI_QLcoffee
             khachHangToolStripMenuItem.Visible = true;
             nhanVienToolStripMenuItem.Visible = true;
             thongKeToolStripMenuItem.Visible = true;
+            //unHidencontrol
+            lblNameLogin.Visible = true;
+            lblTenDN.Visible = true;
+            lblTextMain.Visible = true;
+            lblUserName.Visible = true;
+            lblUser.Visible = true;
+            picMain.Visible = true;
+            //end
             if (vaitro == 0)
             {
                 VaiTroNV();
@@ -99,10 +116,9 @@ namespace GUI_QLcoffee
 
         private void doiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmDoiMK profilenv = new frmDoiMK();
             if (!CheckExistForm("frmDoiMK"))
             {
-                this.IsMdiContainer = true;
-                frmDoiMK profilenv = new frmDoiMK();
                 profilenv.MdiParent = this;
                 profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
@@ -113,9 +129,8 @@ namespace GUI_QLcoffee
                 ActiveChildForm("frmDoiMK");
             }
         }
-        void frmDoiMK_FormClosed(object sender, EventArgs e)
+        void frmDoiMK_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Refresh();
             frmMain_Load(sender, e);
         }
 
