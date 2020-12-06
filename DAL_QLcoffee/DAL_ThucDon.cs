@@ -147,7 +147,7 @@ namespace DAL_QLcoffee
             }
             return false;
         }
-        public bool XoaThucDon(int MaTD)
+        public bool XoaThucDon(string MaTD)
         {
             try
             {
@@ -193,7 +193,7 @@ namespace DAL_QLcoffee
         }
 
         // Xem thống kê
-        public DataTable XemThongKe(string ngayBD, string ngayKT)
+        public DataTable XemThongKe(DateTime ngayBD, DateTime ngayKT)
         {
             try
             {

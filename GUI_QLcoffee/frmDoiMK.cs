@@ -77,7 +77,7 @@ namespace GUI_QLcoffee
                         MessageBox.Show("Đổi mật khẩu thành công, bạn cần phải đăng nhập lại!");
                         this.Hide();
                         frmMain main = new frmMain();
-                        main.Visible=false;
+                        main.Close();
                         frmLogin login = new frmLogin();
                         login.Show();
                     }
