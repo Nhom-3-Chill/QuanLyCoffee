@@ -17,7 +17,11 @@ namespace GUI_QLcoffee
             //commit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new frmLogin());
+=======
+            Application.Run(new frmNhanVien());
+>>>>>>> Stashed changes
         }
     }
 }
