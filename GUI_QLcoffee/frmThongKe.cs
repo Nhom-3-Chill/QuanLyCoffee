@@ -19,13 +19,11 @@ namespace GUI_QLcoffee
         public frmThongKe()
         {
             InitializeComponent();
-            //testcommitt
         }
 
         private void thongkesanpham()
         {
             //dgvThongKe.DataSource = busthucdon.XemThongKe();
-            ////dgvThongKe.DataSource = busthucdon.XemThongKe();
             //dgvThongKe.Columns[0].HeaderText = "ngayBD";
             //dgvThongKe.Columns[1].HeaderText = "ngayKT";
             //dgvThongKe.Columns[2].HeaderText = "TenTD";
@@ -36,11 +34,6 @@ namespace GUI_QLcoffee
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             thongkesanpham();
-        }
-
-        private void frmThongKe_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -27,7 +27,7 @@ namespace BUS_QLcoffee
             return dal_ThucDon.SuaThucDon(td);
         }
 
-        public bool XoaThucDon(int MaTD)
+        public bool XoaThucDon(string MaTD)
         {
             return dal_ThucDon.XoaThucDon(MaTD);
         }
@@ -37,18 +37,21 @@ namespace BUS_QLcoffee
             return dal_ThucDon.TimKiemThucDon(tenTD);
         }
 
-        public DataTable XemThongKe(string ngayBT, string ngayKT)
+        public DataTable XemThongKe(DateTime ngayBT, DateTime ngayKT)
         {
             return dal_ThucDon.XemThongKe(ngayBT, ngayKT);
         }
+
         public DataTable DanhSachTenMon()
         {
             return dal_ThucDon.DanhSachTenMon();
         }
+
         public string DonGiaMon(string tenmon)
         {
             return dal_ThucDon.DonGiaMon(tenmon);
         }
+
         public bool ThanhToanTien(string tenkh, string tennv, DateTime ngaylap, float tongtien)
         {
             return dal_ThucDon.ThanhToanTien(tenkh, tennv, ngaylap, tongtien);
