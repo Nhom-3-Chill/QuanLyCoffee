@@ -43,10 +43,15 @@ namespace DAL_QLcoffee
                 scm.Connection = connection;
                 return scm.ExecuteScalar().ToString();
             }
+            catch (Exception x)
+            {
+                MessageBox.Show("Tên món không hợp lệ! Vui lòng kiểm tra lại." + x.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             finally
             {
                 connection.Close();
             }
+            return "0";
         }
         public bool ThanhToanTien(string tenkh, string tennv, DateTime ngaylap, float tongtien)
         {
@@ -65,6 +70,10 @@ namespace DAL_QLcoffee
                 {
                     return true;
                 }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Khách hàng không hợp lệ! Vui lòng load lại giao diện hóa đơn.");
             }
             finally
             {
