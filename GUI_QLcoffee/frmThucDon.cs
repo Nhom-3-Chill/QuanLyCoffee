@@ -57,7 +57,7 @@ namespace GUI_QLcoffee
             ResetValues();
             load_thucdon();
         }
-        //
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             txtMaTD.Text = null;

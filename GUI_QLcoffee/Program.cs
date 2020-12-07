@@ -17,7 +17,7 @@ namespace GUI_QLcoffee
             //commit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHoaDon("chill"));
+            Application.Run(new frmThucDon());
         }
     }
 }
