@@ -50,6 +50,7 @@ namespace GUI_QLcoffee
             btnBoqua.Enabled = true;
             btnThoat.Enabled = true;
             btnHinhAnh.Enabled = false;
+            btnHinhAnh.BackgroundImage = "Images\";
         }
 
         private void frmThucDon_Load(object sender, EventArgs e)
@@ -231,6 +232,12 @@ namespace GUI_QLcoffee
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void btnBoqua_Click(object sender, EventArgs e)
+        {
+            load_thucdon();
+            ResetValues();
         }
     }
 }

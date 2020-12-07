@@ -37,6 +37,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.dgvThucDon = new System.Windows.Forms.DataGridView();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
+            this.txtHinh = new System.Windows.Forms.TextBox();
             this.picThucDon = new System.Windows.Forms.PictureBox();
             this.btnHinhAnh = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.btnBoqua = new System.Windows.Forms.Button();
             this.lblThucDon = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.txtHinh = new System.Windows.Forms.TextBox();
             this.gpbThucDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
@@ -181,6 +181,14 @@
             this.gpbThongTin.TabStop = false;
             this.gpbThongTin.Text = "Thông Tin";
             // 
+            // txtHinh
+            // 
+            this.txtHinh.Location = new System.Drawing.Point(464, 124);
+            this.txtHinh.Name = "txtHinh";
+            this.txtHinh.Size = new System.Drawing.Size(10, 26);
+            this.txtHinh.TabIndex = 15;
+            this.txtHinh.Visible = false;
+            // 
             // picThucDon
             // 
             this.picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.avtkhung;
@@ -295,6 +303,7 @@
             this.btnBoqua.Text = "Bỏ Qua";
             this.btnBoqua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // lblThucDon
             // 
@@ -321,14 +330,6 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // txtHinh
-            // 
-            this.txtHinh.Location = new System.Drawing.Point(464, 124);
-            this.txtHinh.Name = "txtHinh";
-            this.txtHinh.Size = new System.Drawing.Size(10, 26);
-            this.txtHinh.TabIndex = 15;
-            this.txtHinh.Visible = false;
             // 
             // frmThucDon
             // 
