@@ -127,7 +127,7 @@ namespace DAL_QLcoffee
                 connection.Open();
                 SqlCommand scm = new SqlCommand();
                 scm.CommandType = CommandType.StoredProcedure;
-                scm.CommandText = "UpdateTD";
+                scm.CommandText = "SuaTD";
                 scm.Parameters.AddWithValue("@MaTD", td.MaTD);
                 scm.Parameters.AddWithValue("@TenTD", td.TenTD);
                 scm.Parameters.AddWithValue("@Gia", td.Gia);
