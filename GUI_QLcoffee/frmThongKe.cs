@@ -19,6 +19,7 @@ namespace GUI_QLcoffee
         public frmThongKe()
         {
             InitializeComponent();
+            //testcommit
         }
 
         private void thongkesanpham()
