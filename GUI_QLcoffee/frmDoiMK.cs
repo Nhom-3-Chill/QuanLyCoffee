@@ -27,7 +27,7 @@ namespace GUI_QLcoffee
             {
                 this.Hide();
                 frmMain frm = new frmMain();
-                frm.Refresh();
+                frm.Show();
             }
             else
             {
@@ -94,6 +94,11 @@ namespace GUI_QLcoffee
                     txtNhapLaiMkMoi.Text = null;
                 }
             }
+        }
+
+        private void frmDoiMK_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

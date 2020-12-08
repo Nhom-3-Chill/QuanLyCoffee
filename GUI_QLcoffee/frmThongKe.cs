@@ -23,7 +23,7 @@ namespace GUI_QLcoffee
 
         private void thongkehoadon()
         {
-            dgvThongKe.DataSource = busthucdon.XemThongKe(dtpBatDau.Value, dtpKetthuc.Value);
+            dgvThongKe.DataSource = busthucdon.XemThongKe(Convert.ToDateTime(dtpBatDau.Value), Convert.ToDateTime(dtpKetthuc.Value));
             dgvThongKe.Columns[0].HeaderText = "Mã hóa đơn";
             dgvThongKe.Columns[1].HeaderText = "Ngày lập hóa đơn";
             dgvThongKe.Columns[2].HeaderText = "Tổng thành tiền";

@@ -50,7 +50,6 @@ namespace GUI_QLcoffee
             btnBoqua.Enabled = true;
             btnThoat.Enabled = true;
             btnHinhAnh.Enabled = false;
-
         }
 
         private void frmThucDon_Load(object sender, EventArgs e)
@@ -58,7 +57,7 @@ namespace GUI_QLcoffee
             ResetValues();
             load_thucdon();
         }
-
+        //
         private void btnThem_Click(object sender, EventArgs e)
         {
             txtMaTD.Text = null;

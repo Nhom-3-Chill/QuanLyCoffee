@@ -17,6 +17,7 @@ namespace GUI_QLcoffee
         BUS_ThucDon bus_Thucdon = new BUS_ThucDon();
         DataTable dt = new DataTable();
         float dem = 0;
+        DateTime now = DateTime.Now;
         public frmHoaDon(string tennv)
         {
             InitializeComponent();
@@ -35,11 +36,13 @@ namespace GUI_QLcoffee
             cboTenMon.DataSource = dsmon;
             cboTenMon.DisplayMember = "TenTD";
             cboTenMon.ValueMember = "TenTD";
+            cboTenMon.Text = "Vui lòng chọn tên món!";
             DataTable dskh = bus_Khachhang.DanhSachTenKhach();
             cboTenKH.DataSource = dskh;
             cboTenKH.DisplayMember = "TenKhach";
             cboTenKH.ValueMember = "TenKhach";
             NumSoLuong.Value = 0;
+            lblDatetime.Text = now.ToString();
             dt.Clear();
             try
             {
@@ -57,39 +60,40 @@ namespace GUI_QLcoffee
         public void loadtongtien()
         {
             txtTongtien.Text = "0";
-            txtGiamgia.Text = "0";
         }
 
         private void btnThemmon_Click(object sender, EventArgs e)
         {
-            try
+            if (cboTenMon.Text != "Vui lòng chọn tên món!" && NumSoLuong.Value != 0) 
             {
-                DataRow adddt = dt.NewRow();
-                adddt["TenNV"] = lblTenNV.Text;
-                adddt["TenKH"] = cboTenKH.Text;
-                adddt["TenMon"] = cboTenMon.Text;
-                adddt["SoLuong"] = int.Parse(NumSoLuong.Value.ToString());
-                adddt["DonGia"] = int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text));
-                adddt["ThanhTien"] = (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
-                dt.Rows.Add(adddt);
-                dem += (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
+                try
+                {
+                    DataRow adddt = dt.NewRow();
+                    adddt["TenNV"] = lblTenNV.Text;
+                    adddt["TenKH"] = cboTenKH.Text;
+                    adddt["TenMon"] = cboTenMon.Text;
+                    adddt["SoLuong"] = int.Parse(NumSoLuong.Value.ToString());
+                    adddt["DonGia"] = int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text));
+                    adddt["ThanhTien"] = (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
+                    dt.Rows.Add(adddt);
+                    dem += (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin! " + x.Message);
+                }
+                finally
+                {
+                    txtTongtien.Text = dem.ToString();
+                    dgvHoaDon.DataSource = dt;
+                }
             }
-            catch(Exception x)
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin! " + x.Message);
-            }
-            finally
-            {
-                txtTongtien.Text = dem.ToString();
-                //txtTongtien.Text = (dem * (float.Parse(txtGiamgia.Text) / 100)).ToString();
-                dgvHoaDon.DataSource = dt;
-            }
+            else { MessageBox.Show("Vui lòng chọn số lượng hoặc tên món!", "Thông Báo", MessageBoxButtons.OK); }
         }
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            if(bus_Thucdon.ThanhToanTien(cboTenKH.Text, lblTenNV.Text, now, float.Parse(txtTongtien.Text)))
+            if (bus_Thucdon.ThanhToanTien(cboTenKH.Text, lblTenNV.Text, now, float.Parse(txtTongtien.Text)))
             {
                 MessageBox.Show("Thanh toán thành công!");
                 loadtongtien();
@@ -103,6 +107,16 @@ namespace GUI_QLcoffee
             {
                 e.Cancel = true;
             }
+        }
+
+        private void linkKH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmKhachHang frmKH = new frmKhachHang();
+            frmKH.Show();
+        }
+        private void picboxRes_Click_1(object sender, EventArgs e)
+        {
+            frmHoaDon_Load(sender, e);
         }
     }
 }
