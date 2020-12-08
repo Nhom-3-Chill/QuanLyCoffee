@@ -27,7 +27,7 @@ namespace GUI_QLcoffee
             {
                 this.Hide();
                 frmMain frm = new frmMain();
-                frm.Refresh();
+                frm.Show();
             }
             else
             {
