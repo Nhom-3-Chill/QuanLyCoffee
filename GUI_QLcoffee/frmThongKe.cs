@@ -21,22 +21,19 @@ namespace GUI_QLcoffee
             InitializeComponent();
         }
 
-        private void thongkesanpham()
+        private void thongkehoadon()
         {
             dgvThongKe.DataSource = busthucdon.XemThongKe(dtpBatDau.Value, dtpKetthuc.Value);
-            dgvThongKe.Columns[0].HeaderText = "ngayBD";
-            dgvThongKe.Columns[1].HeaderText = "ngayKT";
-            dgvThongKe.Columns[2].HeaderText = "MaHD";
-            dgvThongKe.Columns[3].HeaderText = "TenTD";
-            dgvThongKe.Columns[4].HeaderText = "Soluong";
-            dgvThongKe.Columns[5].HeaderText = "Gia";
-            dgvThongKe.Columns[6].HeaderText = "TongThanhTien";
-
+            dgvThongKe.Columns[0].HeaderText = "Mã hóa đơn";
+            dgvThongKe.Columns[1].HeaderText = "Ngày lập hóa đơn";
+            dgvThongKe.Columns[2].HeaderText = "Tổng thành tiền";
+            dgvThongKe.Columns[3].HeaderText = "Mã khách hàng";
+            dgvThongKe.Columns[4].HeaderText = "Mã nhân viên";
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            thongkesanpham();
+            thongkehoadon();
         }
     }
 }

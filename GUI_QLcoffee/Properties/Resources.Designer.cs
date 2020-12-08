@@ -233,16 +233,6 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconfinder_Refresh_27873 {
-            get {
-                object obj = ResourceManager.GetObject("iconfinder_Refresh_27873", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Remove_27874 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Remove_27874", resourceCulture);

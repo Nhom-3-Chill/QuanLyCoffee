@@ -34,7 +34,9 @@
             this.lblHoaDon = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.txtTongtien = new System.Windows.Forms.TextBox();
+            this.lblGiamGia = new System.Windows.Forms.Label();
             this.btnThanhtoan = new System.Windows.Forms.Button();
+            this.txtGiamgia = new System.Windows.Forms.TextBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
             this.cboTenKH = new System.Windows.Forms.ComboBox();
@@ -45,24 +47,21 @@
             this.btnThemmon = new System.Windows.Forms.Button();
             this.lblTenKH = new System.Windows.Forms.Label();
             this.lblTenMon = new System.Windows.Forms.Label();
-            this.lblDatetime = new System.Windows.Forms.Label();
-            this.picboxRes = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumSoLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxRes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.picboxRes);
-            this.groupBox1.Controls.Add(this.lblDatetime);
             this.groupBox1.Controls.Add(this.lblTenNV);
             this.groupBox1.Controls.Add(this.lblHoaDon);
             this.groupBox1.Controls.Add(this.lblTongTien);
             this.groupBox1.Controls.Add(this.txtTongtien);
+            this.groupBox1.Controls.Add(this.lblGiamGia);
             this.groupBox1.Controls.Add(this.btnThanhtoan);
+            this.groupBox1.Controls.Add(this.txtGiamgia);
             this.groupBox1.Controls.Add(this.dgvHoaDon);
             this.groupBox1.Controls.Add(this.gpbThongTin);
             this.groupBox1.Location = new System.Drawing.Point(4, 2);
@@ -116,7 +115,6 @@
             this.txtTongtien.Size = new System.Drawing.Size(101, 37);
             this.txtTongtien.TabIndex = 21;
             // 
-<<<<<<< HEAD
             // lblGiamGia
             // 
             this.lblGiamGia.AutoSize = true;
@@ -128,19 +126,12 @@
             this.lblGiamGia.TabIndex = 18;
             this.lblGiamGia.Text = "Giảm Giá:";
             // 
-=======
->>>>>>> 7f22dd2e6fcda4add8cb4f46def25e5a536ed76a
             // btnThanhtoan
             // 
             this.btnThanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
             this.btnThanhtoan.Location = new System.Drawing.Point(294, 459);
             this.btnThanhtoan.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.btnThanhtoan.Location = new System.Drawing.Point(359, 565);
-            this.btnThanhtoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 7f22dd2e6fcda4add8cb4f46def25e5a536ed76a
             this.btnThanhtoan.Name = "btnThanhtoan";
             this.btnThanhtoan.Size = new System.Drawing.Size(108, 43);
             this.btnThanhtoan.TabIndex = 19;
@@ -149,7 +140,6 @@
             this.btnThanhtoan.UseVisualStyleBackColor = true;
             this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
             // 
-<<<<<<< HEAD
             // txtGiamgia
             // 
             this.txtGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -160,8 +150,6 @@
             this.txtGiamgia.Size = new System.Drawing.Size(101, 37);
             this.txtGiamgia.TabIndex = 18;
             // 
-=======
->>>>>>> 7f22dd2e6fcda4add8cb4f46def25e5a536ed76a
             // dgvHoaDon
             // 
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -250,7 +238,6 @@
             this.linkKH.TabIndex = 24;
             this.linkKH.TabStop = true;
             this.linkKH.Text = "...";
-            this.linkKH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkKH_LinkClicked);
             // 
             // lblSoLuong
             // 
@@ -268,22 +255,14 @@
             this.btnThemmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnThemmon.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Add_27831;
             this.btnThemmon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
             this.btnThemmon.Location = new System.Drawing.Point(412, 57);
             this.btnThemmon.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemmon.Name = "btnThemmon";
             this.btnThemmon.Size = new System.Drawing.Size(147, 49);
-=======
-            this.btnThemmon.Location = new System.Drawing.Point(561, 70);
-            this.btnThemmon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemmon.Name = "btnThemmon";
-            this.btnThemmon.Size = new System.Drawing.Size(162, 60);
->>>>>>> 7f22dd2e6fcda4add8cb4f46def25e5a536ed76a
             this.btnThemmon.TabIndex = 22;
             this.btnThemmon.Text = "Thêm Món";
             this.btnThemmon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemmon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemmon.UseCompatibleTextRendering = true;
             this.btnThemmon.UseVisualStyleBackColor = true;
             this.btnThemmon.Click += new System.EventHandler(this.btnThemmon_Click);
             // 
@@ -309,24 +288,6 @@
             this.lblTenMon.TabIndex = 0;
             this.lblTenMon.Text = "Tên Món:";
             // 
-            // lblDatetime
-            // 
-            this.lblDatetime.AutoSize = true;
-            this.lblDatetime.Location = new System.Drawing.Point(674, 232);
-            this.lblDatetime.Name = "lblDatetime";
-            this.lblDatetime.Size = new System.Drawing.Size(0, 17);
-            this.lblDatetime.TabIndex = 29;
-            // 
-            // picboxRes
-            // 
-            this.picboxRes.Image = global::GUI_QLcoffee.Properties.Resources.iconfinder_Refresh_27873;
-            this.picboxRes.Location = new System.Drawing.Point(108, 563);
-            this.picboxRes.Name = "picboxRes";
-            this.picboxRes.Size = new System.Drawing.Size(59, 52);
-            this.picboxRes.TabIndex = 30;
-            this.picboxRes.TabStop = false;
-            this.picboxRes.Click += new System.EventHandler(this.picboxRes_Click_1);
-            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,7 +307,6 @@
             this.gpbThongTin.ResumeLayout(false);
             this.gpbThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumSoLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxRes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,10 +315,12 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThanhtoan;
+        private System.Windows.Forms.TextBox txtGiamgia;
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.GroupBox gpbThongTin;
         private System.Windows.Forms.Label lblTenKH;
         private System.Windows.Forms.Label lblTenMon;
+        private System.Windows.Forms.Label lblGiamGia;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.TextBox txtTongtien;
         private System.Windows.Forms.Button btnThemmon;
@@ -369,7 +331,5 @@
         private System.Windows.Forms.ComboBox cboTenKH;
         private System.Windows.Forms.ComboBox cboTenMon;
         private System.Windows.Forms.Label lblTenNV;
-        private System.Windows.Forms.Label lblDatetime;
-        private System.Windows.Forms.PictureBox picboxRes;
     }
 }

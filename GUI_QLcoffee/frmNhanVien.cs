@@ -167,7 +167,7 @@ namespace GUI_QLcoffee
                 txtEmail.Focus();
                 return;
             }
-            else if (txtTenNV.Text.Trim().Length == 0)
+            if (txtTenNV.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên!");
                 txtTenNV.Focus();
@@ -179,18 +179,12 @@ namespace GUI_QLcoffee
                 txtDiaChi.Focus();
                 return;
             }
-            else if (txtDienThoai.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập số điện thoại!");
-                txtDienThoai.Focus();
-                return;
-            }
-            else if (rdbtnAdmin.Checked == false && rdbtnNV.Checked == false)
+            if (rdbtnAdmin.Checked == false && rdbtnNV.Checked == false)
             {
                 MessageBox.Show("Bạn phải chọn chức vụ!");
                 return;
             }
-            else if (rdbtnHD.Checked == false && rdbtnNgungHD.Checked == false)
+            if (rdbtnHD.Checked == false && rdbtnNgungHD.Checked == false)
             {
                 MessageBox.Show("Bạn phải chọn trạng thái!");
                 return;
