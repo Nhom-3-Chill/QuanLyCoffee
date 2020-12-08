@@ -41,7 +41,7 @@ namespace GUI_QLcoffee
             cboTenKH.DataSource = dskh;
             cboTenKH.DisplayMember = "TenKhach";
             cboTenKH.ValueMember = "TenKhach";
-            NumSoLuong.Value = 0;
+            NumSoLuong.Value = 1;
             lblDatetime.Text = now.ToString();
             dt.Clear();
             try
