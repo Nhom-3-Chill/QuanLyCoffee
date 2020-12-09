@@ -209,12 +209,76 @@ namespace DAL_QLcoffee
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "XemThongKe";
-                command.Parameters.AddWithValue("ngaybt", ngayBD);
+                command.Parameters.AddWithValue("ngaybd", ngayBD);
                 command.Parameters.AddWithValue("ngaykt", ngayKT);
                 command.Connection = connection;
                 DataTable table = new DataTable();
                 table.Load(command.ExecuteReader());
                 return table;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        //BoSungThongKe
+        public DataTable XemTopMon(DateTime ngayBD, DateTime ngayKT)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "XemTopMon";
+                command.Parameters.AddWithValue("ngaybd", ngayBD);
+                command.Parameters.AddWithValue("ngaykt", ngayKT);
+                command.Connection = connection;
+                DataTable table = new DataTable();
+                table.Load(command.ExecuteReader());
+                return table;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public bool LuuHD(int mahd, string tentd, int soluong)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "LuuHD";
+                command.Parameters.AddWithValue("@mahd", mahd);
+                command.Parameters.AddWithValue("@tentd", tentd);
+                command.Parameters.AddWithValue("@soluong", soluong);
+                command.Connection = connection;
+                if (command.ExecuteNonQuery() > 0) 
+                {
+                    return true;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return false;
+        }
+        public string LayMaHD()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "LayMaHD";
+                command.Connection = connection;
+                return Convert.ToString(command.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                return "1";
             }
             finally
             {

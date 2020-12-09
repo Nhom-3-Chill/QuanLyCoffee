@@ -31,6 +31,12 @@ namespace GUI_QLcoffee
             dgvThongKe.Columns[3].HeaderText = "Mã khách hàng";
             dgvThongKe.Columns[4].HeaderText = "Mã nhân viên";
         }
+        private void thongkemonan()
+        {
+            dgvThongKe.DataSource = busthucdon.XemTopMon(dtpBatDau.Value, dtpKetthuc.Value);
+            dgvThongKe.Columns[0].HeaderText = "Tên món ăn";
+            dgvThongKe.Columns[1].HeaderText = "Tổng số lượng";
+        }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
@@ -40,6 +46,11 @@ namespace GUI_QLcoffee
         private void frmThongKe_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTKMon_Click(object sender, EventArgs e)
+        {
+            thongkemonan();
         }
     }
 }

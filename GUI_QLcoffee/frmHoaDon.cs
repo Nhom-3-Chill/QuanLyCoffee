@@ -93,12 +93,27 @@ namespace GUI_QLcoffee
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
+            bool luuhd = false;
+            int mahd = 1;
+            if (bus_Thucdon.LayMaHD() != "")
+            {
+                mahd = int.Parse(bus_Thucdon.LayMaHD()) + 1;
+            }
             if (bus_Thucdon.ThanhToanTien(cboTenKH.Text, lblTenNV.Text, now, float.Parse(txtTongtien.Text)))
             {
-                MessageBox.Show("Thanh toán thành công!");
-                loadtongtien();
-                loaddata();
+                foreach (DataRow item in dt.Rows)
+                {
+                    luuhd = bus_Thucdon.LuuHD(mahd, item["TenMon"].ToString(), int.Parse(item["SoLuong"].ToString()));
+                }
+                if (luuhd)
+                {
+                    MessageBox.Show("Thanh toán thành công!");
+                    loadtongtien();
+                    loaddata();
+                }
+                else { MessageBox.Show("Lỗi! Không thể lưu món"); }
             }
+            else { MessageBox.Show("Lỗi! Không thể thanh toán"); }
         }
 
         private void frmHoaDon_FormClosing(object sender, FormClosingEventArgs e)

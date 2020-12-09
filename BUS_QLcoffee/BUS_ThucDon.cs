@@ -56,5 +56,18 @@ namespace BUS_QLcoffee
         {
             return dal_ThucDon.ThanhToanTien(tenkh, tennv, ngaylap, tongtien);
         }
+        //BoSungThongKe
+        public DataTable XemTopMon(DateTime ngayBD, DateTime ngayKT)
+        {
+            return dal_ThucDon.XemTopMon(ngayBD, ngayKT);
+        }
+        public string LayMaHD()
+        {
+            return dal_ThucDon.LayMaHD();
+        }
+        public bool LuuHD(int mahd, string tentd, int soluong)
+        {
+            return dal_ThucDon.LuuHD(mahd, tentd, soluong);
+        }
     }
 }

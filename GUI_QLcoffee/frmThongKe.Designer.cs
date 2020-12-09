@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongKe));
             this.lblThongKe = new System.Windows.Forms.Label();
             this.gpbNhanvien = new System.Windows.Forms.GroupBox();
+            this.btnXuat = new System.Windows.Forms.Button();
+            this.btnTKMon = new System.Windows.Forms.Button();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
-            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnTKDoanhThu = new System.Windows.Forms.Button();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
             this.dtpKetthuc = new System.Windows.Forms.DateTimePicker();
             this.dtpBatDau = new System.Windows.Forms.DateTimePicker();
@@ -56,8 +58,10 @@
             // 
             // gpbNhanvien
             // 
+            this.gpbNhanvien.Controls.Add(this.btnXuat);
+            this.gpbNhanvien.Controls.Add(this.btnTKMon);
             this.gpbNhanvien.Controls.Add(this.dgvThongKe);
-            this.gpbNhanvien.Controls.Add(this.btnThongKe);
+            this.gpbNhanvien.Controls.Add(this.btnTKDoanhThu);
             this.gpbNhanvien.Controls.Add(this.gpbThongTin);
             this.gpbNhanvien.Controls.Add(this.lblThongKe);
             this.gpbNhanvien.Location = new System.Drawing.Point(15, 14);
@@ -67,6 +71,29 @@
             this.gpbNhanvien.Size = new System.Drawing.Size(901, 608);
             this.gpbNhanvien.TabIndex = 3;
             this.gpbNhanvien.TabStop = false;
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnXuat.Location = new System.Drawing.Point(734, 217);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(108, 58);
+            this.btnXuat.TabIndex = 23;
+            this.btnXuat.Text = "Xuất";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            // 
+            // btnTKMon
+            // 
+            this.btnTKMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKMon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTKMon.Location = new System.Drawing.Point(451, 232);
+            this.btnTKMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTKMon.Name = "btnTKMon";
+            this.btnTKMon.Size = new System.Drawing.Size(228, 43);
+            this.btnTKMon.TabIndex = 22;
+            this.btnTKMon.Text = "Xem thống kê món ăn";
+            this.btnTKMon.UseVisualStyleBackColor = true;
+            this.btnTKMon.Click += new System.EventHandler(this.btnTKMon_Click);
             // 
             // dgvThongKe
             // 
@@ -80,18 +107,18 @@
             this.dgvThongKe.Size = new System.Drawing.Size(839, 274);
             this.dgvThongKe.TabIndex = 21;
             // 
-            // btnThongKe
+            // btnTKDoanhThu
             // 
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(324, 231);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(228, 43);
-            this.btnThongKe.TabIndex = 20;
-            this.btnThongKe.Text = "Xem thống kê doanh thu";
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.btnTKDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTKDoanhThu.Location = new System.Drawing.Point(201, 232);
+            this.btnTKDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTKDoanhThu.Name = "btnTKDoanhThu";
+            this.btnTKDoanhThu.Size = new System.Drawing.Size(228, 43);
+            this.btnTKDoanhThu.TabIndex = 20;
+            this.btnTKDoanhThu.Text = "Xem thống kê doanh thu";
+            this.btnTKDoanhThu.UseVisualStyleBackColor = true;
+            this.btnTKDoanhThu.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // gpbThongTin
             // 
@@ -113,7 +140,7 @@
             // 
             this.dtpKetthuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpKetthuc.Location = new System.Drawing.Point(204, 73);
-            this.dtpKetthuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpKetthuc.Margin = new System.Windows.Forms.Padding(4);
             this.dtpKetthuc.Name = "dtpKetthuc";
             this.dtpKetthuc.Size = new System.Drawing.Size(288, 26);
             this.dtpKetthuc.TabIndex = 3;
@@ -122,7 +149,7 @@
             // 
             this.dtpBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBatDau.Location = new System.Drawing.Point(204, 31);
-            this.dtpBatDau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBatDau.Name = "dtpBatDau";
             this.dtpBatDau.Size = new System.Drawing.Size(288, 26);
             this.dtpBatDau.TabIndex = 2;
@@ -177,7 +204,9 @@
         private System.Windows.Forms.DateTimePicker dtpBatDau;
         private System.Windows.Forms.Label lblKetThuc;
         private System.Windows.Forms.Label lblBatDau;
-        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnTKDoanhThu;
         private System.Windows.Forms.DataGridView dgvThongKe;
+        private System.Windows.Forms.Button btnTKMon;
+        private System.Windows.Forms.Button btnXuat;
     }
 }
