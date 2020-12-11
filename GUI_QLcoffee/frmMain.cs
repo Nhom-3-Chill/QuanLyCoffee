@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,15 +30,15 @@ namespace GUI_QLcoffee
             ResetValues();
         }
 
-        public void Hidencontrol()
-        {
-            lblNameLogin.Visible = false;
-            lblTenDN.Visible = false;
-            lblTextMain.Visible = false;
-            lblUserName.Visible = false;
-            lblUser.Visible = false;
-            picMain.Visible = false;
-        }
+        //public void Hidencontrol()
+        //{
+        //    lblNameLogin.Visible = false;
+        //    lblTenDN.Visible = false;
+        //    lblTextMain.Visible = false;
+        //    lblUserName.Visible = false;
+        //    lblUser.Visible = false;
+        //    //picMain.Visible = false;
+        //}
 
         public void ResetValues()
         {
@@ -56,7 +57,8 @@ namespace GUI_QLcoffee
             lblTextMain.Visible = true;
             lblUserName.Visible = true;
             lblUser.Visible = true;
-            picMain.Visible = true;
+            //picMain.Visible = true;
+            pnlMain.Visible = true;
             //end
             if (vaitro == 0)
             {
@@ -114,7 +116,8 @@ namespace GUI_QLcoffee
                 profilenv.MdiParent = this;
                 profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -147,7 +150,8 @@ namespace GUI_QLcoffee
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -169,7 +173,8 @@ namespace GUI_QLcoffee
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
                 khachHang.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -191,7 +196,8 @@ namespace GUI_QLcoffee
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
                 nhanVien.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -214,7 +220,8 @@ namespace GUI_QLcoffee
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);
                 thongKe.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -237,7 +244,8 @@ namespace GUI_QLcoffee
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThongKe_FormClosed);
                 thongKe.Show();
-                Hidencontrol();
+                //Hidencontrol();
+                pnlMain.Visible = false;
             }
             else
             {
@@ -248,6 +256,24 @@ namespace GUI_QLcoffee
         {
             this.Refresh();
             frmMain_Load(sender, e);
+        }
+
+        private void huongDanSuDungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string file = @"User_manual.docx";
+                var path = Path.Combine(Directory.GetCurrentDirectory(), file);
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Win32Exception)
+            {
+                MessageBox.Show("The file is not found in the specified location");
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("The file is not found in the specified location");
+            }
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

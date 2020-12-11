@@ -20,7 +20,7 @@ namespace GUI_QLcoffee
         {
             InitializeComponent();
             //testcommit
-        }
+        }        
 
         private void thongkesanpham()
         {

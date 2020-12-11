@@ -47,10 +47,9 @@
             this.lblDoiMK.AutoSize = true;
             this.lblDoiMK.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoiMK.ForeColor = System.Drawing.Color.Red;
-            this.lblDoiMK.Location = new System.Drawing.Point(227, 43);
-            this.lblDoiMK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDoiMK.Location = new System.Drawing.Point(303, 53);
             this.lblDoiMK.Name = "lblDoiMK";
-            this.lblDoiMK.Size = new System.Drawing.Size(174, 31);
+            this.lblDoiMK.Size = new System.Drawing.Size(206, 37);
             this.lblDoiMK.TabIndex = 0;
             this.lblDoiMK.Text = "Đổi mật khẩu";
             // 
@@ -58,31 +57,29 @@
             // 
             this.lblMkCu.AutoSize = true;
             this.lblMkCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMkCu.Location = new System.Drawing.Point(30, 134);
-            this.lblMkCu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMkCu.Location = new System.Drawing.Point(40, 165);
             this.lblMkCu.Name = "lblMkCu";
-            this.lblMkCu.Size = new System.Drawing.Size(89, 17);
+            this.lblMkCu.Size = new System.Drawing.Size(105, 20);
             this.lblMkCu.TabIndex = 4;
             this.lblMkCu.Text = "Mật khẩu cũ:";
             // 
             // txtMkCu
             // 
-            this.txtMkCu.Location = new System.Drawing.Point(179, 132);
-            this.txtMkCu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMkCu.Location = new System.Drawing.Point(239, 162);
+            this.txtMkCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMkCu.Multiline = true;
             this.txtMkCu.Name = "txtMkCu";
             this.txtMkCu.PasswordChar = '*';
-            this.txtMkCu.Size = new System.Drawing.Size(294, 28);
+            this.txtMkCu.Size = new System.Drawing.Size(391, 34);
             this.txtMkCu.TabIndex = 1;
             // 
             // lblMkMoi
             // 
             this.lblMkMoi.AutoSize = true;
             this.lblMkMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMkMoi.Location = new System.Drawing.Point(29, 176);
-            this.lblMkMoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMkMoi.Location = new System.Drawing.Point(39, 217);
             this.lblMkMoi.Name = "lblMkMoi";
-            this.lblMkMoi.Size = new System.Drawing.Size(96, 17);
+            this.lblMkMoi.Size = new System.Drawing.Size(114, 20);
             this.lblMkMoi.TabIndex = 5;
             this.lblMkMoi.Text = "Mật khẩu mới:";
             // 
@@ -90,31 +87,30 @@
             // 
             this.lblNhaplaiMkMoi.AutoSize = true;
             this.lblNhaplaiMkMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhaplaiMkMoi.Location = new System.Drawing.Point(29, 218);
-            this.lblNhaplaiMkMoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNhaplaiMkMoi.Location = new System.Drawing.Point(39, 268);
             this.lblNhaplaiMkMoi.Name = "lblNhaplaiMkMoi";
-            this.lblNhaplaiMkMoi.Size = new System.Drawing.Size(152, 17);
+            this.lblNhaplaiMkMoi.Size = new System.Drawing.Size(180, 20);
             this.lblNhaplaiMkMoi.TabIndex = 6;
             this.lblNhaplaiMkMoi.Text = "Nhập lại mật khẩu mới:";
             // 
             // txtMkMoi
             // 
-            this.txtMkMoi.Location = new System.Drawing.Point(179, 171);
-            this.txtMkMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMkMoi.Location = new System.Drawing.Point(239, 210);
+            this.txtMkMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMkMoi.Multiline = true;
             this.txtMkMoi.Name = "txtMkMoi";
             this.txtMkMoi.PasswordChar = '*';
-            this.txtMkMoi.Size = new System.Drawing.Size(294, 28);
+            this.txtMkMoi.Size = new System.Drawing.Size(391, 34);
             this.txtMkMoi.TabIndex = 2;
             // 
             // txtNhapLaiMkMoi
             // 
-            this.txtNhapLaiMkMoi.Location = new System.Drawing.Point(179, 212);
-            this.txtNhapLaiMkMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhapLaiMkMoi.Location = new System.Drawing.Point(239, 261);
+            this.txtNhapLaiMkMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNhapLaiMkMoi.Multiline = true;
             this.txtNhapLaiMkMoi.Name = "txtNhapLaiMkMoi";
             this.txtNhapLaiMkMoi.PasswordChar = '*';
-            this.txtNhapLaiMkMoi.Size = new System.Drawing.Size(294, 28);
+            this.txtNhapLaiMkMoi.Size = new System.Drawing.Size(391, 34);
             this.txtNhapLaiMkMoi.TabIndex = 3;
             // 
             // btnThoat
@@ -122,12 +118,12 @@
             this.btnThoat.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Exit;
+            this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Thoat;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(327, 260);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Location = new System.Drawing.Point(436, 320);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(146, 60);
+            this.btnThoat.Size = new System.Drawing.Size(195, 74);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "      Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -140,10 +136,10 @@
             this.btnDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMK.Image = global::GUI_QLcoffee.Properties.Resources.DoiMK;
             this.btnDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMK.Location = new System.Drawing.Point(179, 260);
-            this.btnDoiMK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDoiMK.Location = new System.Drawing.Point(239, 320);
+            this.btnDoiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDoiMK.Name = "btnDoiMK";
-            this.btnDoiMK.Size = new System.Drawing.Size(143, 60);
+            this.btnDoiMK.Size = new System.Drawing.Size(191, 74);
             this.btnDoiMK.TabIndex = 7;
             this.btnDoiMK.Text = "Đổi mật khẩu";
             this.btnDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,20 +148,20 @@
             // 
             // picDoiMK
             // 
-            this.picDoiMK.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.ly_coffee1;
             this.picDoiMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picDoiMK.Location = new System.Drawing.Point(32, 32);
-            this.picDoiMK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picDoiMK.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.ly_coffee;
+            this.picDoiMK.Location = new System.Drawing.Point(43, 39);
+            this.picDoiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picDoiMK.Name = "picDoiMK";
-            this.picDoiMK.Size = new System.Drawing.Size(98, 66);
+            this.picDoiMK.Size = new System.Drawing.Size(131, 81);
             this.picDoiMK.TabIndex = 0;
             this.picDoiMK.TabStop = false;
             // 
             // frmDoiMK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 358);
+            this.ClientSize = new System.Drawing.Size(677, 441);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.txtNhapLaiMkMoi);
@@ -177,11 +173,10 @@
             this.Controls.Add(this.lblDoiMK);
             this.Controls.Add(this.picDoiMK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
-            this.Load += new System.EventHandler(this.frmDoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

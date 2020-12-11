@@ -228,5 +228,29 @@ namespace GUI_QLcoffee
             txtSearch.Text = null;
             txtSearch.BackColor = Color.LightGray;
         }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtDienThoai_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDienThoai.Text != "")
+            {
+                try
+                {
+                    int phone = Int32.Parse(txtDienThoai.Text.Trim());
+                }
+                catch
+                {
+                    MessageBox.Show("Số điện thoại không được nhập chữ!!");
+                    txtDienThoai.Text = "";
+                    txtDienThoai.Focus();
+                    return;
+                }
+            }
+        }
     }
 }

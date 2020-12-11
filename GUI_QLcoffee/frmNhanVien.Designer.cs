@@ -152,10 +152,13 @@
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtDienThoai.Location = new System.Drawing.Point(581, 106);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDienThoai.MaxLength = 11;
             this.txtDienThoai.Multiline = true;
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(244, 31);
             this.txtDienThoai.TabIndex = 11;
+            this.txtDienThoai.TextChanged += new System.EventHandler(this.txtDienThoai_TextChanged);
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // lblDienThoai
             // 
@@ -416,7 +419,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them1;
+            this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(67, 252);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

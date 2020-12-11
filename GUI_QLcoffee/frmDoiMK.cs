@@ -57,10 +57,16 @@ namespace GUI_QLcoffee
                 txtNhapLaiMkMoi.Focus();
                 return;
             }
+            else if (txtMkCu.Text.Trim() == txtMkMoi.Text.Trim())
+            {
+                MessageBox.Show("Mật khẩu cũ và mật khẩu mới phải khác nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMkMoi.Focus();
+                return;
+            }
             else if (txtMkMoi.Text.Trim() != txtNhapLaiMkMoi.Text.Trim())
             {
-                MessageBox.Show("Mật khẩu cũ và mật khẩu mới phải giống nhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMkMoi.Focus();
+                MessageBox.Show("Mật khẩu mới và nhập lại mật khẩu mới phải giống nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNhapLaiMkMoi.Focus();
                 return;
             }
             else
@@ -94,11 +100,6 @@ namespace GUI_QLcoffee
                     txtNhapLaiMkMoi.Text = null;
                 }
             }
-        }
-
-        private void frmDoiMK_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

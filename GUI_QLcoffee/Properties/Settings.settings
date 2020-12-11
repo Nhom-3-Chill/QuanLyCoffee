@@ -1,16 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GUI_QLcoffee.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="GUI_QLcoffee" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)" />
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="email" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="pass" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

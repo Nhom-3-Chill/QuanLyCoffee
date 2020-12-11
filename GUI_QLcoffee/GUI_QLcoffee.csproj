@@ -124,18 +124,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -156,14 +156,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\ly_coffee.jpg" />
     <None Include="Resources\iconfinder_Refresh_27873.png" />
-    <None Include="Icon\Hoa_Don1.jpg" />
     <None Include="Icon\Hoa_Don.jpg" />
     <None Include="Resources\iconfinder_Add_27831.png" />
     <None Include="Icon\Thuc_don.png" />
     <None Include="Icon\Khach_hang.jpg" />
     <None Include="Icon\Nhan_vien.jpg" />
-    <None Include="Resources\avtkhung.PNG" />
     <None Include="Resources\icons8-search-32.png" />
     <None Include="Resources\iconfinder_Remove_27874.png" />
     <None Include="Resources\iconfinder_Save_27876.png" />
@@ -171,15 +171,12 @@
     <None Include="Resources\Bo_qua.jpg" />
     <None Include="Resources\Sua.jpg" />
     <None Include="Resources\Xoa.jpg" />
-    <None Include="Resources\dong_y1.jpg" />
-    <None Include="Resources\Them1.png" />
     <None Include="Resources\dong_y.jpg" />
     <None Include="Resources\Them.png" />
     <None Include="Icon\dang_nhap.jpg" />
     <None Include="Icon\Exit.png" />
     <None Include="Icon\DoiMK.jpg" />
     <None Include="Icon\Dang_xuat.jpg" />
-    <Content Include="Icon\fpt.ico" />
     <None Include="Images\ly_coffee.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

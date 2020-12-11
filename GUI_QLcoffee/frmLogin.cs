@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLcoffee;
 using BUS_QLcoffee;
+using System.Net.Mail;
 
 namespace GUI_QLcoffee
 {
@@ -38,72 +40,129 @@ namespace GUI_QLcoffee
             }
         }
 
+        public void writeRememberAP()
+        {
+            try
+            {
+                string startupPath = Environment.CurrentDirectory;
+                string file = startupPath + @"\Remember.txt";
+                using (FileStream fstr = new FileStream(file, FileMode.Create, FileAccess.Write))
+                {
+                    using (StreamWriter sw = new StreamWriter(fstr))
+                    {
+                        if (chkLogin.Checked == true)
+                        {
+                            sw.WriteLine(txtEmail.Text);
+                            sw.WriteLine(txtMK.Text);// dòng "1" để kiểm tra có checked hay không
+                            sw.WriteLine("1");// ghi từng dòng vào file Remember.txt
+                            sw.Flush();
+                        }
+                        else
+                        {
+                            sw.WriteLine("0");// dòng "0" là không check vào checkbox
+                            sw.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void readRememberAP()
+        {
+            try
+            {
+                string startupPath = Environment.CurrentDirectory;
+                string file = startupPath + @"\Remember.txt";
+                using (FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read))
+                {
+                    string[] lines = File.ReadAllLines(file);
+                    if (lines[lines.Length - 1] == "1")
+                    {
+                        txtEmail.Text = lines[lines.Length - 3];
+                        txtMK.Text = lines[lines.Length - 2];
+                        chkLogin.Checked = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtEmail.Text = Properties.Settings.Default.email;
-            txtMK.Text = Properties.Settings.Default.pass;
+            readRememberAP();
+        }
+
+        public bool checkmail(string emailadd)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailadd);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            try
+            if (txtEmail.Text.Trim().Length == 0)
             {
-                if (txtEmail.Text.Trim().Length == 0)
+                MessageBox.Show("Không được để trống email!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            else if (!checkmail(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email bạn nhập không hợp lệ!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMK.Focus();
+                return;
+            }
+            else if(txtMK.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Không được để trống mật khẩu!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMK.Focus();
+                return;
+            }
+            else if(txtEmail.Text.Trim().Length != 0&& txtMK.Text.Trim().Length != 0)
+            {
+                DTO_NhanVien nv = new DTO_NhanVien();
+                nv.Email = txtEmail.Text;
+                nv.MatKhau = bus_NhanVien.encryption(txtMK.Text);
+                if (bus_NhanVien.NVDangNhap(nv))
                 {
-                    MessageBox.Show("Không được để trống email!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmail.Focus();
-                }
-                else if(txtMK.Text.Trim().Length == 0)
-                {
-                    MessageBox.Show("Không được để trống mật khẩu!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMK.Focus();
-                }
-                else if(txtEmail.Text.Trim().Length != 0&& txtMK.Text.Trim().Length != 0)
-                {
-                    DTO_NhanVien nv = new DTO_NhanVien();
-                    nv.Email = txtEmail.Text;
-                    nv.MatKhau = bus_NhanVien.encryption(txtMK.Text);
-                    if (bus_NhanVien.NVDangNhap(nv))
+                    tinhtrang = bus_NhanVien.NVTinhTrang(nv);
+                    if (tinhtrang == 0)
                     {
-                        tinhtrang = bus_NhanVien.NVTinhTrang(nv);
-                        if (tinhtrang == 1)
-                        {
-                            frmMain.mail = txtEmail.Text;
-                            frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
-                            MessageBox.Show("Đăng nhập thành công!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            frmMain frm = new frmMain();
-                            frm.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tài khoản đã dừng hoạt động vui lòng liên hệ quản lý!");
-                        }
+                        frmMain.mail = txtEmail.Text;
+                        frmMain.vaitro = bus_NhanVien.NVVaiTro(nv);
+                        MessageBox.Show("Đăng nhập thành công!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        frmMain frm = new frmMain();
+                        frm.Show();
+                        writeRememberAP();
                     }
                     else
                     {
-                        MessageBox.Show("Đăng nhập thất bại, vui lòng kiểm tra email hoặc mật khẩu!");
-                        txtEmail.Text = null;
-                        txtMK.Text = null;
-                        txtEmail.Focus();
-                        chkLogin.Checked = false;
+                        MessageBox.Show("Tài khoản đã dừng hoạt động vui lòng liên hệ quản lý!");
                     }
-                }                
-            }
-            catch { MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo"); }
-            
-            if (chkLogin.Checked)
-            {
-                Properties.Settings.Default.email = txtEmail.Text;
-                Properties.Settings.Default.pass = txtMK.Text;
-                Properties.Settings.Default.Save();
-            }
-            else
-            {
-                Properties.Settings.Default.email = "";
-                Properties.Settings.Default.pass = "";
-                Properties.Settings.Default.Save();
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại, vui lòng kiểm tra email hoặc mật khẩu!");
+                    txtEmail.Text = null;
+                    txtMK.Text = null;
+                    txtEmail.Focus();
+                    chkLogin.Checked = false;
+                }
+            }                
         }
 
         private void lblQuenMK_Click(object sender, EventArgs e)
@@ -138,6 +197,6 @@ namespace GUI_QLcoffee
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
+        }        
     }
 }

@@ -49,7 +49,7 @@ namespace GUI_QLcoffee
             btnXoa.Enabled = false;
             btnBoqua.Enabled = true;
             btnThoat.Enabled = true;
-            btnHinhAnh.Enabled = false;
+            picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.Menu ;
         }
 
         private void frmThucDon_Load(object sender, EventArgs e)
@@ -231,6 +231,24 @@ namespace GUI_QLcoffee
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void txtGia_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGia.Text != "")
+                {
+                    int phone = Int32.Parse(txtGia.Text.Trim());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Giá không được nhập chữ!");
+                txtGia.Text = "";
+                txtGia.Focus();
+                return;
+            }
         }
     }
 }

@@ -63,16 +63,6 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap avtkhung {
-            get {
-                object obj = ResourceManager.GetObject("avtkhung", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Bo_qua {
             get {
                 object obj = ResourceManager.GetObject("Bo_qua", resourceCulture);
@@ -86,26 +76,6 @@ namespace GUI_QLcoffee.Properties {
         internal static System.Drawing.Bitmap dang_nhap {
             get {
                 object obj = ResourceManager.GetObject("dang_nhap", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dang_nhap1 {
-            get {
-                object obj = ResourceManager.GetObject("dang_nhap1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dang_nhap2 {
-            get {
-                object obj = ResourceManager.GetObject("dang_nhap2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,16 +103,6 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DoiMK1 {
-            get {
-                object obj = ResourceManager.GetObject("DoiMK1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dong_y {
             get {
                 object obj = ResourceManager.GetObject("dong_y", resourceCulture);
@@ -153,69 +113,9 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dong_y1 {
-            get {
-                object obj = ResourceManager.GetObject("dong_y1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Exit {
-            get {
-                object obj = ResourceManager.GetObject("Exit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Exit1 {
-            get {
-                object obj = ResourceManager.GetObject("Exit1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Exit2 {
-            get {
-                object obj = ResourceManager.GetObject("Exit2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hoa_Don {
             get {
                 object obj = ResourceManager.GetObject("Hoa_Don", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Hoa_Don1 {
-            get {
-                object obj = ResourceManager.GetObject("Hoa_Don1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Hoa_Don2 {
-            get {
-                object obj = ResourceManager.GetObject("Hoa_Don2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -265,7 +165,7 @@ namespace GUI_QLcoffee.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap icons8_search_32 {
             get {
-                object obj = ResourceManager.GetObject("icons8-search-32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_search_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +193,9 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ly_coffee1 {
+        internal static System.Drawing.Bitmap Menu {
             get {
-                object obj = ResourceManager.GetObject("ly_coffee1", resourceCulture);
+                object obj = ResourceManager.GetObject("Menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +206,6 @@ namespace GUI_QLcoffee.Properties {
         internal static System.Drawing.Bitmap Nhan_vien {
             get {
                 object obj = ResourceManager.GetObject("Nhan_vien", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Nhan_vien1 {
-            get {
-                object obj = ResourceManager.GetObject("Nhan_vien1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,16 +233,6 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Them1 {
-            get {
-                object obj = ResourceManager.GetObject("Them1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Thoat {
             get {
                 object obj = ResourceManager.GetObject("Thoat", resourceCulture);
@@ -366,16 +246,6 @@ namespace GUI_QLcoffee.Properties {
         internal static System.Drawing.Bitmap Thuc_don {
             get {
                 object obj = ResourceManager.GetObject("Thuc_don", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Thuc_don1 {
-            get {
-                object obj = ResourceManager.GetObject("Thuc_don1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

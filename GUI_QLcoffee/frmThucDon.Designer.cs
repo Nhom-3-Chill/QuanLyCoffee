@@ -37,6 +37,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.dgvThucDon = new System.Windows.Forms.DataGridView();
             this.gpbThongTin = new System.Windows.Forms.GroupBox();
+            this.txtHinh = new System.Windows.Forms.TextBox();
             this.picThucDon = new System.Windows.Forms.PictureBox();
             this.btnHinhAnh = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.btnBoqua = new System.Windows.Forms.Button();
             this.lblThucDon = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.txtHinh = new System.Windows.Forms.TextBox();
             this.gpbThucDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucDon)).BeginInit();
             this.gpbThongTin.SuspendLayout();
@@ -80,7 +80,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them1;
+            this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(89, 300);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -181,9 +181,17 @@
             this.gpbThongTin.TabStop = false;
             this.gpbThongTin.Text = "Thông Tin";
             // 
+            // txtHinh
+            // 
+            this.txtHinh.Location = new System.Drawing.Point(464, 124);
+            this.txtHinh.Name = "txtHinh";
+            this.txtHinh.Size = new System.Drawing.Size(10, 26);
+            this.txtHinh.TabIndex = 15;
+            this.txtHinh.Visible = false;
+            // 
             // picThucDon
             // 
-            this.picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.avtkhung;
+            this.picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.Menu;
             this.picThucDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picThucDon.Location = new System.Drawing.Point(608, 25);
             this.picThucDon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -210,10 +218,12 @@
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.txtGia.Location = new System.Drawing.Point(185, 146);
             this.txtGia.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtGia.MaxLength = 6;
             this.txtGia.Multiline = true;
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(245, 31);
             this.txtGia.TabIndex = 12;
+            this.txtGia.TextChanged += new System.EventHandler(this.txtGia_TextChanged);
             this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
             // 
             // txtTenTD
@@ -321,14 +331,6 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // txtHinh
-            // 
-            this.txtHinh.Location = new System.Drawing.Point(464, 124);
-            this.txtHinh.Name = "txtHinh";
-            this.txtHinh.Size = new System.Drawing.Size(10, 26);
-            this.txtHinh.TabIndex = 15;
-            this.txtHinh.Visible = false;
             // 
             // frmThucDon
             // 

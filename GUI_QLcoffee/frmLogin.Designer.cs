@@ -117,7 +117,7 @@
             this.btnThoat.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Exit;
+            this.btnThoat.Image = global::GUI_QLcoffee.Properties.Resources.Thoat;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(697, 239);
             this.btnThoat.Name = "btnThoat";
@@ -132,7 +132,7 @@
             this.btnDangNhap.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Image = global::GUI_QLcoffee.Properties.Resources.dang_nhap2;
+            this.btnDangNhap.Image = global::GUI_QLcoffee.Properties.Resources.dang_nhap;
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangNhap.Location = new System.Drawing.Point(496, 239);
             this.btnDangNhap.Name = "btnDangNhap";
@@ -171,6 +171,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptnLogin)).EndInit();
