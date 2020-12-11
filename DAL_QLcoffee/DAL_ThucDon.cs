@@ -285,5 +285,24 @@ namespace DAL_QLcoffee
                 connection.Close();
             }
         }
+        public DataTable XemchitietHD(int mahd)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "XemchitietHD";
+                command.Connection = connection;
+                command.Parameters.AddWithValue("@mahd", mahd);
+                DataTable table = new DataTable();
+                table.Load(command.ExecuteReader());
+                return table;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

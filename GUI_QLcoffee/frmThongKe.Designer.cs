@@ -40,6 +40,7 @@
             this.dtpBatDau = new System.Windows.Forms.DateTimePicker();
             this.lblKetThuc = new System.Windows.Forms.Label();
             this.lblBatDau = new System.Windows.Forms.Label();
+            this.btnXem = new System.Windows.Forms.Button();
             this.gpbNhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.gpbThongTin.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // gpbNhanvien
             // 
+            this.gpbNhanvien.Controls.Add(this.btnXem);
             this.gpbNhanvien.Controls.Add(this.btnXuat);
             this.gpbNhanvien.Controls.Add(this.btnTKMon);
             this.gpbNhanvien.Controls.Add(this.dgvThongKe);
@@ -104,8 +106,9 @@
             this.dgvThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
-            this.dgvThongKe.Size = new System.Drawing.Size(839, 274);
+            this.dgvThongKe.Size = new System.Drawing.Size(834, 274);
             this.dgvThongKe.TabIndex = 21;
+            this.dgvThongKe.Click += new System.EventHandler(this.dgvThongKe_Click);
             // 
             // btnTKDoanhThu
             // 
@@ -174,6 +177,17 @@
             this.lblBatDau.TabIndex = 1;
             this.lblBatDau.Text = "Chọn ngày bắt đầu:";
             // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnXem.Location = new System.Drawing.Point(45, 222);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(108, 58);
+            this.btnXem.TabIndex = 24;
+            this.btnXem.Text = "Xem";
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -208,5 +222,6 @@
         private System.Windows.Forms.DataGridView dgvThongKe;
         private System.Windows.Forms.Button btnTKMon;
         private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.Button btnXem;
     }
 }

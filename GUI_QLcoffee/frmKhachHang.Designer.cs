@@ -41,9 +41,6 @@
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTenKH = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.lblKhachHang = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnBoqua = new System.Windows.Forms.Button();
@@ -51,6 +48,9 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.lblKhachHang = new System.Windows.Forms.Label();
             this.gpbNhanvien.SuspendLayout();
             this.gpbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -202,42 +202,6 @@
             this.lblTenKH.TabIndex = 6;
             this.lblTenKH.Text = "Tên Khách Hàng:";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(185, 303);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(319, 32);
-            this.txtSearch.TabIndex = 18;
-            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
-            // 
-            // dgvKhachHang
-            // 
-            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(31, 343);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.RowHeadersWidth = 51;
-            this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(820, 235);
-            this.dgvKhachHang.TabIndex = 13;
-            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
-            // 
-            // lblKhachHang
-            // 
-            this.lblKhachHang.AutoSize = true;
-            this.lblKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblKhachHang.ForeColor = System.Drawing.Color.Red;
-            this.lblKhachHang.Location = new System.Drawing.Point(320, 21);
-            this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(189, 36);
-            this.lblKhachHang.TabIndex = 0;
-            this.lblKhachHang.Text = "Khách Hàng";
-            // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -314,7 +278,10 @@
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnThem.Image = global::GUI_QLcoffee.Properties.Resources.Them;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(103, 236);
@@ -339,6 +306,42 @@
             this.btnSearch.Text = "        Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(185, 303);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(319, 32);
+            this.txtSearch.TabIndex = 18;
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
+            // 
+            // dgvKhachHang
+            // 
+            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Location = new System.Drawing.Point(31, 343);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.RowHeadersWidth = 51;
+            this.dgvKhachHang.RowTemplate.Height = 24;
+            this.dgvKhachHang.Size = new System.Drawing.Size(820, 235);
+            this.dgvKhachHang.TabIndex = 13;
+            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
+            // 
+            // lblKhachHang
+            // 
+            this.lblKhachHang.AutoSize = true;
+            this.lblKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblKhachHang.ForeColor = System.Drawing.Color.Red;
+            this.lblKhachHang.Location = new System.Drawing.Point(320, 21);
+            this.lblKhachHang.Name = "lblKhachHang";
+            this.lblKhachHang.Size = new System.Drawing.Size(189, 36);
+            this.lblKhachHang.TabIndex = 0;
+            this.lblKhachHang.Text = "Khách Hàng";
             // 
             // frmKhachHang
             // 

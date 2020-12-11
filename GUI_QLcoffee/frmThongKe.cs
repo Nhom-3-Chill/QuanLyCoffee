@@ -41,16 +41,39 @@ namespace GUI_QLcoffee
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             thongkesanpham();
+            btnXem.Enabled = false;
         }
 
         private void frmThongKe_Load(object sender, EventArgs e)
         {
-
+            btnXem.Enabled = false;
         }
 
         private void btnTKMon_Click(object sender, EventArgs e)
         {
             thongkemonan();
+            btnXem.Enabled = false;
+        }
+
+        private void dgvThongKe_Click(object sender, EventArgs e)
+        {
+            btnXem.Enabled = true;
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            if (dgvThongKe.Rows.Count > 1)
+            {
+                try
+                {
+                    frmShowCTHD frmshow = new frmShowCTHD(int.Parse(dgvThongKe.CurrentRow.Cells[0].Value.ToString()));
+                    frmshow.Show();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Tính năng này chỉ áp dụng khi xem thống kê doanh thu!","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

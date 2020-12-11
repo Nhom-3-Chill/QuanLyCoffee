@@ -58,13 +58,6 @@ namespace GUI_QLcoffee
             dgvHoaDon.DataSource = dt;
         }
 
-        //public void ResetValues()
-        //{
-        //    cboTenMon.Text = "Vui lòng chọn tên món ăn!";
-        //    cboTenKH.Text = "Vãng lai";
-        //    NumSoLuong.Value = 1;
-        //}
-
         public void loadtongtien()
         {
             txtTongtien.Text = "0";
@@ -85,7 +78,6 @@ namespace GUI_QLcoffee
                     adddt["ThanhTien"] = (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
                     dt.Rows.Add(adddt);
                     dem += (int.Parse(NumSoLuong.Value.ToString()) * int.Parse(bus_Thucdon.DonGiaMon(cboTenMon.Text)));
-                    //ResetValues();
                 }
                 catch (Exception x)
                 {

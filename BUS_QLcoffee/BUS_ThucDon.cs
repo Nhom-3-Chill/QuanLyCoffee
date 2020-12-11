@@ -69,5 +69,10 @@ namespace BUS_QLcoffee
         {
             return dal_ThucDon.LuuHD(mahd, tentd, soluong);
         }
+        public DataTable XemchitietHD(int mahd)
+        {
+            return dal_ThucDon.XemchitietHD(mahd);
+        }
+
     }
 }
