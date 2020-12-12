@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowCTHD));
             this.dgvShowCTHD = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowCTHD)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +50,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 289);
             this.Controls.Add(this.dgvShowCTHD);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmShowCTHD";
-            this.Text = "frmShowCTHD";
+            this.Text = "Chi Tiết Hóa Đơn";
             this.Load += new System.EventHandler(this.frmShowCTHD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowCTHD)).EndInit();
             this.ResumeLayout(false);

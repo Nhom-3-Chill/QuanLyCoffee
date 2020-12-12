@@ -25,9 +25,7 @@ namespace GUI_QLcoffee
         {
             if(MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Hide();
-                frmMain frm = new frmMain();
-                frm.Show();
+                this.Close();
             }
             else
             {
@@ -79,11 +77,10 @@ namespace GUI_QLcoffee
                     string matKhauMoi = bus_NhanVien.encryption(txtMkMoi.Text);
                     if(bus_NhanVien.NVDoiMatKhau(nv, matKhauCu, matKhauMoi))
                     {
+                        frmMain.check = true;
                         bus_NhanVien.SendEmail(frmMain.mail, txtNhapLaiMkMoi.Text);
                         MessageBox.Show("Đổi mật khẩu thành công, bạn cần phải đăng nhập lại!");
                         this.Close();
-                        //frmLogin login = new frmLogin();
-                        //login.Show();
                     }
                     else
                     {

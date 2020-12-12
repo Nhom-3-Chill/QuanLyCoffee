@@ -49,7 +49,7 @@ namespace GUI_QLcoffee
             btnXoa.Enabled = false;
             btnBoqua.Enabled = true;
             btnThoat.Enabled = true;
-            picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.Menu ;
+            picThucDon.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.Menu;
         }
 
         private void frmThucDon_Load(object sender, EventArgs e)

@@ -16,12 +16,12 @@ namespace GUI_QLcoffee
     {
         public static string mail;
         public static int vaitro = 0;
+        public static bool check = false;
         BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
         public frmMain()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            //testcommitt
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -29,16 +29,6 @@ namespace GUI_QLcoffee
             this.Refresh();
             ResetValues();
         }
-
-        //public void Hidencontrol()
-        //{
-        //    lblNameLogin.Visible = false;
-        //    lblTenDN.Visible = false;
-        //    lblTextMain.Visible = false;
-        //    lblUserName.Visible = false;
-        //    lblUser.Visible = false;
-        //    //picMain.Visible = false;
-        //}
 
         public void ResetValues()
         {
@@ -113,10 +103,10 @@ namespace GUI_QLcoffee
             frmDoiMK profilenv = new frmDoiMK();
             if (!CheckExistForm("frmDoiMK"))
             {
+                this.IsMdiContainer = true;
                 profilenv.MdiParent = this;
                 profilenv.FormClosed += new FormClosedEventHandler(frmDoiMK_FormClosed);
                 profilenv.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
@@ -128,9 +118,12 @@ namespace GUI_QLcoffee
         {
             this.Refresh();
             frmMain_Load(sender, e);
-            this.Hide();
-            frmLogin login = new frmLogin();
-            login.Show();
+            if (check == true)
+            {
+                this.Hide();
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
         }
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,7 +143,6 @@ namespace GUI_QLcoffee
                 hoaDon.MdiParent = this;
                 hoaDon.FormClosed += new FormClosedEventHandler(frmHoaDon_FormClosed);
                 hoaDon.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
@@ -173,7 +165,6 @@ namespace GUI_QLcoffee
                 khachHang.MdiParent = this;
                 khachHang.FormClosed += new FormClosedEventHandler(frmKhachHang_FormClosed);
                 khachHang.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
@@ -196,7 +187,6 @@ namespace GUI_QLcoffee
                 nhanVien.MdiParent = this;
                 nhanVien.FormClosed += new FormClosedEventHandler(frmNhanVien_FormClosed);
                 nhanVien.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
@@ -220,7 +210,6 @@ namespace GUI_QLcoffee
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThucDon_FormClosed);
                 thongKe.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
@@ -244,7 +233,6 @@ namespace GUI_QLcoffee
                 thongKe.MdiParent = this;
                 thongKe.FormClosed += new FormClosedEventHandler(frmThongKe_FormClosed);
                 thongKe.Show();
-                //Hidencontrol();
                 pnlMain.Visible = false;
             }
             else
