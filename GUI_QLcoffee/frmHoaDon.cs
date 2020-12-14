@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,13 @@ namespace GUI_QLcoffee
 {
     public partial class frmHoaDon : Form
     {
+        SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QuanLyCoffeeFull.mdf;Integrated Security=True");
         BUS_KhachHang bus_Khachhang = new BUS_KhachHang();
         BUS_ThucDon bus_Thucdon = new BUS_ThucDon();
         DataTable dt = new DataTable();
         float dem = 0;
         DateTime now = DateTime.Now;
+
         public frmHoaDon(string tennv)
         {
             InitializeComponent();
@@ -111,6 +114,18 @@ namespace GUI_QLcoffee
                     MessageBox.Show("Thanh toán thành công!");
                     loadtongtien();
                     loaddata();
+                    frmReportHoaDon frm = new frmReportHoaDon();
+                    frm.Show();
+                    connection.Open();
+                    string s = "select hd.MaHD, nv.MaNV, kh.TenKhach, td.TenTD, ct.SoLuong, td.Gia, (ct.SoLuong * td.Gia) as 'ThanhTien', hd.TongThanhTien from THUCDON td inner join CHITIETHOADON ct on td.MaTD = ct.MaTD inner join HOADON hd on ct.MaHD = hd.MaHD inner join NHANVIEN nv on nv.MaNV = hd.MaNV inner join KHACHHANG kh on kh.MaKH = hd.MaKH group by hd.MaHD, nv.MaNV, kh.TenKhach, td.TenTD, ct.SoLuong, td.Gia, hd.TongThanhTien having hd.MaHD='" + int.Parse(bus_Thucdon.LayMaHD()) + "'";
+                    SqlDataAdapter adapter = new SqlDataAdapter(s, connection);
+                    DataSet set = new DataSet();
+                    adapter.Fill(set, "HOADON");
+                    reporthoadon report = new reporthoadon();
+                    report.SetDataSource(set);
+                    frm.rpHoaDon.ReportSource = report;
+                    connection.Close();
+                    frm.rpHoaDon.Refresh();
                 }
                 else { MessageBox.Show("Lỗi! Không thể lưu món"); }
             }

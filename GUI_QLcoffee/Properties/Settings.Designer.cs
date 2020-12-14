@@ -23,15 +23,6 @@ namespace GUI_QLcoffee.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string GUI_QLcoffee {
-            get {
-                return ((string)(this["GUI_QLcoffee"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -53,6 +44,17 @@ namespace GUI_QLcoffee.Properties {
             }
             set {
                 this["pass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyCoffeeFull;Integrated Se" +
+            "curity=True")]
+        public string QuanLyCoffeeFullConnectionString {
+            get {
+                return ((string)(this["QuanLyCoffeeFullConnectionString"]));
             }
         }
     }

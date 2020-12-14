@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace GUI_QLcoffee
 {
     public partial class frmThongKe : Form
     {
+        SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QuanLyCoffeeFull.mdf;Integrated Security=True");
         BUS_ThucDon busthucdon = new BUS_ThucDon();
 
         public frmThongKe()
@@ -74,6 +76,26 @@ namespace GUI_QLcoffee
                     MessageBox.Show("Tính năng này chỉ áp dụng khi xem thống kê doanh thu!","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            frmReportThongKe frm = new frmReportThongKe();
+            frm.Show();
+            connection.Open();
+            //string s = "select hd.MaHD, nv.MaNV, kh.TenKhach, td.TenTD, ct.SoLuong, td.Gia, (ct.SoLuong * td.Gia) as 'ThanhTien' from THUCDON td inner join CHITIETHOADON ct on td.MaTD = ct.MaTD inner join HOADON hd on ct.MaHD = hd.MaHD inner join NHANVIEN nv on nv.MaNV = hd.MaNV inner join KHACHHANG kh on kh.MaKH = hd.MaKH group by hd.MaHD, nv.MaNV, kh.TenKhach, td.TenTD, ct.SoLuong, td.Gia having hd.MaHD='" + int.Parse(busthucdon.LayMaHD()) + "'";
+            string s = "select * from hoadon group by MaHD, NgayLapHD, TongThanhTien, MaKH, MaNV having NgayLapHD between '" + dtpBatDau.Value + "' and '" + dtpKetthuc.Value + "'";
+            string a = "select sum(TongThanhTien) as 'doanhthu' from hoadon";
+            SqlDataAdapter adapter = new SqlDataAdapter(s, connection);
+            SqlDataAdapter sqlData = new SqlDataAdapter(a, connection);
+            DataSet set = new DataSet();
+            adapter.Fill(set, "HOADON");
+            sqlData.Fill(set, "HOADON");
+            reportthongke report = new reportthongke();
+            report.SetDataSource(set);
+            frm.rpThongKe.ReportSource = report;
+            connection.Close();
+            frm.rpThongKe.Refresh();
         }
     }
 }

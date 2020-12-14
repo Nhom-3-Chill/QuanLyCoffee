@@ -63,6 +63,16 @@ namespace GUI_QLcoffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bo_qua {
             get {
                 object obj = ResourceManager.GetObject("Bo_qua", resourceCulture);
@@ -226,6 +236,16 @@ namespace GUI_QLcoffee.Properties {
         internal static System.Drawing.Bitmap Them {
             get {
                 object obj = ResourceManager.GetObject("Them", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Them1 {
+            get {
+                object obj = ResourceManager.GetObject("Them1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
