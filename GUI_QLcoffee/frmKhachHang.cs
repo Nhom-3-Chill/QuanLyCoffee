@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO_QLcoffee;
 using BUS_QLcoffee;
 using System.Data.SqlClient;
+using System.Net.Mail;
 
 namespace GUI_QLcoffee
 {
@@ -73,6 +74,20 @@ namespace GUI_QLcoffee
             btnThoat.Enabled = true;
         }
 
+        public bool checkmail(string emailadd)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailadd);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtMaKH.Text == "")
@@ -86,6 +101,12 @@ namespace GUI_QLcoffee
             if (txtDienThoai.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập số điện thoại của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (!checkmail(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email bạn nhập không hợp lệ!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
             }
             if (txtEmail.Text == "")
             {
@@ -135,6 +156,32 @@ namespace GUI_QLcoffee
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (txtMaKH.Text.Trim().Length==0)
+            {
+                MessageBox.Show("Không được để trống mã khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtTenKH.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Không được để trống tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDienThoai.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Không được để trống số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (!checkmail(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email bạn nhập không hợp lệ!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            if (txtEmail.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Không được để trống Email của khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtDiaChi.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Không được để trống địa chỉ của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             DTO_KhachHang dtokhachhang = new DTO_KhachHang(txtMaKH.Text, txtTenKH.Text, txtDienThoai.Text, txtEmail.Text, txtDiaChi.Text);
             if (MessageBox.Show("Bạn có muốn sửa khách hàng này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

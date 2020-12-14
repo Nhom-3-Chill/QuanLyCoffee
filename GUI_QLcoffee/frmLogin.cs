@@ -122,7 +122,7 @@ namespace GUI_QLcoffee
             else if (!checkmail(txtEmail.Text.Trim()))
             {
                 MessageBox.Show("Email bạn nhập không hợp lệ!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMK.Focus();
+                txtEmail.Focus();
                 return;
             }
             else if(txtMK.Text.Trim().Length == 0)
@@ -180,7 +180,6 @@ namespace GUI_QLcoffee
                     string matKhauMoi = bus_NhanVien.encryption(builder.ToString());
                     bus_NhanVien.NVTaoMatKhau(txtEmail.Text, matKhauMoi);
                     bus_NhanVien.SendEmail(txtEmail.Text, builder.ToString());
-                    MessageBox.Show(matKhauMoi);
                 }
                 else
                 {

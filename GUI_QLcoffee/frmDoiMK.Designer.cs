@@ -148,8 +148,8 @@
             // 
             // picDoiMK
             // 
-            this.picDoiMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picDoiMK.BackgroundImage = global::GUI_QLcoffee.Properties.Resources.ly_coffee;
+            this.picDoiMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picDoiMK.Location = new System.Drawing.Point(43, 39);
             this.picDoiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picDoiMK.Name = "picDoiMK";
